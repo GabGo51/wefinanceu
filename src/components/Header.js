@@ -35,7 +35,7 @@ const Header = () => {
             transition={{ duration: 0.5 }}
             exit={{ height: 0, opacity: 0 }}
           >
-            <p className="logo">WeFinanceU</p>
+            <p onClick={() => handleNavigate("/")} className="logo">WeFinanceU</p>
             <ul>
               <li onClick={() => handleNavigate("/about")}>About</li>
               <li onClick={() => handleNavigate("/product")}>Product</li>
@@ -72,7 +72,10 @@ const Header = () => {
             <i onClick={toggleMenu} className="fa-solid fa-x"></i>
           </PhoneHeader>
         ) : (
-          <DesktopHeader>
+          <DesktopHeader initial={{ height: 0, opacity: 0 }}
+          animate={{height:80, opacity: 1 }}
+          transition={{ duration: 0.5, delay:0.5 }}
+          exit={{ height: 0, opacity: 0 }}>
             <p onClick={() => handleNavigate("/")}>WeFinanceU</p>
             <ul>
               <li onClick={() => handleNavigate("/about")}>About</li>
@@ -115,7 +118,11 @@ const Header = () => {
   );
 };
 
-const DesktopHeader = styled.header`
+const DesktopHeader = styled(motion.header)`
+  position: fixed;
+  top: 0;
+  background-color: white;
+  height: 80px;
   width: clamp(300px, 80%, 1200px);
   display: flex;
   justify-content: space-between;
@@ -171,9 +178,14 @@ const DesktopHeader = styled.header`
   }
 `;
 const PhoneHeader = styled(motion.header)`
-
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   color: white;
   background-color: black;
   display: flex;
