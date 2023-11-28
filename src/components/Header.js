@@ -73,12 +73,12 @@ const Header = () => {
           </PhoneHeader>
         ) : (
           <DesktopHeader>
-            <p>WeFinanceU</p>
+            <p onClick={() => handleNavigate("/")}>WeFinanceU</p>
             <ul>
-              <li>About</li>
-              <li>Service</li>
-              <li>Product</li>
-              <li>Contact Us</li>
+              <li onClick={() => handleNavigate("/about")}>About</li>
+              <li onClick={() => handleNavigate("/product")}>Product</li>
+              <li onClick={() => handleNavigate("/team")}>Team</li>
+              <li onClick={() => handleNavigate("/contact")}>Contact Us</li>
             </ul>
             <div className="button-box">
               <button className="login-button">
