@@ -21,7 +21,7 @@ export default createGlobalStyle`
     width: 100vw;
     overflow: hidden;
     overflow-y: scroll;
-    box-sizing: content-box; 
+    box-sizing: content-box;
     font-family: 'Montserrat', sans-serif;
   }
   
@@ -64,6 +64,13 @@ export default createGlobalStyle`
   q:before, q:after {
     content: '';
     content: none;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: clamp(300px, 80%, 1200px);
+    align-items: center;
   }
 
   .login-button{

@@ -5,7 +5,6 @@ import { useContext } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-
 const Header = () => {
   const { open, lang, setLang, setOpen } = useContext(SettingContext);
 
@@ -19,7 +18,7 @@ const Header = () => {
     setOpen(false);
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
@@ -35,7 +34,9 @@ const Header = () => {
             transition={{ duration: 0.5 }}
             exit={{ height: 0, opacity: 0 }}
           >
-            <p onClick={() => handleNavigate("/")} className="logo">WeFinanceU</p>
+            <p onClick={() => handleNavigate("/")} className="logo">
+              WeFinanceU
+            </p>
             <ul>
               <li onClick={() => handleNavigate("/about")}>About</li>
               <li onClick={() => handleNavigate("/product")}>Product</li>
@@ -72,45 +73,49 @@ const Header = () => {
             <i onClick={toggleMenu} className="fa-solid fa-x"></i>
           </PhoneHeader>
         ) : (
-          <DesktopHeader initial={{ height: 0, opacity: 0 }}
-          animate={{height:80, opacity: 1 }}
-          transition={{ duration: 0.5, delay:0.5 }}
-          exit={{ height: 0, opacity: 0 }}>
-            <p onClick={() => handleNavigate("/")}>WeFinanceU</p>
-            <ul>
-              <li onClick={() => handleNavigate("/about")}>About</li>
-              <li onClick={() => handleNavigate("/product")}>Product</li>
-              <li onClick={() => handleNavigate("/team")}>Team</li>
-              <li onClick={() => handleNavigate("/contact")}>Contact Us</li>
-            </ul>
-            <div className="button-box">
-              <button className="login-button">
-                <p>Login</p>
-                <p className="arrow">⟶</p>
-              </button>
+          <DesktopHeader
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 80, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            exit={{ height: 0, opacity: 0 }}
+          >
+            <div className="wrapper">
+              <p onClick={() => handleNavigate("/")}>WeFinanceU</p>
+              <ul>
+                <li onClick={() => handleNavigate("/about")}>About</li>
+                <li onClick={() => handleNavigate("/product")}>Product</li>
+                <li onClick={() => handleNavigate("/team")}>Team</li>
+                <li onClick={() => handleNavigate("/contact")}>Contact Us</li>
+              </ul>
+              <div className="button-box">
+                <button className="login-button">
+                  <p>Login</p>
+                  <p className="arrow">⟶</p>
+                </button>
 
-              <div>
-                <button
-                  style={{ opacity: !lang ? 1 : 0.5 }}
-                  onClick={() => {
-                    setLang(false);
-                  }}
-                  className="fr"
-                >
-                  FR
-                </button>
-                <button
-                  style={{ opacity: lang ? 1 : 0.5 }}
-                  onClick={() => {
-                    setLang(true);
-                  }}
-                  className="eng"
-                >
-                  EN
-                </button>
+                <div>
+                  <button
+                    style={{ opacity: !lang ? 1 : 0.5 }}
+                    onClick={() => {
+                      setLang(false);
+                    }}
+                    className="fr"
+                  >
+                    FR
+                  </button>
+                  <button
+                    style={{ opacity: lang ? 1 : 0.5 }}
+                    onClick={() => {
+                      setLang(true);
+                    }}
+                    className="eng"
+                  >
+                    EN
+                  </button>
+                </div>
               </div>
+              <i onClick={toggleMenu} className="fa-solid fa-bars"></i>
             </div>
-            <i onClick={toggleMenu} className="fa-solid fa-bars"></i>
           </DesktopHeader>
         )}
       </AnimatePresence>
@@ -121,13 +126,18 @@ const Header = () => {
 const DesktopHeader = styled(motion.header)`
   position: fixed;
   top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: white;
   height: 80px;
-  width: clamp(300px, 80%, 1200px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100vw;
   padding: 20px 0px;
+  z-index: 100;
+
+  .wrapper {
+    display: flex;
+  }
   ul {
     display: flex;
     li {
@@ -178,6 +188,7 @@ const DesktopHeader = styled(motion.header)`
   }
 `;
 const PhoneHeader = styled(motion.header)`
+ z-index: 100;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -187,7 +198,7 @@ const PhoneHeader = styled(motion.header)`
   width: 100vw;
   height: 120vh;
   color: white;
-  background-color: black;
+  background-color:  #015D85;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -205,7 +216,7 @@ const PhoneHeader = styled(motion.header)`
 
   i {
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: 10vw;
   }
 
@@ -213,7 +224,7 @@ const PhoneHeader = styled(motion.header)`
     margin-bottom: 100px;
   }
 
-  .lang-button{
+  .lang-button {
     position: absolute;
     top: 20px;
     left: 10vw;

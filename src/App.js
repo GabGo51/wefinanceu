@@ -8,6 +8,7 @@ import Contact from "./components/Contact/Contact";
 
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -21,7 +22,9 @@ function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer/>
       </Container>
+      
     </Router>
   );
 }
