@@ -5,7 +5,7 @@ import { useState } from "react";
 export const SettingContext = createContext(null);
 export const SettingProvider = ({ children }) => {
   const [lang, setLang] = useState(true);
-  const [open ,setOpen] = useState(true)
+  const [open ,setOpen] = useState(false)
   
   return (
     <SettingContext.Provider value={{ lang, setLang, open, setOpen}}>
