@@ -25,7 +25,12 @@ export default createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
   }
   
-  
+  h2{
+    font-size: clamp(22px, 3vw, 30px);
+  }
+  h3{
+    font-size: clamp(22px, 3vw, 30px);
+  }
 
 
   

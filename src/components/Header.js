@@ -30,10 +30,10 @@ const Header = () => {
         {open ? (
           <PhoneHeader
             key="phone-header" //must have for exit
-            initial={{ height: 0, opacity: 0  }}
-            animate={{ height: "100vh", opacity: 1 }}
-            transition={{ duration: 0.5, delay:0.2 }}
-            exit={{ height: 0, opacity: 0 }}
+            initial={{ left:"100vw", width:0}}
+            animate={{ left:0, width:'100vw' }}
+            transition={{ duration: 0.3, delay:0.2 }}
+            exit={{ left:"100vw", width:0 }}
             
           >
             <p onClick={() => handleNavigate("/")} className="logo">
@@ -73,7 +73,10 @@ const Header = () => {
               </div>
             </div>
             <i onClick={toggleMenu} className="fa-solid fa-x"></i>
-            <motion.img initial={{height:0}} animate={{height:'100svh'}} transition={{duration:0.7}} className="background" src={building}/>
+            <motion.img initial={{ left:"100vw", width:0}}
+            animate={{ left:0, width:'100vw' }}
+            transition={{ duration: 0.3, delay:0.2 }}
+            exit={{ left:"100vw", width:0 }}  className="background" src={building}/>
           </PhoneHeader>
         ) : (
           <DesktopHeader
@@ -160,7 +163,7 @@ const DesktopHeader = styled(motion.header)`
   }
 
   .lang{
-    width: 35px;
+    width: 40px;
     height: 35px;
     border: 1px solid black;
     background-color: transparent;
@@ -196,7 +199,6 @@ const DesktopHeader = styled(motion.header)`
   }
 `;
 const PhoneHeader = styled(motion.header)`
-  
   z-index: 100;
   position: fixed;
   top: 0;

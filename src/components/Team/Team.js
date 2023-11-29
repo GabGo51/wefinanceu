@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
+import Intro from "./Intro";
+import Members from "./Members";
 
 const Team = () => {
   return (
-    <div>Team</div>
-  )
-}
+    <Container>
+      <Intro />
+      <Members />
+    </Container>
+  );
+};
 
-export default Team
+const Container = styled.div``;
+
+export default Team;
