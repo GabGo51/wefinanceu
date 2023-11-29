@@ -4,6 +4,7 @@ import { SettingContext } from "../context/SettingContext";
 import { useContext } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import building from '../img/building.webp'
 
 const Header = () => {
   const { open, lang, setLang, setOpen } = useContext(SettingContext);
@@ -29,10 +30,11 @@ const Header = () => {
         {open ? (
           <PhoneHeader
             key="phone-header" //must have for exit
-            initial={{ height: 0, opacity: 0 }}
+            initial={{ height: 0, opacity: 0  }}
             animate={{ height: "100vh", opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay:0.2 }}
             exit={{ height: 0, opacity: 0 }}
+            
           >
             <p onClick={() => handleNavigate("/")} className="logo">
               WeFinanceU
@@ -46,7 +48,7 @@ const Header = () => {
             <div className="button-box">
               <button className="login-button">
                 <p>Login</p>
-                <p className="arrow">⟶</p>
+                
               </button>
 
               <div className="lang-button">
@@ -55,7 +57,7 @@ const Header = () => {
                   onClick={() => {
                     setLang(false);
                   }}
-                  className="fr"
+                  className="lang fr"
                 >
                   FR
                 </button>
@@ -64,13 +66,14 @@ const Header = () => {
                   onClick={() => {
                     setLang(true);
                   }}
-                  className="eng"
+                  className="lang eng"
                 >
                   EN
                 </button>
               </div>
             </div>
             <i onClick={toggleMenu} className="fa-solid fa-x"></i>
+            <motion.img initial={{height:0}} animate={{height:'100svh'}} transition={{duration:0.7}} className="background" src={building}/>
           </PhoneHeader>
         ) : (
           <DesktopHeader
@@ -90,7 +93,7 @@ const Header = () => {
               <div className="button-box">
                 <button className="login-button">
                   <p>Login</p>
-                  <p className="arrow">⟶</p>
+                  
                 </button>
 
                 <div>
@@ -99,7 +102,7 @@ const Header = () => {
                     onClick={() => {
                       setLang(false);
                     }}
-                    className="fr"
+                    className="lang fr"
                   >
                     FR
                   </button>
@@ -108,7 +111,7 @@ const Header = () => {
                     onClick={() => {
                       setLang(true);
                     }}
-                    className="eng"
+                    className="lang eng"
                   >
                     EN
                   </button>
@@ -152,21 +155,26 @@ const DesktopHeader = styled(motion.header)`
 
   i {
     display: none;
+    cursor: pointer;
+    scale: 1.5;
+  }
+
+  .lang{
+    width: 35px;
+    height: 35px;
+    border: 1px solid black;
+    background-color: transparent;
+    cursor: pointer;
+    color: black;
+
   }
 
   .fr {
     border-radius: 50% 0 0 50%;
-    width: 35px;
-    border: 1px solid black;
-    background-color: transparent;
-    cursor: pointer;
+    
   }
   .eng {
     border-radius: 0% 50% 50% 0%;
-    width: 35px;
-    border: 1px solid black;
-    background-color: transparent;
-    cursor: pointer;
   }
 
   .menu {
@@ -188,7 +196,8 @@ const DesktopHeader = styled(motion.header)`
   }
 `;
 const PhoneHeader = styled(motion.header)`
- z-index: 100;
+  
+  z-index: 100;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -198,59 +207,87 @@ const PhoneHeader = styled(motion.header)`
   width: 100vw;
   height: 120vh;
   color: white;
-  background-color:  #015D85;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   ul {
+    z-index: 100;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     li {
       margin: 20px 0;
+      font-weight: 600;
+      cursor: pointer;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
   }
 
   i {
+    scale: 1.5;
+    z-index: 100;
     position: absolute;
     top: 30px;
     right: 10vw;
   }
 
   .logo {
+    z-index: 100;
     margin-bottom: 100px;
+    cursor: pointer;
   }
 
   .lang-button {
+    z-index: 100;
     position: absolute;
     top: 20px;
     left: 10vw;
   }
 
-  .fr {
-    border-radius: 50% 0 0 50%;
+  .lang{
     width: 35px;
     height: 35px;
-    border: 1px solid white;
+    border: 2px solid white;
     background-color: transparent;
     cursor: pointer;
     color: white;
+    font-weight: 600;
+
+  }
+
+  .fr {
+    border-radius: 50% 0 0 50%;
+    
   }
   .eng {
     border-radius: 0% 50% 50% 0%;
-    width: 35px;
-    height: 35px;
-    border: 1px solid white;
-    color: white;
-    background-color: transparent;
-    cursor: pointer;
+  }
+
+  .button-box{
+    z-index: 100;
   }
 
   .login-button {
+    display: block;
     margin-top: 100px;
+    color: white;
+    font-weight: 600;
+    border: 2px solid white;
+  }
+
+  .background{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100svh;
+    object-fit: cover;
+    z-index: 1;
   }
 `;
 export default Header;

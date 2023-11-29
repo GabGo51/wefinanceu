@@ -76,8 +76,8 @@ export default createGlobalStyle`
   .login-button{
     cursor: pointer;
     transition: 300ms;
-    background-color: black;
-    color: white;
+    background-color: transparent;
+    color: black;
     height: 35px;
     width: 120px;
     border-radius: 30px;
@@ -91,9 +91,8 @@ export default createGlobalStyle`
     }
 
     &:hover{
-      .arrow{
-        transform: translateX(50%);
-      }
+      background-color: black;
+      color: white;
     }
   }
 
