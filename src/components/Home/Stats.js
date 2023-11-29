@@ -1,27 +1,55 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 const Stats = () => {
+
+  const initial = {
+    opacity:0, 
+    y:50,
+  }
+
+  const animate = {
+    opacity:1, 
+    y:0,
+  }
+
+  const navigate = useNavigate();
+  const handleNavigate = (page) => {
+    navigate(page);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  
+
   return (
     <Container>
-      <h2>WeFinance in Number</h2>
+      <motion.h2 initial={initial} animate={animate} transition={{duration:1, delay:0.5}}>WeFinance in Number</motion.h2>
       <div className='wrapper'>
-        <div>
+        <motion.div initial={initial} animate={animate} transition={{duration:1, delay:0.7}}>
           <h3>100+</h3>
           <p>Lenders</p>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div initial={initial} animate={animate} transition={{duration:1, delay:0.9}}>
           <h3>400M+</h3>
           <p>Funded</p>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div initial={initial} animate={animate} transition={{duration:1, delay:1.1}}>
           <h3>25+</h3>
           <p>Years of Experience</p>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div initial={initial} animate={animate} transition={{duration:1, delay:1.3}}>
           <h3>15+</h3>
           <p>Market Covered</p>
-        </div>
+        </motion.div>
+      </div>
+      <div className='button-wrapper'>
+        <h4>Learn more</h4>
+        <motion.button onClick={()=>handleNavigate('/about')} whileHover={{marginRight:20}} transition={{duration:0.3}}>about us</motion.button>
+        <i class="fa-solid fa-arrow-right"></i>
       </div>
 
 
@@ -35,9 +63,7 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 
-h2{
-  margin: 50px 0;
-}
+
 
 .wrapper{
   div{
@@ -48,7 +74,28 @@ h2{
   }
 }
 
-@media (max-width:900px){
+.button-wrapper{
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  h4{
+    font-weight: 400;
+  }
+  button{
+    transition: 300ms;
+    all: unset;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 10px;
+
+  }
+
+  i{
+    margin-left: 10px;
+  }
+}
+
+@media (max-width:950px){
   h2{
     text-align: center;
   }

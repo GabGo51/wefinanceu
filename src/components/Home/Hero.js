@@ -1,26 +1,29 @@
 import React from 'react'
 import styled from "styled-components";
 import screen from "./img/screen.PNG";
+import { motion} from 'framer-motion';
 
 const Hero = () => {
   return (
+    
     <Container>
       <div className="wrapper">
         <div className="text-box">
-          <h1>A simple plateforme, solution for all your problemes</h1>
-          <p>
+          <motion.h1 initial={{x:-50, opacity:0}} animate={{x:0, opacity:1}} transition={{duration:1,delay:0.5}}>A simple plateforme, solution for all your problemes</motion.h1>
+          <motion.p initial={{x:-50, opacity:0}} animate={{x:0, opacity:1}} transition={{duration:1, delay:0.7}}>
             ahjfljabvlabvlablvabglbalgblagbl ajvfkahjf asfgahgfl b
             agflahjbflablfablzn v.z,nm gzkjgjkhzgjkhz{" "}
-          </p>
-          <button className="login-button">
+          </motion.p>
+          <motion.button initial={{x:-50, opacity:0}} animate={{x:0, opacity:1}} transition={{duration:1, delay:0.7}} className="login-button">
             <p>Login</p>
             
-          </button>
+          </motion.button>
         </div>
 
-        <img src={screen} />
+        <motion.img initial={{x:50, opacity:0}} animate={{x:0, opacity:1}} transition={{duration:1, delay:0.7}} src={screen} />
       </div>
     </Container>
+    
   )
 }
 
@@ -53,7 +56,7 @@ const Container = styled.div`
       width: clamp(300px, 50%, 600px);
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 950px) {
       flex-direction: column;
       .text-box {
         text-align: center;

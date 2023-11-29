@@ -25,7 +25,7 @@ const Header = () => {
 
   console.log(open);
   return (
-    <>
+    <Container>
       <AnimatePresence>
         {open ? (
           <PhoneHeader
@@ -61,6 +61,7 @@ const Header = () => {
                 >
                   FR
                 </button>
+                <>|</>
                 <button
                   style={{ opacity: lang ? 1 : 0.5 }}
                   onClick={() => {
@@ -99,7 +100,7 @@ const Header = () => {
                   
                 </button>
 
-                <div>
+                <div className="lang-button">
                   <button
                     style={{ opacity: !lang ? 1 : 0.5 }}
                     onClick={() => {
@@ -109,6 +110,7 @@ const Header = () => {
                   >
                     FR
                   </button>
+                  <>|</>
                   <button
                     style={{ opacity: lang ? 1 : 0.5 }}
                     onClick={() => {
@@ -125,10 +127,17 @@ const Header = () => {
           </DesktopHeader>
         )}
       </AnimatePresence>
-    </>
+    </Container>
   );
 };
+const Container = styled.div`
+width: 100%;
+.lang-button{
+  display: flex;
+  align-items: center;
+}
 
+`
 const DesktopHeader = styled(motion.header)`
   position: fixed;
   top: 0;
@@ -161,24 +170,19 @@ const DesktopHeader = styled(motion.header)`
     cursor: pointer;
     scale: 1.5;
   }
+  
 
   .lang{
     width: 40px;
     height: 35px;
-    border: 1px solid black;
+    border: none;
     background-color: transparent;
     cursor: pointer;
     color: black;
 
   }
 
-  .fr {
-    border-radius: 50% 0 0 50%;
-    
-  }
-  .eng {
-    border-radius: 0% 50% 50% 0%;
-  }
+  
 
   .menu {
     width: 100vw;
@@ -186,7 +190,7 @@ const DesktopHeader = styled(motion.header)`
     background-color: black;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 950px) {
     i {
       display: block;
     }
@@ -247,26 +251,22 @@ const PhoneHeader = styled(motion.header)`
     position: absolute;
     top: 20px;
     left: 10vw;
+    display: flex;
+    align-items: center;
   }
 
   .lang{
     width: 35px;
     height: 35px;
-    border: 2px solid white;
+    border: none;
     background-color: transparent;
     cursor: pointer;
     color: white;
     font-weight: 600;
-
-  }
-
-  .fr {
-    border-radius: 50% 0 0 50%;
     
   }
-  .eng {
-    border-radius: 0% 50% 50% 0%;
-  }
+
+  
 
   .button-box{
     z-index: 100;

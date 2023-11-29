@@ -25,12 +25,7 @@ export default createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
   }
   
-  h2{
-    font-size: clamp(22px, 3vw, 30px);
-  }
-  h3{
-    font-size: clamp(22px, 3vw, 30px);
-  }
+ 
 
 
   
@@ -71,6 +66,14 @@ export default createGlobalStyle`
     content: none;
   }
 
+  h2{
+    font-size: clamp(22px, 3vw, 30px);
+    margin: 50px 0;
+  }
+  h3{
+    font-size: clamp(20px, 3vw, 24px);
+  }
+
   .wrapper {
     display: flex;
     justify-content: space-between;
@@ -85,7 +88,7 @@ export default createGlobalStyle`
     color: black;
     height: 35px;
     width: 120px;
-    border-radius: 30px;
+    border-radius: 10px;
     font-size: 16px;
     display: flex;
     align-items: center;
