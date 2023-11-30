@@ -88,7 +88,7 @@ export default createGlobalStyle`
     font-weight: 600;
     transition: 300ms;
     background-color: transparent;
-    color: black;
+    
     height: 35px;
     width: 120px;
     border-radius: 10px;
@@ -96,7 +96,8 @@ export default createGlobalStyle`
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
+    border: 2px solid #015d85;
+      color: #015d85;
     .arrow{
       margin-left: 10px;
       transition: 300ms;
@@ -104,9 +105,9 @@ export default createGlobalStyle`
 
     &:hover{
       
-      border: 1px solid #015d85;
-      color: #015d85;
-      scale: 1.05;
+      background-color: #015d85;
+      color:white;
+      
     }
   }
 

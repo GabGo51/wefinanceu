@@ -5,10 +5,9 @@ import About from "./components/About/About";
 import Product from "./components/Product/Product";
 import Team from "./components/Team/Team";
 import Contact from "./components/Contact/Contact";
-
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
+import PoweredBy from "./components/PoweredBy";
 
 function App() {
   return (
@@ -21,6 +20,7 @@ function App() {
           <Route path="/product" element={<Product />} />
           <Route path="/team" element={<Team />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/poweredby" element={<PoweredBy />} />
         </Routes>
         <Footer/>
       </Container>

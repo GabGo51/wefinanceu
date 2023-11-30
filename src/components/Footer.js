@@ -32,8 +32,9 @@ const Footer = () => {
         </ul>
       </div>
       <div className="powered">
-        <p>© {currentYear} WeFinanceU</p> <>|</> <p>All rights resreved</p>
+        <p>© {currentYear} WeFinanceU</p> <>|</> <p>All rights reserved</p>
       </div>
+      <button onClick={() => handleNavigate("/poweredby")}>powered by</button>
     </Container>
   );
 };
@@ -94,6 +95,13 @@ const Container = styled.footer`
     p {
       margin: 0 30px;
     }
+  }
+
+  button{
+    all: unset;
+    opacity: 0.4;
+    font-size: 12px;
+    cursor: pointer;
   }
 `;
 
