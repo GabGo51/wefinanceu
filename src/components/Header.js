@@ -150,6 +150,10 @@ const DesktopHeader = styled(motion.header)`
   padding: 20px 0px;
   z-index: 100;
 
+  p{
+    cursor: pointer;
+  }
+
   .wrapper {
     display: flex;
   }

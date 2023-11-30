@@ -16,6 +16,10 @@ const Footer = () => {
     <Container>
       <div className="wrapper">
         <p onClick={() => handleNavigate("/")}>WeFinanceU</p>
+        <ul className="contact-ul">
+          <li>450-712-7842</li>
+          <li>WeFinanceU@gmail.com</li>
+        </ul>
         <ul>
           <li onClick={() => handleNavigate("/about")}>About</li>
           <li onClick={() => handleNavigate("/product")}>Product</li>
@@ -52,9 +56,19 @@ const Container = styled.footer`
         margin: 20px 0;
 
         &:hover{
-          padding-right: 10px;
+          transform: translateX(5%);
         }
       }
+    }
+    .contact-ul{
+      li{
+        text-align: start;
+        margin:  10px 0;
+        transition: 500ms;
+
+        
+      }
+      
     }
   }
 

@@ -12,6 +12,7 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     
     
+    
   }
   
   
@@ -21,6 +22,7 @@ export default createGlobalStyle`
     width: 100vw;
     overflow: hidden;
     overflow-y: scroll;
+    
     box-sizing: content-box;
     font-family: 'Montserrat', sans-serif;
   }
