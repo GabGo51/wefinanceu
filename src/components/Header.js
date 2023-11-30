@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import building from '../img/building.webp'
-
+import blueLogo from '../img/blueLogo.PNG'
 const Header = () => {
   const { open, lang, setLang, setOpen } = useContext(SettingContext);
 
@@ -87,7 +87,7 @@ const Header = () => {
             exit={{ height: 0, opacity: 0 }}
           >
             <div className="wrapper">
-              <p onClick={() => handleNavigate("/")}>WeFinanceU</p>
+              <img src={blueLogo} onClick={() => handleNavigate("/")}/>
               <ul>
                 <li onClick={() => handleNavigate("/about")}>About</li>
                 <li onClick={() => handleNavigate("/product")}>Product</li>
@@ -150,12 +150,15 @@ const DesktopHeader = styled(motion.header)`
   padding: 20px 0px;
   z-index: 100;
 
-  p{
-    cursor: pointer;
+  img{
+    width:clamp(150px ,20% ,200px);
+      cursor: pointer;
+      margin-left: -10px;
   }
 
   .wrapper {
     display: flex;
+    align-items: center;
   }
   ul {
     display: flex;

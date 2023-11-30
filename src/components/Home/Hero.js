@@ -15,7 +15,7 @@ const Hero = () => {
             agflahjbflablfablzn v.z,nm gzkjgjkhzgjkhz{" "}
           </motion.p>
           <motion.button initial={{x:-50, opacity:0}} animate={{x:0, opacity:1}} transition={{duration:1, delay:0.7}} className="login-button">
-            <p>Login</p>
+            Try it for free!
             
           </motion.button>
         </div>
@@ -49,6 +49,7 @@ const Container = styled.div`
 
       button {
         margin: 40px 0;
+        padding:20px 0;
       }
     }
 

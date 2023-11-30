@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
+import whiteLogo from '../img/whiteLogo.PNG'
 const Footer = () => {
   const navigate = useNavigate();
   const handleNavigate = (page) => {
@@ -15,11 +16,14 @@ const Footer = () => {
   return (
     <Container>
       <div className="wrapper">
-        <p onClick={() => handleNavigate("/")}>WeFinanceU</p>
+        <div>
+          <img onClick={() => handleNavigate("/")} src={whiteLogo}/>
         <ul className="contact-ul">
           <li>450-712-7842</li>
           <li>WeFinanceU@gmail.com</li>
         </ul>
+        </div>
+        
         <ul>
           <li onClick={() => handleNavigate("/about")}>About</li>
           <li onClick={() => handleNavigate("/product")}>Product</li>
@@ -43,18 +47,23 @@ const Container = styled.footer`
   align-items: center;
   justify-content: center;
 
-  p{
-    cursor: pointer;
-  }
+  
 
   .wrapper {
+    img{
+      width:clamp(150px ,20% ,250px);
+      cursor: pointer;
+      margin-bottom: 20px;
+
+      
+    }
     ul{
       li{
         cursor: pointer;
         transition: 300ms;
         text-align: end;
         margin: 20px 0;
-
+        width: 100px;
         &:hover{
           transform: translateX(5%);
         }
@@ -65,6 +74,7 @@ const Container = styled.footer`
         text-align: start;
         margin:  10px 0;
         transition: 500ms;
+        width: 200px;
 
         
       }

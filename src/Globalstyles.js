@@ -85,6 +85,7 @@ export default createGlobalStyle`
 
   .login-button{
     cursor: pointer;
+    font-weight: 600;
     transition: 300ms;
     background-color: transparent;
     color: black;
@@ -95,14 +96,17 @@ export default createGlobalStyle`
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid black;
     .arrow{
       margin-left: 10px;
       transition: 300ms;
     }
 
     &:hover{
-      background-color: black;
-      color: white;
+      
+      border: 1px solid #015d85;
+      color: #015d85;
+      scale: 1.05;
     }
   }
 
