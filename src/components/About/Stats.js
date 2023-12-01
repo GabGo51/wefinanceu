@@ -22,6 +22,7 @@ align-items: center;
 justify-content: center;
 flex-direction: column;
 background-color: #f7f7fe;
+padding-bottom: 100px;
 
 .wrapper{
   gap: 20px;
