@@ -100,25 +100,7 @@ const Container = styled.div`
     }
   }
 
-  .button-wrapper {
-    display: flex;
-    align-items: center;
-    margin-top: 40px;
-    h4 {
-      font-weight: 400;
-    }
-    button {
-      transition: 300ms;
-      all: unset;
-      cursor: pointer;
-      font-weight: 600;
-      margin-left: 10px;
-    }
-
-    i {
-      margin-left: 10px;
-    }
-  }
+  
 
   @media (max-width: 950px) {
     h2 {

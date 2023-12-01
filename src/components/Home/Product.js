@@ -7,8 +7,19 @@ import form from "./img/contact.png";
 import dollar from "./img/dollar.png";
 import monitor from "./img/monitor.png";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Product = () => {
+
+  const navigate = useNavigate();
+  const handleNavigate = (page) => {
+    navigate(page);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <Container>
       <motion.h2
@@ -66,7 +77,17 @@ const Product = () => {
           <img src={tableau} />
         </motion.div>
       </div>
-      <div className="wrapper"></div>
+      <div className="button-wrapper">
+        <h4>Get more details on</h4>
+        <motion.button
+          onClick={() => handleNavigate("/product")}
+          whileHover={{ marginRight: 20 }}
+          transition={{ duration: 0.3 }}
+        >
+          our product
+        </motion.button>
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
     </Container>
   );
 };
@@ -77,7 +98,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  margin-bottom: 100px;
   h2 {
     text-align: center;
     margin: 50px 50px;

@@ -111,7 +111,27 @@ export default createGlobalStyle`
       
     }
   }
-  
+
+  .button-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    h4 {
+      font-weight: 400;
+    }
+    button {
+      transition: 300ms;
+      all: unset;
+      cursor: pointer;
+      font-weight: 600;
+      margin-left: 10px;
+    }
+
+    i {
+      margin-left: 10px;
+    }
+  }
+
   //no text highlight
   .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
