@@ -11,10 +11,14 @@ import { motion } from "framer-motion";
 const Product = () => {
   return (
     <Container>
-      <motion.h2 initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          viewport={{ once: true }}>Simplify the process and save time on your projects</motion.h2>
+      <motion.h2
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 0.2 }}
+        viewport={{ once: true }}
+      >
+        Simplify the process and save time on your projects
+      </motion.h2>
 
       <div className="wrapper">
         <motion.div
@@ -56,7 +60,6 @@ const Product = () => {
           <img className="icon" src={monitor} />
           <h3>Dashboard</h3>
           <p>
-            {" "}
             some text about how to go about the about form and what it do for ur
             business
           </p>

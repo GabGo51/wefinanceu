@@ -1,38 +1,55 @@
-import React from 'react'
+import React from "react";
 import styled from "styled-components";
 import screen from "./img/screen.PNG";
-import { motion} from 'framer-motion';
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    
     <Container>
       <div className="wrapper">
         <div className="text-box">
-          <motion.h1 initial={{x:-50, opacity:0}} animate={{x:0, opacity:1}} transition={{duration:1,delay:0.5}}>A simple plateforme, solution for all your problemes</motion.h1>
-          <motion.p initial={{x:-50, opacity:0}} animate={{x:0, opacity:1}} transition={{duration:1, delay:0.7}}>
+          <motion.h1
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            A simple plateform, solution for all your problems
+          </motion.h1>
+          <motion.p
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.7 }}
+          >
             ahjfljabvlabvlablvabglbalgblagbl ajvfkahjf asfgahgfl b
             agflahjbflablfablzn v.z,nm gzkjgjkhzgjkhz{" "}
           </motion.p>
-          <motion.button initial={{x:-50, opacity:0}} animate={{x:0, opacity:1}} transition={{duration:1, delay:0.7}} className="login-button">
+          <motion.button
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.7 }}
+            className="login-button"
+          >
             Try it free
-            
           </motion.button>
         </div>
 
-        <motion.img initial={{x:50, opacity:0}} animate={{x:0, opacity:1}} transition={{duration:1, delay:0.7}} src={screen} />
+        <motion.img
+          initial={{ x: 50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.7 }}
+          src={screen}
+        />
       </div>
     </Container>
-    
-  )
-}
+  );
+};
 
 const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
- 
+
   .wrapper {
     .text-box {
       display: flex;
@@ -71,4 +88,4 @@ const Container = styled.div`
   }
 `;
 
-export default Hero
+export default Hero;

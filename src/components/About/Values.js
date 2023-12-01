@@ -109,7 +109,7 @@ const Container = styled.div`
     display: block;
     width: 60px;
     margin: 0;
-    z-index: 100;
+    z-index: 90;
   }
   
 `;

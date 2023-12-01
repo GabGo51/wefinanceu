@@ -70,10 +70,11 @@ export default createGlobalStyle`
 
   h2{
     font-size: clamp(22px, 3vw, 30px);
-    margin: 50px 0;
+    margin: 40px 0;
   }
   h3{
     font-size: clamp(20px, 3vw, 24px);
+    margin: 20px 0;
   }
 
   .wrapper {
@@ -110,6 +111,17 @@ export default createGlobalStyle`
       
     }
   }
+  
+  //no text highlight
+  .noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
 
   
 `;

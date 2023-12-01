@@ -39,7 +39,7 @@ const Header = () => {
             <p onClick={() => handleNavigate("/")} className="logo">
               WeFinanceU
             </p>
-            <ul>
+            <ul className="noselect">
               <li onClick={() => handleNavigate("/about")}>About</li>
               <li onClick={() => handleNavigate("/product")}>Product</li>
               <li onClick={() => handleNavigate("/team")}>Team</li>
@@ -88,7 +88,7 @@ const Header = () => {
           >
             <div className="wrapper">
               <img src={blueLogo} onClick={() => handleNavigate("/")}/>
-              <ul>
+              <ul className="noselect">
                 <li onClick={() => handleNavigate("/about")}>About</li>
                 <li onClick={() => handleNavigate("/product")}>Product</li>
                 <li onClick={() => handleNavigate("/team")}>Team</li>
@@ -163,8 +163,16 @@ const DesktopHeader = styled(motion.header)`
   ul {
     display: flex;
     li {
+      transition: 500ms;
+      padding: 10px 5px;
+      margin: 5px 0;
       margin-right: 20px;
       cursor: pointer;
+      border-bottom: 1px solid white;
+      &:hover {
+        border-bottom: 1px solid #015d85;
+        transform: translateY(-5%);
+      }
     }
   }
   div {
@@ -180,12 +188,17 @@ const DesktopHeader = styled(motion.header)`
   
 
   .lang{
+    transition: 300ms;
     width: 40px;
     height: 35px;
     border: none;
     background-color: transparent;
     cursor: pointer;
     color: black;
+    &:hover{
+      scale: 1.1;
+      
+    }
 
   }
 
@@ -260,9 +273,11 @@ const PhoneHeader = styled(motion.header)`
     left: 10vw;
     display: flex;
     align-items: center;
+    
   }
 
   .lang{
+    transition: 300ms;
     width: 35px;
     height: 35px;
     border: none;
@@ -270,6 +285,9 @@ const PhoneHeader = styled(motion.header)`
     cursor: pointer;
     color: white;
     font-weight: 600;
+    &:hover{
+      scale: 1.1;
+    }
     
   }
 
@@ -296,7 +314,7 @@ const PhoneHeader = styled(motion.header)`
     width: 100vw;
     height: 100svh;
     object-fit: cover;
-    z-index: 1;
+    z-index: 99;
   }
 `;
 export default Header;

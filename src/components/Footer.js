@@ -17,14 +17,14 @@ const Footer = () => {
     <Container>
       <div className="wrapper">
         <div>
-          <img onClick={() => handleNavigate("/")} src={whiteLogo}/>
-        <ul className="contact-ul">
+          <img className="noselect" onClick={() => handleNavigate("/")} src={whiteLogo}/>
+        <ul className="contact-ul noselect">
           <li>450-712-7842</li>
           <li>WeFinanceU@gmail.com</li>
         </ul>
         </div>
         
-        <ul>
+        <ul className="noselect">
           <li onClick={() => handleNavigate("/about")}>About</li>
           <li onClick={() => handleNavigate("/product")}>Product</li>
           <li onClick={() => handleNavigate("/team")}>Team</li>

@@ -1,9 +1,42 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
 
 const Stats = () => {
   return (
-    <div>Stats</div>
-  )
-}
+    <Container>
+      <h2>A look on our past succes</h2>
+      <div className="wrapper">
+        <div className="card"></div>
+        <div className="card"></div>
+        <div className="card"></div>
+        <div className="card"></div>
 
-export default Stats
+      </div>
+    </Container>
+  );
+};
+
+const Container = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+background-color: #f7f7fe;
+
+.wrapper{
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card{
+  background-color:#95cfe8 ;
+  border-radius: 20px;
+  height: 300px;
+  width: 22%;
+
+  @media (max-width:1350px){
+    width: 30%;
+  }
+}
+`;
+
+export default Stats;
