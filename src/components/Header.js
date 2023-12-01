@@ -210,7 +210,7 @@ const DesktopHeader = styled(motion.header)`
     background-color: black;
   }
 
-  @media (max-width: 950px) {
+  @media (max-width: 1100px) {
     i {
       display: block;
     }

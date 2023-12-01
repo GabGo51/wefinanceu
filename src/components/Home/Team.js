@@ -49,6 +49,7 @@ img{
   margin-top: -100px;
   margin-bottom: 100px;
   justify-content: start;
+  padding: 20px;
 
   button{
     all: unset;
