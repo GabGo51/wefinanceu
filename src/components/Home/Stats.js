@@ -105,6 +105,7 @@ const Container = styled.div`
   @media (max-width: 950px) {
     h2 {
       text-align: center;
+      margin: 20px 0;
     }
     .wrapper {
       flex-wrap: wrap;
