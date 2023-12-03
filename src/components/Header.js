@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import building from '../img/building.webp'
 import blueLogo from '../img/blueLogo.PNG'
+import logo from '../img/logopng.png'
 const Header = () => {
   const { open, lang, setLang, setOpen } = useContext(SettingContext);
 
@@ -36,9 +37,9 @@ const Header = () => {
             exit={{ left:"100vw", width:0 }}
             
           >
-            <p onClick={() => handleNavigate("/")} className="logo">
-              WeFinanceU
-            </p>
+            <img src={logo} onClick={() => handleNavigate("/")} className="logo"/>
+             
+            
             <ul className="noselect">
               <li onClick={() => handleNavigate("/about")}>About</li>
               <li onClick={() => handleNavigate("/product")}>Product</li>
@@ -237,6 +238,12 @@ const PhoneHeader = styled(motion.header)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  img{
+    display: block;
+    z-index: 100;
+    width: 200px;
+  }
 
   ul {
     z-index: 100;
