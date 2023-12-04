@@ -1,9 +1,25 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
 
 const Profiles = () => {
   return (
-    <div>Profiles</div>
-  )
-}
+    <Container>
+      <h2>Our different profiles and features</h2>
+      <div className="wrapper">
+        <nav>
 
-export default Profiles
+        </nav>
+        <div className="content">
+
+
+        </div>
+      </div>
+    </Container>
+  );
+};
+
+const Container = styled.div`
+
+`;
+
+export default Profiles;
