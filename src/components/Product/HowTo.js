@@ -4,9 +4,11 @@ import account from "./img/account.PNG";
 const HowTo = () => {
   return (
     <Container>
+      
+      <div className="video"></div>
       <h2>How WeFinanceU works</h2>
       <div className="wrapper">
-        <div>
+        <div className="text">
           <div className="title">
             <div>1</div>
             <h3>Create an account</h3>
@@ -21,10 +23,10 @@ const HowTo = () => {
         <img src={account} />
       </div>
       <div className="wrapper reverse">
-        <div>
-        <div className="title">
-            <div>3</div>
-            <h3>Create an account</h3>
+        <div className="text">
+          <div className="title">
+            <div>2</div>
+            <h3>Fill out the survey</h3>
           </div>
           <p>
             WeFinanceU se consacre à démocratiser l'accès au financement
@@ -36,10 +38,10 @@ const HowTo = () => {
         <img src={account} />
       </div>
       <div className="wrapper">
-        <div>
-        <div className="title">
+        <div className="text">
+          <div className="title">
             <div>3</div>
-            <h3>Create an account</h3>
+            <h3>Get a price fork</h3>
           </div>
           <p>
             WeFinanceU se consacre à démocratiser l'accès au financement
@@ -51,10 +53,10 @@ const HowTo = () => {
         <img src={account} />
       </div>
       <div className="wrapper reverse">
-        <div>
-        <div className="title">
+        <div className="text">
+          <div className="title">
             <div>4</div>
-            <h3>Create an account</h3>
+            <h3>Review your submissions</h3>
           </div>
           <p>
             WeFinanceU se consacre à démocratiser l'accès au financement
@@ -74,42 +76,57 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  padding-top: 50px;
 
-
-
-  img{
-    width: clamp(250px, 40%, 400px);
+  .video{
+    height: 500px;
+    background-color: grey;
+    width: clamp(320px, 80% ,1000px);
+    border-radius: 20px;
+    margin-bottom: 50px;
   }
 
-  .wrapper{
+  img {
+    width: clamp(250px, 40%, 400px);
+    border-radius: 20px;
+  }
+
+  .wrapper {
     gap: 40px;
     margin: 40px 0;
+    
 
-    .title{
+    .text {
+      width: clamp(300px, 80%, 600px);
+    }
+
+    .title {
       display: flex;
       align-items: center;
       margin-bottom: 40px;
-      div{
+
+      div {
         display: flex;
         align-items: center;
         justify-content: center;
         margin-right: 20px;
         font-weight: 600;
-        background-color:#95cfe8;
+        background-color: #95cfe8;
         width: 50px;
         height: 50px;
         border-radius: 50%;
       }
     }
 
-    @media (max-width:950px){
+    @media (max-width: 950px) {
       flex-direction: column;
     }
   }
 
-  .reverse{
+  .reverse {
     flex-direction: row-reverse;
-    @media (max-width:950px){
+    @media (max-width: 950px) {
       flex-direction: column;
     }
   }
