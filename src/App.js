@@ -22,9 +22,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/poweredby" element={<PoweredBy />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </Container>
-      
     </Router>
   );
 }

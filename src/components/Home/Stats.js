@@ -23,7 +23,13 @@ const Stats = () => {
   };
 
   return (
-    <Container>
+    <Container
+     //using scale makes it go bottom to top 
+     //height:top-bottom scale:bottom-top
+      initial={{ scaleY: 0 }}
+      animate={{ scaleY: 1 }}
+      transition={{ duration: 1 }}
+    >
       <motion.h2
         initial={initial}
         whileInView={animate}
@@ -70,27 +76,34 @@ const Stats = () => {
           <p>Market Covered</p>
         </motion.div>
       </div>
-      <div className="button-wrapper">
+      <motion.div initial={initial}
+        whileInView={animate} transition={{duration:1, delay:0.2}} className="button-wrapper">
         <h4>Learn more</h4>
         <motion.button
+        
+        
           onClick={() => handleNavigate("/about")}
-          whileHover={{ marginRight: 20 }}
+          whileHover={{ paddingRight: 20 }}
           transition={{ duration: 0.3 }}
         >
           about us
         </motion.button>
         <i class="fa-solid fa-arrow-right"></i>
-      </div>
+      </motion.div>
     </Container>
   );
 };
 
-const Container = styled.div`
+const Container = styled(motion.div)`
+  transform-origin: revert;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  padding-bottom: 60px;
+  padding-top: 10px;
+  background-color: var(--grey-color);
   .wrapper {
     div {
       margin: 40px 0;
@@ -99,8 +112,6 @@ const Container = styled.div`
       color: #015d85;
     }
   }
-
-  
 
   @media (max-width: 950px) {
     h2 {

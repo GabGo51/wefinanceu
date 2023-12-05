@@ -1,13 +1,24 @@
 import React from "react";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import office1 from "./img/office1.PNG";
 import office2 from "./img/office2.PNG";
 const Intro = () => {
   return (
     <Container>
-      <div className="color-box">
+      <motion.div
+        className="color-box"
+        initial ={{height:0}}
+        //since % dont work have to use auto
+        animate={{ height: 'auto' }}
+        transition={{ duration: 1 }}
+      >
         <div className="wrapper">
-          <div>
+          <motion.div
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.7 }}
+          >
             <h2>Our Mission</h2>
             <p>
               WeFinanceU se consacre à démocratiser l'accès au financement
@@ -26,33 +37,40 @@ const Intro = () => {
               rapidement les informations clés nécessaires pour des décisions
               financières éclairées.
             </p>
-          </div>
+          </motion.div>
 
-          <img src={office1} />
+          <motion.img
+            src={office1}
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.9 }}
+          />
         </div>
-      </div>
+      </motion.div>
 
       <div className="wrapper">
-        <img src={office2} />
+        <motion.img initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.9 }} src={office2} />
         <div className="text-box">
           <h2>Our Vision</h2>
           <p>
-              WeFinanceU se consacre à démocratiser l'accès au financement
-              immobilier commercial pour tous, que cela soit des débutants ou
-              des experts dans le secteur.
-            </p>
-            <p>
-              Nous éliminons les obstacles habituels, tels que les échanges de
-              courriels interminables, les appels répétés, les réunions
-              téléphoniques ou en personne et l'attente de documents, grâce à
-              notre plateforme intuitive d'analyse de prêts commerciaux.{" "}
-            </p>
-            <p>
-              {" "}
-              De cette manière, chaque utilisateur est habilité à obtenir
-              rapidement les informations clés nécessaires pour des décisions
-              financières éclairées.
-            </p>
+            WeFinanceU se consacre à démocratiser l'accès au financement
+            immobilier commercial pour tous, que cela soit des débutants ou des
+            experts dans le secteur.
+          </p>
+          <p>
+            Nous éliminons les obstacles habituels, tels que les échanges de
+            courriels interminables, les appels répétés, les réunions
+            téléphoniques ou en personne et l'attente de documents, grâce à
+            notre plateforme intuitive d'analyse de prêts commerciaux.{" "}
+          </p>
+          <p>
+            {" "}
+            De cette manière, chaque utilisateur est habilité à obtenir
+            rapidement les informations clés nécessaires pour des décisions
+            financières éclairées.
+          </p>
         </div>
       </div>
     </Container>
@@ -64,6 +82,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 
   img {
     width: clamp(500px, 50%, 700px);
@@ -77,14 +96,14 @@ const Container = styled.div`
 
   p {
     margin: 20px 0;
-    font-size: clamp(14px ,30%, 16px);
+    font-size: clamp(14px, 30%, 16px);
   }
 
   .color-box {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #95cfe8;
+    background-color:var(--light-color);
   }
 
   .wrapper {
@@ -93,18 +112,16 @@ const Container = styled.div`
       margin-right: 40px;
     }
 
-    @media (max-width:1200px){
+    @media (max-width: 1200px) {
       flex-direction: column-reverse;
-      
-      img{
+
+      img {
         width: 100%;
-        height: clamp( 200px,20%, 400px);
+        height: clamp(200px, 20%, 400px);
         margin: 10px;
       }
 
-      
-
-      .text-box{
+      .text-box {
         margin: 0;
       }
     }

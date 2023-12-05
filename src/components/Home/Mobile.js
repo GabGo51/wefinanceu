@@ -29,7 +29,7 @@ const Mobile = () => {
           <motion.button
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.7 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
             viewport = {{once:true}}
             className="login-button"
           >

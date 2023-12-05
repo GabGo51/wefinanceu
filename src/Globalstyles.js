@@ -3,6 +3,12 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
 
+  :root{
+    --main-color:#015d85;
+    --light-color: #def3ff;
+    --grey-color:#f7f7fe;
+  }
+
   
 
   *,
@@ -98,7 +104,7 @@ export default createGlobalStyle`
     align-items: center;
     justify-content: center;
     border: 2px solid #015d85;
-      color: #015d85;
+      color:var(--main-color);
     .arrow{
       margin-left: 10px;
       transition: 300ms;
@@ -113,18 +119,26 @@ export default createGlobalStyle`
   }
 
   .button-wrapper {
+    transition: 00ms;
     display: flex;
     align-items: center;
     margin-top: 40px;
+    font-size: clamp(16px, 500%, 20px);
     h4 {
       font-weight: 400;
+      
     }
     button {
-      transition: 300ms;
+      transition: 00ms;
       all: unset;
       cursor: pointer;
       font-weight: 600;
       margin-left: 10px;
+
+      &:hover{
+        transition: 00ms;
+        padding-right: 20px;
+      }
     }
 
     i {

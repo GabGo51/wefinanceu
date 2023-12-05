@@ -81,7 +81,7 @@ const Container = styled.div`
     height: 90px;
     margin-top: -75px;
     margin-left: -16px;
-    background-color: #95cfe8;
+    background-color: var(--light-color);
     border-radius: 50%;
     margin-bottom: 20px;
       }

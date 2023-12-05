@@ -20,7 +20,7 @@ const Header = () => {
     setOpen(false);
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      
     });
   };
 
@@ -84,7 +84,7 @@ const Header = () => {
           <DesktopHeader
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 80, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             exit={{ height: 0, opacity: 0 }}
           >
             <div className="wrapper">

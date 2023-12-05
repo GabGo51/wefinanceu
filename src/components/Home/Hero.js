@@ -11,14 +11,14 @@ const Hero = () => {
           <motion.h1
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 1, delay: 0.2 }}
           >
             A simple plateform, solution for all your problems
           </motion.h1>
           <motion.p
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.7 }}
+            transition={{ duration: 1, delay: 0.4 }}
           >
             ahjfljabvlabvlablvabglbalgblagbl ajvfkahjf asfgahgfl b
             agflahjbflablfablzn v.z,nm gzkjgjkhzgjkhz{" "}
@@ -26,7 +26,7 @@ const Hero = () => {
           <motion.button
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.7 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
             className="login-button"
           >
             Try it free
@@ -36,7 +36,7 @@ const Hero = () => {
         <motion.img
           initial={{ x: 50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
+          transition={{ duration: 1, delay: 0.8 }}
           src={screen}
         />
       </div>
@@ -49,6 +49,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  padding-bottom: 30px;
 
   .wrapper {
     .text-box {
@@ -72,7 +73,7 @@ const Container = styled.div`
 
     img {
       border-radius: 30px;
-      width: clamp(300px, 50%, 600px);
+      width: clamp(300px, 50%, 550px);
     }
 
     @media (max-width: 950px) {

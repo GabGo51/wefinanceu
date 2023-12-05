@@ -10,7 +10,6 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 const Product = () => {
-
   const navigate = useNavigate();
   const handleNavigate = (page) => {
     navigate(page);
@@ -81,7 +80,7 @@ const Product = () => {
         <h4>Get more details on</h4>
         <motion.button
           onClick={() => handleNavigate("/product")}
-          whileHover={{ marginRight: 20 }}
+          whileHover={{ paddingRight: 20 }}
           transition={{ duration: 0.3 }}
         >
           our product

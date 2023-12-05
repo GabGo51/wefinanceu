@@ -21,7 +21,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-background-color: #f7f7fe;
+
 padding-bottom: 100px;
 
 .wrapper{
@@ -29,7 +29,7 @@ padding-bottom: 100px;
   flex-wrap: wrap;
 }
 .card{
-  background-color:#95cfe8 ;
+  background-color: var(--light-color);
   border-radius: 20px;
   height: 300px;
   width: 22%;

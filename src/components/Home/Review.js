@@ -4,7 +4,6 @@ import star from "./img/star.jpg";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 const Review = () => {
-
   const navigate = useNavigate();
   const handleNavigate = (page) => {
     navigate(page);
@@ -55,7 +54,7 @@ const Review = () => {
         <h4>Want to tell us something ? </h4>
         <motion.button
           onClick={() => handleNavigate("/contact")}
-          whileHover={{ marginRight: 20 }}
+          whileHover={{ paddingRight: 20 }}
           transition={{ duration: 0.3 }}
         >
           Contact us
@@ -70,7 +69,6 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 
   h3 {
     font-size: 20px;
@@ -86,7 +84,7 @@ const Container = styled.div`
     transform: translateX(-8%);
   }
 
-  .wrapper{
+  .wrapper {
     flex-wrap: wrap;
     align-items: start;
     justify-content: space-around;
@@ -101,7 +99,7 @@ const Container = styled.div`
     margin: 20px;
     width: clamp(300px, 30%, 420px);
 
-    div{
+    div {
       height: 1px;
       width: 100%;
       background-color: grey;
