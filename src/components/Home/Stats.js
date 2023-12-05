@@ -18,7 +18,7 @@ const Stats = () => {
     navigate(page);
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      
     });
   };
 
@@ -77,7 +77,7 @@ const Stats = () => {
         </motion.div>
       </div>
       <motion.div initial={initial}
-        whileInView={animate} transition={{duration:1, delay:0.2}} className="button-wrapper">
+        whileInView={animate} transition={{duration:0.3, delay:0.2}} className="button-wrapper">
         <h4>Learn more</h4>
         <motion.button
         

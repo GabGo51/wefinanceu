@@ -9,7 +9,7 @@ const Review = () => {
     navigate(page);
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      
     });
   };
   return (
@@ -17,7 +17,7 @@ const Review = () => {
       <h2>What our customers are saying</h2>
       <div className="wrapper">
         <div className="review">
-          <img src={star} />
+          <img alt="star" src={star} />
           <h3>No more waiting to get a quote!</h3>
           <div></div>
           <p>
@@ -28,7 +28,7 @@ const Review = () => {
           <h4>Gabriel Gosselin</h4>
         </div>
         <div className="review">
-          <img src={star} />
+          <img alt="star" src={star} />
           <h3>No more waiting to get a quote!</h3>
           <div></div>
           <p>
@@ -39,7 +39,7 @@ const Review = () => {
           <h4>Gabriel Gosselin</h4>
         </div>
         <div className="review">
-          <img src={star} />
+          <img alt="star" src={star} />
           <h3>No more waiting to get a quote!</h3>
           <div></div>
           <p>

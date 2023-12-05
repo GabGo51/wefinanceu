@@ -55,7 +55,7 @@ const Profiles = () => {
               </p>
             </div>
 
-            <img src={account} />
+            <img alt="device" src={account} />
           </>
         )}
         {profile === "profile2" && (
@@ -71,7 +71,7 @@ const Profiles = () => {
               </p>
             </div>
 
-            <img src={account} />
+            <img alt="device" src={account} />
           </>
         )}
         {profile === "profile3" && (
@@ -87,7 +87,7 @@ const Profiles = () => {
               </p>
             </div>
 
-            <img src={account} />
+            <img alt="device" src={account} />
           </>
         )}
       </div>

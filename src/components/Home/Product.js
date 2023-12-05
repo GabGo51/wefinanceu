@@ -15,7 +15,7 @@ const Product = () => {
     navigate(page);
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      
     });
   };
 
@@ -37,14 +37,14 @@ const Product = () => {
           transition={{ duration: 1, delay: 0.5 }}
           viewport={{ once: true }}
         >
-          <img className="icon" src={form} />
+          <img alt="icon" className="icon" src={form} />
           <h3>Online Form</h3>
           <p>
             {" "}
             some text about how to go about the about form and what it do for ur
             business
           </p>
-          <img src={formulaire} />
+          <img alt="icon" src={formulaire} />
         </motion.div>
         <motion.div
           initial={{ y: 50, opacity: 0 }}
@@ -52,14 +52,14 @@ const Product = () => {
           transition={{ duration: 1, delay: 0.7 }}
           viewport={{ once: true }}
         >
-          <img className="icon" src={dollar} />
+          <img alt="icon" className="icon" src={dollar} />
           <h3>Price Range</h3>
           <p>
             {" "}
             some text about how to go about the about form and what it do for ur
             business
           </p>
-          <img src={fourchette} />
+          <img alt="icon" src={fourchette} />
         </motion.div>
         <motion.div
           initial={{ x: 50, opacity: 0 }}
@@ -67,13 +67,13 @@ const Product = () => {
           transition={{ duration: 1, delay: 0.9 }}
           viewport={{ once: true }}
         >
-          <img className="icon" src={monitor} />
+          <img alt="icon" className="icon" src={monitor} />
           <h3>Dashboard</h3>
           <p>
             some text about how to go about the about form and what it do for ur
             business
           </p>
-          <img src={tableau} />
+          <img alt="icon" src={tableau} />
         </motion.div>
       </div>
       <div className="button-wrapper">

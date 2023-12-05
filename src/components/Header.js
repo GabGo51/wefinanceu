@@ -37,7 +37,7 @@ const Header = () => {
             exit={{ left:"100vw", width:0 }}
             
           >
-            <img src={logo} onClick={() => handleNavigate("/")} className="logo"/>
+            <img alt="logo" src={logo} onClick={() => handleNavigate("/")} className="logo"/>
              
             
             <ul className="noselect">
@@ -75,7 +75,7 @@ const Header = () => {
               </div>
             </div>
             <i onClick={toggleMenu} className="fa-solid fa-x"></i>
-            <motion.img initial={{ left:"100vw", width:0}}
+            <motion.img alt="background" initial={{ left:"100vw", width:0}}
             animate={{ left:0, width:'100vw' }}
             transition={{ duration: 0.3, delay:0.2 }}
             exit={{ left:"100vw", width:0 }}  className="background" src={building}/>
@@ -88,7 +88,7 @@ const Header = () => {
             exit={{ height: 0, opacity: 0 }}
           >
             <div className="wrapper">
-              <img src={blueLogo} onClick={() => handleNavigate("/")}/>
+              <img alt="logo" src={blueLogo} onClick={() => handleNavigate("/")}/>
               <ul className="noselect">
                 <li onClick={() => handleNavigate("/about")}>About</li>
                 <li onClick={() => handleNavigate("/product")}>Product</li>

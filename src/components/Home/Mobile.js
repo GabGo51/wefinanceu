@@ -37,6 +37,7 @@ const Mobile = () => {
           </motion.button>
         </div>
         <motion.img
+          alt='phone'
           initial={{ x: 50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.7 }}

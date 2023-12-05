@@ -9,7 +9,7 @@ const Footer = () => {
     navigate(page);
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      
     });
   };
   const currentYear = new Date().getFullYear();
@@ -17,7 +17,7 @@ const Footer = () => {
     <Container>
       <div className="wrapper">
         <div>
-          <img className="noselect" onClick={() => handleNavigate("/")} src={whiteLogo}/>
+          <img alt="logo" className="noselect" onClick={() => handleNavigate("/")} src={whiteLogo}/>
         <ul className="contact-ul noselect">
           <li>450-712-7842</li>
           <li>WeFinanceU@gmail.com</li>

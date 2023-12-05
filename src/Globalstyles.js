@@ -119,7 +119,7 @@ export default createGlobalStyle`
   }
 
   .button-wrapper {
-    transition: 00ms;
+    transition: 300ms;
     display: flex;
     align-items: center;
     margin-top: 40px;
@@ -129,16 +129,13 @@ export default createGlobalStyle`
       
     }
     button {
-      transition: 00ms;
+      transition: 300ms;
       all: unset;
       cursor: pointer;
       font-weight: 600;
       margin-left: 10px;
 
-      &:hover{
-        transition: 00ms;
-        padding-right: 20px;
-      }
+      
     }
 
     i {

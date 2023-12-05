@@ -9,13 +9,13 @@ const Team = () => {
     navigate(page);
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      
     });
   };
   return (
     <Container>
       
-        <img src={team}/>
+        <img alt='team members' src={team}/>
         <div className='wrapper'>
           
             <h2>Meet</h2>

@@ -8,9 +8,9 @@ const Intro = () => {
     <Container>
       <motion.div
         className="color-box"
-        initial ={{height:0}}
+        initial={{ height: 0 }}
         //since % dont work have to use auto
-        animate={{ height: 'auto' }}
+        animate={{ height: "auto" }}
         transition={{ duration: 1 }}
       >
         <div className="wrapper">
@@ -40,6 +40,7 @@ const Intro = () => {
           </motion.div>
 
           <motion.img
+            alt="office"
             src={office1}
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -49,9 +50,13 @@ const Intro = () => {
       </motion.div>
 
       <div className="wrapper">
-        <motion.img initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.9 }} src={office2} />
+        <motion.img
+          alt="office"
+          initial={{ x: -50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.9 }}
+          src={office2}
+        />
         <div className="text-box">
           <h2>Our Vision</h2>
           <p>
@@ -82,7 +87,6 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 
   img {
     width: clamp(500px, 50%, 700px);
@@ -103,7 +107,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:var(--light-color);
+    background-color: var(--light-color);
   }
 
   .wrapper {

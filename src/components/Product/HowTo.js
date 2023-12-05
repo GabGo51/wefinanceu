@@ -1,11 +1,12 @@
 import React from "react";
+import { motion, spring } from "framer-motion";
 import styled from "styled-components";
 import account from "./img/account.PNG";
 const HowTo = () => {
   return (
     <Container>
       
-      <div className="video"></div>
+      <motion.div initial={{scaleY:0, opacity:0.5}} animate= {{scaleY:1, opacity:1}} transition={{duration:0.75, delay:0.2, type:spring}} className="video"></motion.div>
       <h2>How WeFinanceU works</h2>
       <div className="wrapper">
         <div className="text">
@@ -20,7 +21,7 @@ const HowTo = () => {
           </p>
         </div>
 
-        <img src={account} />
+        <img alt='device' src={account} />
       </div>
       <div className="wrapper reverse">
         <div className="text">
@@ -35,7 +36,7 @@ const HowTo = () => {
           </p>
         </div>
 
-        <img src={account} />
+        <img alt='device' src={account} />
       </div>
       <div className="wrapper">
         <div className="text">
@@ -50,7 +51,7 @@ const HowTo = () => {
           </p>
         </div>
 
-        <img src={account} />
+        <img alt='device' src={account} />
       </div>
       <div className="wrapper reverse">
         <div className="text">
@@ -65,7 +66,7 @@ const HowTo = () => {
           </p>
         </div>
 
-        <img src={account} />
+        <img alt='device' src={account} />
       </div>
     </Container>
   );
@@ -112,7 +113,7 @@ const Container = styled.div`
         justify-content: center;
         margin-right: 20px;
         font-weight: 600;
-        background-color: #95cfe8;
+        background-color: var(--light-color);
         width: 50px;
         height: 50px;
         border-radius: 50%;

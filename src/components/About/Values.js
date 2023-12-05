@@ -10,7 +10,7 @@ const Values = () => {
       <h2>What drives us</h2>
       <div className="wrapper">
         <div classname="value">
-          <img className="icon" src={client} />
+          <img alt="icon" className="icon" src={client} />
           <div></div>
           <h3>Client Oriented</h3>
           <p>
@@ -22,7 +22,7 @@ const Values = () => {
           </p>
         </div>
         <div classname="value">
-          <img className="icon" src={integrity} />
+          <img alt="icon" className="icon" src={integrity} />
           <div></div>
           <h3>Integrity</h3>
           <p>
@@ -34,7 +34,7 @@ const Values = () => {
           </p>
         </div>
         <div classname="value">
-          <img className="icon" src={agile} />
+          <img alt="icon" className="icon" src={agile} />
           <div></div>
           <h3>Agility</h3>
           <p>
@@ -46,7 +46,7 @@ const Values = () => {
           </p>
         </div>
         <div classname="value">
-          <img className="icon" src={collaborate} />
+          <img alt="icon" className="icon" src={collaborate} />
           <div></div>
           <h3>Collaboration</h3>
           <p>
