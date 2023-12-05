@@ -13,15 +13,14 @@ const Hero = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            A simple plateform, solution for all your problems
+            Commercial real estate financing, simplified
           </motion.h1>
           <motion.p
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            ahjfljabvlabvlablvabglbalgblagbl ajvfkahjf asfgahgfl b
-            agflahjbflablfablzn v.z,nm gzkjgjkhzgjkhz{" "}
+           WeFinanceU se consacre à démocratiser l'accès au financement en immobilier commercial pour tous, que vous soyez des débutants ou des experts dans le secteur.
           </motion.p>
           <motion.button
             initial={{ x: -50, opacity: 0 }}

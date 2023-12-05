@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-
 export default createGlobalStyle`
 
   :root{
@@ -22,16 +21,19 @@ export default createGlobalStyle`
   }
   
   
-
+  
   
   html, body {
     width: 100vw;
     overflow: hidden;
-    overflow-y: scroll;
-    
     box-sizing: content-box;
     font-family: 'Montserrat', sans-serif;
   }
+  html{
+    overflow-y: scroll;
+  }
+
+  
   
  
 

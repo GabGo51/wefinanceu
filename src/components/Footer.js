@@ -1,36 +1,105 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-import whiteLogo from '../img/whiteLogo.PNG'
+import whiteLogo from "../img/whiteLogo.PNG";
 const Footer = () => {
   const navigate = useNavigate();
   const handleNavigate = (page) => {
     navigate(page);
     window.scrollTo({
       top: 0,
-      
     });
   };
   const currentYear = new Date().getFullYear();
   return (
-    <Container>
+    <Container
+      initial={{ scaleY: 0.6, backgroundColor: "white" }}
+      whileInView={{ scaleY: 1, backgroundColor: "#015d85" }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       <div className="wrapper">
         <div>
-          <img alt="logo" className="noselect" onClick={() => handleNavigate("/")} src={whiteLogo}/>
-        <ul className="contact-ul noselect">
-          <li>450-712-7842</li>
-          <li>WeFinanceU@gmail.com</li>
-        </ul>
+          <motion.img
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            alt="logo"
+            className="noselect"
+            onClick={() => handleNavigate("/")}
+            src={whiteLogo}
+          />
+          <ul className="contact-ul noselect">
+            <motion.div
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              onClick={() => handleNavigate("/about")}
+            >
+              <li>450-712-7842</li>
+            </motion.div>
+            <motion.div
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              onClick={() => handleNavigate("/about")}
+            >
+              <li>WeFinanceU@gmail.com</li>
+            </motion.div>
+          </ul>
         </div>
-        
+
         <ul className="noselect">
-          <li onClick={() => handleNavigate("/about")}>About</li>
-          <li onClick={() => handleNavigate("/product")}>Product</li>
-          <li onClick={() => handleNavigate("/team")}>Team</li>
-          <li onClick={() => handleNavigate("/contact")}>Contact Us</li>
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            onClick={() => handleNavigate("/about")}
+          >
+            <li>About</li>
+          </motion.div>
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+            onClick={() => handleNavigate("/product")}
+          >
+            <li>Product</li>
+          </motion.div>
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
+            onClick={() => handleNavigate("/team")}
+          >
+            <li>Team</li>
+          </motion.div>
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            viewport={{ once: true }}
+            onClick={() => handleNavigate("/contact")}
+          >
+            <li>Contact Us</li>
+          </motion.div>
         </ul>
       </div>
+      <motion.div
+        className="line"
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      ></motion.div>
       <div className="powered">
         <p>© {currentYear} WeFinanceU</p> <>|</> <p>All rights reserved</p>
       </div>
@@ -38,7 +107,8 @@ const Footer = () => {
     </Container>
   );
 };
-const Container = styled.footer`
+const Container = styled(motion.footer)`
+  transform-origin: bottom;
   padding: 20px 0;
   background-color: #015d85;
   width: 100vw;
@@ -48,39 +118,40 @@ const Container = styled.footer`
   align-items: center;
   justify-content: center;
 
-  
-
   .wrapper {
-    img{
-      width:clamp(150px ,20% ,250px);
+    img {
+      width: clamp(150px, 20%, 250px);
       cursor: pointer;
       margin-bottom: 20px;
-
-      
     }
-    ul{
-      li{
+    ul {
+      li {
         cursor: pointer;
         transition: 300ms;
         text-align: end;
         margin: 20px 0;
         width: 100px;
-        &:hover{
+        &:hover {
           transform: translateX(5%);
         }
       }
     }
-    .contact-ul{
-      li{
+    .contact-ul {
+      li {
         text-align: start;
-        margin:  10px 0;
+        margin: 10px 0;
         transition: 500ms;
         width: 200px;
-
-        
       }
-      
     }
+  }
+
+  .line {
+    border-top: 1px solid #e9e9e9;
+    opacity: 0.6;
+    width: clamp(300px, 95%, 1400px);
+    margin-top: 15px;
+    transform-origin: left;
   }
 
   .powered {
@@ -89,7 +160,7 @@ const Container = styled.footer`
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    border-top: 1px solid #e9e9e9;
+
     width: clamp(300px, 95%, 1400px);
     font-size: 12px;
     p {
@@ -97,7 +168,7 @@ const Container = styled.footer`
     }
   }
 
-  button{
+  button {
     all: unset;
     opacity: 0.4;
     font-size: 12px;

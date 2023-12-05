@@ -76,11 +76,14 @@ const Container = styled.div`
     div{
       width: 45%;
       margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       div{
         width: 90px;
     height: 90px;
     margin-top: -75px;
-    margin-left: -16px;
+    
     background-color: var(--light-color);
     border-radius: 50%;
     margin-bottom: 20px;
