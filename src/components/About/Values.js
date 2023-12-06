@@ -4,12 +4,36 @@ import client from "./img/client.png";
 import integrity from "./img/integrity.png";
 import agile from "./img/agile.png";
 import collaborate from "./img/collaborate.png";
+import { motion } from "framer-motion";
+
 const Values = () => {
+  const initial = {
+    opacity: 0,
+    y: 100,
+  };
+
+  const animate = {
+    opacity: 1,
+    y: 0,
+  };
   return (
     <Container>
-      <h2>What drives us</h2>
+      <motion.h2
+        initial={initial}
+        whileInView={animate}
+        transition={{ duration: 1, delay: 0.2 }}
+        viewport={{ once: true }}
+      >
+        What drives us
+      </motion.h2>
       <div className="wrapper">
-        <div classname="value">
+        <motion.div
+          initial={initial}
+          whileInView={animate}
+          transition={{ duration: 1, delay: 0.3 }}
+          viewport={{ once: true }}
+          classname="value"
+        >
           <img alt="icon" className="icon" src={client} />
           <div></div>
           <h3>Client Oriented</h3>
@@ -20,8 +44,14 @@ const Values = () => {
             secteur du financement immobilier commercial accessible à tous,
             indépendamment de leur niveau d'expérience ou de leur origine.
           </p>
-        </div>
-        <div classname="value">
+        </motion.div>
+        <motion.div
+          initial={initial}
+          whileInView={animate}
+          transition={{ duration: 1, delay: 0.4 }}
+          viewport={{ once: true }}
+          classname="value"
+        >
           <img alt="icon" className="icon" src={integrity} />
           <div></div>
           <h3>Integrity</h3>
@@ -32,8 +62,14 @@ const Values = () => {
             informations fiables et faciles à comprendre pour aider nos clients
             à prendre des décisions éclairées.
           </p>
-        </div>
-        <div classname="value">
+        </motion.div>
+        <motion.div
+          initial={initial}
+          whileInView={animate}
+          transition={{ duration: 1, delay: 0.2 }}
+          viewport={{ once: true }}
+          classname="value"
+        >
           <img alt="icon" className="icon" src={agile} />
           <div></div>
           <h3>Agility</h3>
@@ -44,8 +80,14 @@ const Values = () => {
             WeFinanceU offre une alternative aux processus de financement
             archaïques établis depuis des décennies.
           </p>
-        </div>
-        <div classname="value">
+        </motion.div>
+        <motion.div
+          initial={initial}
+          whileInView={animate}
+          transition={{ duration: 1, delay: 0.3 }}
+          viewport={{ once: true }}
+          classname="value"
+        >
           <img alt="icon" className="icon" src={collaborate} />
           <div></div>
           <h3>Collaboration</h3>
@@ -57,7 +99,7 @@ const Values = () => {
             courtage, notre objectif est de créer des relations durables et
             bénéfiques pour toutes les parties.
           </p>
-        </div>
+        </motion.div>
       </div>
     </Container>
   );
@@ -69,44 +111,47 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
 
+  h2{
+    margin-bottom: 80px;
+  }
+
   .wrapper {
     flex-wrap: wrap;
     align-items: start;
     gap: 20px;
-    div{
+    div {
       width: 45%;
       margin-bottom: 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      div{
+      div {
         width: 90px;
-    height: 90px;
-    margin-top: -75px;
-    
-    background-color: var(--light-color);
-    border-radius: 50%;
-    margin-bottom: 20px;
+        height: 90px;
+        margin-top: -75px;
+
+        background-color: var(--light-color);
+        border-radius: 50%;
+        margin-bottom: 20px;
       }
     }
 
-    @media (max-width:900px){
+    @media (max-width: 900px) {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      div{
+      div {
         width: 100%;
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
-        div{
+        div {
           margin-left: -3px;
         }
       }
     }
   }
-  
 
   .icon {
     display: block;
@@ -114,7 +159,6 @@ const Container = styled.div`
     margin: 0;
     z-index: 90;
   }
-  
 `;
 
 export default Values;

@@ -34,6 +34,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   padding-top: 80px;
+  
 `;
 
 export default App;

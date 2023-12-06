@@ -114,7 +114,7 @@ const Container = styled.div`
       cursor: pointer;
 
       &.active {
-        background-color: #95cfe8;
+        background-color: var(--light-color);
       }
     }
   }

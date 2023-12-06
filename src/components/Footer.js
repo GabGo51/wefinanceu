@@ -52,6 +52,7 @@ const Footer = () => {
               <li>WeFinanceU@gmail.com</li>
             </motion.div>
           </ul>
+          <button className="login-button">Login</button>
         </div>
 
         <ul className="noselect">
@@ -103,7 +104,7 @@ const Footer = () => {
       <div className="powered">
         <p>© {currentYear} WeFinanceU</p> <>|</> <p>All rights reserved</p>
       </div>
-      <button onClick={() => handleNavigate("/poweredby")}>powered by</button>
+      <button className="powered-button" onClick={() => handleNavigate("/poweredby")}>powered by</button>
     </Container>
   );
 };
@@ -122,7 +123,7 @@ const Container = styled(motion.footer)`
     img {
       width: clamp(150px, 20%, 250px);
       cursor: pointer;
-      margin-bottom: 20px;
+      
     }
     ul {
       li {
@@ -143,6 +144,15 @@ const Container = styled(motion.footer)`
         transition: 500ms;
         width: 200px;
       }
+    }
+  }
+  .login-button{
+    border: 2px solid white;
+    color: white;
+
+    &:hover{
+      background-color: white;
+      color: var(--main-color);
     }
   }
 
@@ -168,7 +178,7 @@ const Container = styled(motion.footer)`
     }
   }
 
-  button {
+  .powered-button {
     all: unset;
     opacity: 0.4;
     font-size: 12px;

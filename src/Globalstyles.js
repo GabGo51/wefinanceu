@@ -28,8 +28,10 @@ export default createGlobalStyle`
     overflow: hidden;
     box-sizing: content-box;
     font-family: 'Montserrat', sans-serif;
+    
   }
   html{
+    
     overflow-y: scroll;
   }
 

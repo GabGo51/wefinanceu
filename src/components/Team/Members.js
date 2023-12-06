@@ -15,7 +15,7 @@ const Members = () => {
       >
         <div className="wrapper">
           <motion.img initial={{y:50, opacity:0}} whileInView={{y:0, opacity:1}} transition={{ duration: 0.5, delay: 0.5 }} src={alexis}/>
-          <motion.img initial={{y:50, opacity:0}} whileInView={{y:0, opacity:1}} transition={{ duration: 0.5, delay: 0.5 }} src={sabrina}/>
+          <motion.img initial={{y:50, opacity:0}} whileInView={{y:0, opacity:1}} transition={{ duration: 0.5, delay: 0.6 }} src={sabrina}/>
 
         </div>
       </motion.div>

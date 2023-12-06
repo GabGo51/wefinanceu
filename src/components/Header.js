@@ -75,10 +75,10 @@ const Header = () => {
               </div>
             </div>
             <i onClick={toggleMenu} className="fa-solid fa-x"></i>
-            <motion.img alt="background" initial={{ left:"100vw", width:0}}
+            <motion.div  initial={{ left:"100vw", width:0}}
             animate={{ left:0, width:'100vw' }}
             transition={{ duration: 0.3, delay:0.2 }}
-            exit={{ left:"100vw", width:0 }}  className="background" src={building}/>
+            exit={{ left:"100vw", width:0 }}  className="background"/>
           </PhoneHeader>
         ) : (
           <DesktopHeader
@@ -243,6 +243,7 @@ const PhoneHeader = styled(motion.header)`
     display: block;
     z-index: 100;
     width: 200px;
+    margin-top: -200px;
   }
 
   ul {
@@ -255,7 +256,7 @@ const PhoneHeader = styled(motion.header)`
       margin: 20px 0;
       font-weight: 600;
       cursor: pointer;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      
     }
   }
 
@@ -322,6 +323,7 @@ const PhoneHeader = styled(motion.header)`
     height: 100svh;
     object-fit: cover;
     z-index: 99;
+    background-color: var(--main-color);
   }
 `;
 export default Header;

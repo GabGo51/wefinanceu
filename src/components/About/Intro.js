@@ -8,16 +8,16 @@ const Intro = () => {
     <Container>
       <motion.div
         className="color-box"
-        initial={{ height: 100 }}
+        initial={{ height: 250, backgroundColor:'white' }}
         //since % dont work have to use auto
-        animate={{ height: "auto" }}
+        animate={{ height: "auto", backgroundColor:'var(--light-color)' }}
         transition={{ duration: 0.7 }}
       >
         <div className="wrapper">
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.7 }}
+            transition={{ duration: 1, delay: 0.5 }}
           >
             <h2>Our Mission</h2>
             <p>
@@ -44,7 +44,7 @@ const Intro = () => {
             src={office1}
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.9 }}
+            transition={{ duration: 1, delay: 0.6 }}
           />
         </div>
       </motion.div>
@@ -54,10 +54,12 @@ const Intro = () => {
           alt="office"
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.9 }}
+          transition={{ duration: 1, delay: 0.8 }}
           src={office2}
         />
-        <div className="text-box">
+        <motion.div initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.9 }} viewport={{once:true}} className="text-box">
           <h2>Our Vision</h2>
           <p>
             WeFinanceU se consacre à démocratiser l'accès au financement
@@ -76,7 +78,7 @@ const Intro = () => {
             rapidement les informations clés nécessaires pour des décisions
             financières éclairées.
           </p>
-        </div>
+        </motion.div>
       </div>
     </Container>
   );
