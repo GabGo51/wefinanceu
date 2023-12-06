@@ -1,24 +1,39 @@
-import React from 'react'
-import styled from 'styled-components'
-import Form from './Form'
-import Text from './Text'
+import React from "react";
+import styled from "styled-components";
+import Form from "./Form";
+import Text from "./Text";
 const Contact = () => {
   return (
-    <Container><div className='wrapper'><Text/><Form/></div></Container>
-  )
-}
+    <Container>
+      <div className="blue">
+        <div className="wrapper">
+          <Text />
+          <Form />
+        </div>
+      </div>
+    </Container>
+  );
+};
 const Container = styled.div`
-padding-top: 50px;
-display: flex;
-align-items: center;
-justify-content: center;
-width: 100%;
+  
+  
+  width: 100%;
 
-.wrapper{
-  @media (max-width:950px){
-    flex-direction: column;
+  .blue{
+    padding-bottom: 100px;
+    padding-top: 50px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+    width: 100%;
+    background-color: var(--light-color);
   }
-}
-`
 
-export default Contact
+  .wrapper {
+    @media (max-width: 950px) {
+      flex-direction: column;
+    }
+  }
+`;
+
+export default Contact;

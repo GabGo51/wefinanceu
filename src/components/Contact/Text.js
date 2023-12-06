@@ -13,15 +13,15 @@ const Text = () => {
         possible.
       </p>
       <div>
-      <i class="fa-solid fa-check"></i>
+      <i className="fa-solid fa-check"></i>
       <p> Get advice from a sales expert who will understand your business needs</p>
       </div>
       <div>
-      <i class="fa-solid fa-check"></i>
+      <i className="fa-solid fa-check"></i>
       <p> Understand how to best use WeFinanceU</p>
       </div>
       <div>
-      <i class="fa-solid fa-check"></i>
+      <i className="fa-solid fa-check"></i>
       <p> Learn more about how to scale your business</p>
       </div>
     </Container>

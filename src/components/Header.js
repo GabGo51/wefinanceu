@@ -133,6 +133,7 @@ const Header = () => {
 };
 const Container = styled.div`
 width: 100%;
+
 .lang-button{
   display: flex;
   align-items: center;
@@ -150,6 +151,7 @@ const DesktopHeader = styled(motion.header)`
   width: 100vw;
   padding: 20px 0px;
   z-index: 100;
+  box-shadow: rgba(100, 100, 111, 0.1) 0px 2px 29px 0px;
 
   img{
     width:clamp(150px ,20% ,200px);

@@ -104,7 +104,12 @@ const Footer = () => {
       <div className="powered">
         <p>© {currentYear} WeFinanceU</p> <>|</> <p>All rights reserved</p>
       </div>
-      <button className="powered-button" onClick={() => handleNavigate("/poweredby")}>powered by</button>
+      <button
+        className="powered-button"
+        onClick={() => handleNavigate("/poweredby")}
+      >
+        powered by
+      </button>
     </Container>
   );
 };
@@ -123,7 +128,6 @@ const Container = styled(motion.footer)`
     img {
       width: clamp(150px, 20%, 250px);
       cursor: pointer;
-      
     }
     ul {
       li {
@@ -146,11 +150,11 @@ const Container = styled(motion.footer)`
       }
     }
   }
-  .login-button{
+  .login-button {
     border: 2px solid white;
     color: white;
 
-    &:hover{
+    &:hover {
       background-color: white;
       color: var(--main-color);
     }
