@@ -55,8 +55,10 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
-  margin-top: 100px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  margin-top: 50px;
+  background-color: var(--light-color);
 
   .wrapper {
     .text-box {

@@ -8,10 +8,10 @@ const Intro = () => {
     <Container>
       <motion.div
         className="color-box"
-        initial={{ height: 0 }}
+        initial={{ height: 100 }}
         //since % dont work have to use auto
         animate={{ height: "auto" }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.7 }}
       >
         <div className="wrapper">
           <motion.div

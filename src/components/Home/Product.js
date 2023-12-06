@@ -27,7 +27,7 @@ const Product = () => {
         transition={{ duration: 1, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Simplify the process and save time on your projects
+        An easy process that will save the time you need 
       </motion.h2>
 
       <div className="wrapper">

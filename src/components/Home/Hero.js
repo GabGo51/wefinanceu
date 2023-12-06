@@ -20,7 +20,9 @@ const Hero = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-           WeFinanceU se consacre à démocratiser l'accès au financement en immobilier commercial pour tous, que vous soyez des débutants ou des experts dans le secteur.
+            WeFinanceU se consacre à démocratiser l'accès au financement en
+            immobilier commercial pour tous, que vous soyez des débutants ou des
+            experts dans le secteur.
           </motion.p>
           <motion.button
             initial={{ x: -50, opacity: 0 }}
@@ -33,10 +35,10 @@ const Hero = () => {
         </div>
 
         <motion.img
-         alt="device"
+          alt="device"
           initial={{ x: 50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
+          transition={{ duration: 1, delay: 0.6 }}
           src={screen}
         />
       </div>

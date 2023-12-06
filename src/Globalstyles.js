@@ -97,7 +97,6 @@ export default createGlobalStyle`
     font-weight: 600;
     transition: 300ms;
     background-color: transparent;
-    
     height: 35px;
     width: 120px;
     border-radius: 10px;
@@ -124,6 +123,7 @@ export default createGlobalStyle`
     transition: 300ms;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-top: 40px;
     font-size: clamp(16px, 500%, 20px);
     h4 {
