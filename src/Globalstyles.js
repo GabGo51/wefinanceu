@@ -4,7 +4,8 @@ export default createGlobalStyle`
 
   :root{
     --main:#002332;
-    --yellow:#ffb22b;
+    --yellow:rgb(255, 178, 43);
+    --yellow-light:rgb(255, 178, 43, 0.5);
   }
 
   
@@ -13,15 +14,10 @@ export default createGlobalStyle`
   *:before,
   *:after {
     box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    
-    
-    
+    -webkit-font-smoothing: antialiased; 
   }
   
-  
-  
-  
+ 
   html, body {
     width: 100vw;
     overflow: hidden;
@@ -34,12 +30,6 @@ export default createGlobalStyle`
     overflow-y: scroll;
   }
 
-  
-  
- 
-
-
-  
 
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -77,8 +67,9 @@ export default createGlobalStyle`
     content: none;
   }
 
-  h1 , h2 , h3 , h4 {
+  h1 , h2 , h3  {
     font-family: 'Inter', sans-serif;
+    color: var(--main);
   }
 
   h2{
@@ -95,6 +86,35 @@ export default createGlobalStyle`
     justify-content: space-between;
     width: clamp(300px, 80%, 1200px);
     align-items: center;
+  }
+
+  .try-button{
+    transition: 500ms;
+    width: clamp(100px, 20%, 165px);
+    
+    height: clamp(20px, 5vw, 60px);
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    
+    border-radius: 8px;
+    background: var(--yellow, #FFB22B);
+    box-shadow: 0px 18px 40px 0px rgba(242, 108, 67, 0.22);
+    color: #FFF;
+    border: 2px solid var(--yellow);
+    text-align: center;
+    font-family: Inter;
+    font-size: clamp(14px, 1.5vw, 20px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+
+    &:hover{
+      background-color:white;
+      color:var(--yellow);
+      
+    }
   }
 
   .login-button{
@@ -117,10 +137,8 @@ export default createGlobalStyle`
     }
 
     &:hover{
-      
       background-color: #015d85;
       color:white;
-      
     }
   }
 
@@ -131,6 +149,7 @@ export default createGlobalStyle`
     justify-content: center;
     margin-top: 40px;
     font-size: clamp(16px, 500%, 20px);
+    
     h4 {
       font-weight: 400;
       

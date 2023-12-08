@@ -322,7 +322,7 @@ const PhoneHeader = styled(motion.header)`
     height: 100svh;
     object-fit: cover;
     z-index: 99;
-    background-color: var(--main-color);
+    background-color: var(--main);
   }
 `;
 export default Header;

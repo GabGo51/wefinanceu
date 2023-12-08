@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-import whiteLogo from "../img/whiteLogo.PNG";
+import logo from "../img/logopng.png";
 const Footer = () => {
   const navigate = useNavigate();
   const handleNavigate = (page) => {
@@ -30,7 +30,7 @@ const Footer = () => {
             alt="logo"
             className="noselect"
             onClick={() => handleNavigate("/")}
-            src={whiteLogo}
+            src={logo}
           />
           <ul className="contact-ul noselect">
             <motion.div

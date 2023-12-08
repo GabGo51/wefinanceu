@@ -29,7 +29,7 @@ const Hero = () => {
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="login-button"
+            className="try-button"
           >
             Try it free
           </motion.button>
@@ -105,7 +105,7 @@ const Container = styled.div`
       position: absolute;
       right: -50px;
       bottom: 4px;
-      @media (max-width:550px){
+      @media (max-width:800px){
         display: none;
       }
     }

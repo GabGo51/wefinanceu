@@ -113,7 +113,7 @@ const Container = styled.div`
         justify-content: center;
         margin-right: 20px;
         font-weight: 600;
-        background-color: var(--light-color);
+        background-color: var(--yellow-light);
         width: 50px;
         height: 50px;
         border-radius: 50%;

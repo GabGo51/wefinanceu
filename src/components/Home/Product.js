@@ -38,7 +38,7 @@ const Product = () => {
           viewport={{ once: true }}
         >
           <img alt="icon" className="icon" src={form} />
-          <h3>Online Form</h3>
+          <h3>Quick and easy personalised analysis</h3>
           <p>
             {" "}
             some text about how to go about the about form and what it do for ur
@@ -53,7 +53,7 @@ const Product = () => {
           viewport={{ once: true }}
         >
           <img alt="icon" className="icon" src={dollar} />
-          <h3>Price Range</h3>
+          <h3>Accurate financing amount</h3>
           <p>
             {" "}
             some text about how to go about the about form and what it do for ur
@@ -68,7 +68,7 @@ const Product = () => {
           viewport={{ once: true }}
         >
           <img alt="icon" className="icon" src={monitor} />
-          <h3>Dashboard</h3>
+          <h3>Revision on a comprehensive dashbord </h3>
           <p>
             some text about how to go about the about form and what it do for ur
             business

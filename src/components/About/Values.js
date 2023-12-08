@@ -129,8 +129,8 @@ const Container = styled.div`
         width: 90px;
         height: 90px;
         margin-top: -75px;
-
-        background-color: var(--light-color);
+        margin-left: -2px;
+        background-color: var(--yellow-light);
         border-radius: 50%;
         margin-bottom: 20px;
       }
