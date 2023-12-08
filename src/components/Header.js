@@ -4,7 +4,6 @@ import { SettingContext } from "../context/SettingContext";
 import { useContext } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import building from "../img/building.webp";
 import blueLogo from "../img/blueLogo.PNG";
 import logo from "../img/logopng.png";
 const Header = () => {
@@ -45,7 +44,6 @@ const Header = () => {
             <ul className="noselect">
               <li onClick={() => handleNavigate("/product")}>Our Solution</li>
               <li onClick={() => handleNavigate("/about")}>About Us</li>
-
               <li onClick={() => handleNavigate("/contact")}>Contact</li>
             </ul>
             <div className="button-box">
@@ -202,6 +200,7 @@ const DesktopHeader = styled(motion.header)`
     height: 35px;
     border: none;
     background-color: transparent;
+    color: var(--main);
     cursor: pointer;
     color: black;
     &:hover {

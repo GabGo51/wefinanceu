@@ -84,7 +84,7 @@ export default createGlobalStyle`
   .wrapper {
     display: flex;
     justify-content: space-between;
-    width: clamp(300px, 80%, 1200px);
+    width: clamp(300px, 80%, 1400px);
     align-items: center;
   }
 

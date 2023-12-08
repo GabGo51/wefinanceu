@@ -1,11 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import formulaire from "./img/formulaire.PNG";
-import fourchette from "./img/fourchette.PNG";
-import tableau from "./img/tableau.PNG";
-import form from "./img/contact.png";
-import dollar from "./img/dollar.png";
-import monitor from "./img/monitor.png";
+import form from './img/form.png'
+import chart from './img/chart.png'
+import dashboard from './img/dashboard.png'
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
@@ -27,7 +24,7 @@ const Product = () => {
         transition={{ duration: 1, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        An easy process that will save the time you need 
+        How WeFinanceU Works 
       </motion.h2>
 
       <div className="wrapper">
@@ -38,13 +35,14 @@ const Product = () => {
           viewport={{ once: true }}
         >
           <img alt="icon" className="icon" src={form} />
-          <h3>Quick and easy personalised analysis</h3>
+          <h3>Take a short survey</h3>
           <p>
-            {" "}
-            some text about how to go about the about form and what it do for ur
-            business
+          En répondant à un questionnaire de 18 à 30 questions, l'utilisateur reçoit en moins de 10 minutes
+une fourchette précise du financement possible pour une propriété commerciale, ajustée aux taux d'intérêt du marché et
+aux programmes de financement en vigueur. 
+
           </p>
-          <img alt="icon" src={formulaire} />
+          
         </motion.div>
         <motion.div
           initial={{ y: 50, opacity: 0 }}
@@ -52,14 +50,14 @@ const Product = () => {
           transition={{ duration: 1, delay: 0.7 }}
           viewport={{ once: true }}
         >
-          <img alt="icon" className="icon" src={dollar} />
-          <h3>Accurate financing amount</h3>
+          <img alt="icon" className="icon" src={chart} />
+          <h3>Get an accurate finance range</h3>
           <p>
             {" "}
             some text about how to go about the about form and what it do for ur
             business
           </p>
-          <img alt="icon" src={fourchette} />
+          
         </motion.div>
         <motion.div
           initial={{ x: 50, opacity: 0 }}
@@ -67,13 +65,13 @@ const Product = () => {
           transition={{ duration: 1, delay: 0.9 }}
           viewport={{ once: true }}
         >
-          <img alt="icon" className="icon" src={monitor} />
-          <h3>Revision on a comprehensive dashbord </h3>
+          <img alt="icon" className="icon" src={dashboard} />
+          <h3>Review your submissions on dashboard </h3>
           <p>
             some text about how to go about the about form and what it do for ur
             business
           </p>
-          <img alt="icon" src={tableau} />
+          
         </motion.div>
       </div>
       <div className="button-wrapper">
@@ -98,6 +96,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 100px;
+  
   h2 {
     text-align: center;
     margin: 50px 50px;

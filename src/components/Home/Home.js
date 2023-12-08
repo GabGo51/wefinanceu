@@ -3,9 +3,10 @@ import styled from "styled-components";
 import Hero from "./Hero";
 import Stats from "./Stats";
 import Product from "./Product";
-import Team from "./Team";
 import Review from "./Review";
 import Mobile from "./Mobile";
+import Benefits from "./Benefits";
+import Who from "./Who";
 
 const Home = () => {
   return (
@@ -13,7 +14,8 @@ const Home = () => {
       <Hero/>
       <Stats/>
       <Product/>
-      <Team/>
+      <Benefits/>
+      <Who/>
       <Review/>
       <Mobile/>
     </Container>
