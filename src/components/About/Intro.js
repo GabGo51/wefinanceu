@@ -1,66 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import office1 from "./img/office1.PNG";
-import office2 from "./img/office2.PNG";
+import team from "./img/team1.PNG";
+
 const Intro = () => {
   return (
     <Container>
-      <motion.div
-        className="color-box"
-        initial={{ height: 250, backgroundColor:'white' }}
-        //since % dont work have to use auto
-        animate={{ height: "auto", backgroundColor:'var(--light-color)' }}
-        transition={{ duration: 0.7 }}
-      >
-        <div className="wrapper">
-          <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-          >
-            <h2>Our Mission</h2>
-            <p>
-              WeFinanceU se consacre à démocratiser l'accès au financement
-              immobilier commercial pour tous, que cela soit des débutants ou
-              des experts dans le secteur.
-            </p>
-            <p>
-              Nous éliminons les obstacles habituels, tels que les échanges de
-              courriels interminables, les appels répétés, les réunions
-              téléphoniques ou en personne et l'attente de documents, grâce à
-              notre plateforme intuitive d'analyse de prêts commerciaux.{" "}
-            </p>
-            <p>
-              {" "}
-              De cette manière, chaque utilisateur est habilité à obtenir
-              rapidement les informations clés nécessaires pour des décisions
-              financières éclairées.
-            </p>
-          </motion.div>
-
-          <motion.img
-            alt="office"
-            src={office1}
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.6 }}
-          />
-        </div>
-      </motion.div>
-
       <div className="wrapper">
-        <motion.img
-          alt="office"
+        <motion.div
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          src={office2}
-        />
-        <motion.div initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.9 }} viewport={{once:true}} className="text-box">
-          <h2>Our Vision</h2>
+          transition={{ duration: 1, delay: 0.2 }}
+        >
+          <h2>Our Team</h2>
           <p>
             WeFinanceU se consacre à démocratiser l'accès au financement
             immobilier commercial pour tous, que cela soit des débutants ou des
@@ -79,6 +31,14 @@ const Intro = () => {
             financières éclairées.
           </p>
         </motion.div>
+
+        <motion.img
+          alt="office"
+          src={team}
+          initial={{ x: 50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.4 }}
+        />
       </div>
     </Container>
   );

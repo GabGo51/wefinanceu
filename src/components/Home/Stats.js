@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import vector from './img/Vector.png'
+
+
 const Stats = () => {
   const initial = {
     opacity: 0,
@@ -30,14 +33,6 @@ const Stats = () => {
       animate={{ scaleY: 1 }}
       transition={{ duration: 1 }}
     >
-      <motion.h2
-        initial={initial}
-        whileInView={animate}
-        transition={{ duration: 1, delay: 0.4 }}
-        viewport={{ once: true }}
-      >
-        WeFinanceU in numbers
-      </motion.h2>
       <div className="wrapper">
         <motion.div
           initial={initial}
@@ -103,21 +98,38 @@ const Container = styled(motion.div)`
   justify-content: center;
   padding-bottom: 60px;
   padding-top: 10px;
-  background-color: var(--grey-color);
+  margin-top: -25px;
+  background-color: var(--main);
+  color: white;
+  padding-top: 50px;
   .wrapper {
+    
     div {
       margin: 40px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+
+
+      
     }
     h3 {
-      color: #015d85;
+      font-size:clamp(22px, 3vw, 42px);
+      margin: 10px 0px;
+    }
+
+    p{
+      color: var(--yellow);
+    }
+
+    h4{
+      
     }
   }
 
   @media (max-width: 950px) {
-    h2 {
-      text-align: center;
-      margin: 20px 0;
-    }
+    
     .wrapper {
       flex-wrap: wrap;
       div {

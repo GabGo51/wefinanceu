@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import screen from "./img/screen.PNG";
+import desktop from "./img/desktop.png";
 import { motion } from "framer-motion";
+import mobile from "./img/mobile.png";
 
 const Hero = () => {
   return (
@@ -33,14 +34,26 @@ const Hero = () => {
             Try it free
           </motion.button>
         </div>
-
+        <div className="image-box">
+          <motion.img
+          alt="device"
+          initial={{ scaleY: 0.5,opacity: 0 }}
+      animate={{ scaleY: 1, opacity: 1 }}
+      
+          transition={{ duration: 1, delay: 0.5 }}
+          src={desktop}
+        />
         <motion.img
           alt="device"
-          initial={{ x: 50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          src={screen}
+          initial={{ scaleY: 0.5, opacity: 0 }}
+      animate={{ scaleY: 1 ,opacity: 1 }}
+      
+          transition={{ duration: 1, delay: 0.7 }}
+          src={mobile}
+          className="mobile"
         />
+        </div>
+        
       </div>
     </Container>
   );
@@ -51,13 +64,17 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  padding-bottom: 30px;
+  
 
   .wrapper {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     .text-box {
       display: flex;
       flex-direction: column;
-      margin-right: 50px;
+      align-items: center;
 
       h1 {
         margin-bottom: 40px;
@@ -65,6 +82,7 @@ const Container = styled.div`
       }
 
       p {
+        max-width: 600px;
       }
 
       button {
@@ -73,21 +91,26 @@ const Container = styled.div`
       }
     }
 
-    img {
-      border-radius: 30px;
-      width: clamp(300px, 50%, 550px);
+    .image-box{
+      position: relative;
     }
 
-    @media (max-width: 950px) {
-      flex-direction: column;
-      .text-box {
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
-        max-width: 500px;
+    img {
+      width: 100%;
+      transform-origin: bottom;
+    }
+
+    .mobile{
+      width: clamp(100px, 25%, 350px);
+      position: absolute;
+      right: -50px;
+      bottom: 4px;
+      @media (max-width:550px){
+        display: none;
       }
     }
+
+    
   }
 `;
 

@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <Container
       initial={{ scaleY: 0.6, backgroundColor: "white" }}
-      whileInView={{ scaleY: 1, backgroundColor: "#015d85" }}
+      whileInView={{ scaleY: 1, backgroundColor: "var(--main)" }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
     >
@@ -116,7 +116,6 @@ const Footer = () => {
 const Container = styled(motion.footer)`
   transform-origin: bottom;
   padding: 20px 0;
-  background-color: #015d85;
   width: 100vw;
   color: white;
   display: flex;
@@ -156,7 +155,7 @@ const Container = styled(motion.footer)`
 
     &:hover {
       background-color: white;
-      color: var(--main-color);
+      color: var(--main);
     }
   }
 

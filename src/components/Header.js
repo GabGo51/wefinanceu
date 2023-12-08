@@ -4,9 +4,9 @@ import { SettingContext } from "../context/SettingContext";
 import { useContext } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import building from '../img/building.webp'
-import blueLogo from '../img/blueLogo.PNG'
-import logo from '../img/logopng.png'
+import building from "../img/building.webp";
+import blueLogo from "../img/blueLogo.PNG";
+import logo from "../img/logopng.png";
 const Header = () => {
   const { open, lang, setLang, setOpen } = useContext(SettingContext);
 
@@ -20,7 +20,6 @@ const Header = () => {
     setOpen(false);
     window.scrollTo({
       top: 0,
-      
     });
   };
 
@@ -31,25 +30,27 @@ const Header = () => {
         {open ? (
           <PhoneHeader
             key="phone-header" //must have for exit
-            initial={{ left:"100vw", width:0}}
-            animate={{ left:0, width:'100vw' }}
-            transition={{ duration: 0.3, delay:0.2 }}
-            exit={{ left:"100vw", width:0 }}
-            
+            initial={{ left: "100vw", width: 0 }}
+            animate={{ left: 0, width: "100vw" }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+            exit={{ left: "100vw", width: 0 }}
           >
-            <img alt="logo" src={logo} onClick={() => handleNavigate("/")} className="logo"/>
-             
-            
+            <img
+              alt="logo"
+              src={logo}
+              onClick={() => handleNavigate("/")}
+              className="logo"
+            />
+
             <ul className="noselect">
-              <li onClick={() => handleNavigate("/about")}>About</li>
-              <li onClick={() => handleNavigate("/product")}>Product</li>
-              <li onClick={() => handleNavigate("/team")}>Team</li>
-              <li onClick={() => handleNavigate("/contact")}>Contact Us</li>
+              <li onClick={() => handleNavigate("/product")}>Our Solution</li>
+              <li onClick={() => handleNavigate("/about")}>About Us</li>
+
+              <li onClick={() => handleNavigate("/contact")}>Contact</li>
             </ul>
             <div className="button-box">
               <button className="login-button">
                 <p>Login</p>
-                
               </button>
 
               <div className="lang-button">
@@ -75,10 +76,13 @@ const Header = () => {
               </div>
             </div>
             <i onClick={toggleMenu} className="fa-solid fa-x"></i>
-            <motion.div  initial={{ left:"100vw", width:0}}
-            animate={{ left:0, width:'100vw' }}
-            transition={{ duration: 0.3, delay:0.2 }}
-            exit={{ left:"100vw", width:0 }}  className="background"/>
+            <motion.div
+              initial={{ left: "100vw", width: 0 }}
+              animate={{ left: 0, width: "100vw" }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+              exit={{ left: "100vw", width: 0 }}
+              className="background"
+            />
           </PhoneHeader>
         ) : (
           <DesktopHeader
@@ -88,17 +92,20 @@ const Header = () => {
             exit={{ height: 0, opacity: 0 }}
           >
             <div className="wrapper">
-              <img alt="logo" src={blueLogo} onClick={() => handleNavigate("/")}/>
+              <img
+                alt="logo"
+                src={blueLogo}
+                onClick={() => handleNavigate("/")}
+              />
               <ul className="noselect">
-                <li onClick={() => handleNavigate("/about")}>About</li>
-                <li onClick={() => handleNavigate("/product")}>Product</li>
-                <li onClick={() => handleNavigate("/team")}>Team</li>
-                <li onClick={() => handleNavigate("/contact")}>Contact Us</li>
+                <li onClick={() => handleNavigate("/product")}>Our Solution</li>
+                <li onClick={() => handleNavigate("/about")}>About Us</li>
+
+                <li onClick={() => handleNavigate("/contact")}>Contact</li>
               </ul>
               <div className="button-box">
                 <button className="login-button">
                   <p>Login</p>
-                  
                 </button>
 
                 <div className="lang-button">
@@ -132,14 +139,13 @@ const Header = () => {
   );
 };
 const Container = styled.div`
-width: 100%;
+  width: 100%;
 
-.lang-button{
-  display: flex;
-  align-items: center;
-}
-
-`
+  .lang-button {
+    display: flex;
+    align-items: center;
+  }
+`;
 const DesktopHeader = styled(motion.header)`
   position: fixed;
   top: 0;
@@ -153,10 +159,10 @@ const DesktopHeader = styled(motion.header)`
   z-index: 100;
   box-shadow: rgba(100, 100, 111, 0.1) 0px 2px 29px 0px;
 
-  img{
-    width:clamp(150px ,20% ,200px);
-      cursor: pointer;
-      margin-left: -10px;
+  img {
+    width: clamp(150px, 20%, 200px);
+    cursor: pointer;
+    margin-left: -10px;
   }
 
   .wrapper {
@@ -170,6 +176,7 @@ const DesktopHeader = styled(motion.header)`
       padding: 10px 5px;
       margin: 5px 0;
       margin-right: 20px;
+      color: var(--main);
       cursor: pointer;
       border-bottom: 1px solid white;
       &:hover {
@@ -188,9 +195,8 @@ const DesktopHeader = styled(motion.header)`
     cursor: pointer;
     scale: 1.5;
   }
-  
 
-  .lang{
+  .lang {
     transition: 300ms;
     width: 40px;
     height: 35px;
@@ -198,14 +204,10 @@ const DesktopHeader = styled(motion.header)`
     background-color: transparent;
     cursor: pointer;
     color: black;
-    &:hover{
+    &:hover {
       scale: 1.1;
-      
     }
-
   }
-
-  
 
   .menu {
     width: 100vw;
@@ -241,7 +243,7 @@ const PhoneHeader = styled(motion.header)`
   justify-content: center;
   align-items: center;
 
-  img{
+  img {
     display: block;
     z-index: 100;
     width: 200px;
@@ -258,7 +260,6 @@ const PhoneHeader = styled(motion.header)`
       margin: 20px 0;
       font-weight: 600;
       cursor: pointer;
-      
     }
   }
 
@@ -283,10 +284,9 @@ const PhoneHeader = styled(motion.header)`
     left: 10vw;
     display: flex;
     align-items: center;
-    
   }
 
-  .lang{
+  .lang {
     transition: 300ms;
     width: 35px;
     height: 35px;
@@ -295,15 +295,12 @@ const PhoneHeader = styled(motion.header)`
     cursor: pointer;
     color: white;
     font-weight: 600;
-    &:hover{
+    &:hover {
       scale: 1.1;
     }
-    
   }
 
-  
-
-  .button-box{
+  .button-box {
     z-index: 100;
   }
 
@@ -315,7 +312,7 @@ const PhoneHeader = styled(motion.header)`
     border: 2px solid white;
   }
 
-  .background{
+  .background {
     position: fixed;
     top: 0;
     bottom: 0;

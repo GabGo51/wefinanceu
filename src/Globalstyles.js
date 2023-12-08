@@ -3,9 +3,8 @@ import { createGlobalStyle } from "styled-components";
 export default createGlobalStyle`
 
   :root{
-    --main-color:#015d85;
-    --light-color: #def3ff;
-    --grey-color:#f7f7fe;
+    --main:#002332;
+    --yellow:#ffb22b;
   }
 
   
@@ -76,6 +75,10 @@ export default createGlobalStyle`
   q:before, q:after {
     content: '';
     content: none;
+  }
+
+  h1 , h2 , h3 , h4 {
+    font-family: 'Inter', sans-serif;
   }
 
   h2{
