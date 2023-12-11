@@ -7,6 +7,7 @@ import Review from "./Review";
 import Mobile from "./Mobile";
 import Benefits from "./Benefits";
 import Who from "./Who";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
