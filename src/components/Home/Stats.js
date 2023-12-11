@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import vector from "./img/vector.png";
+
 
 const Stats = () => {
   const initial = {
@@ -86,8 +86,8 @@ const Stats = () => {
         </motion.button>
         <i class="fa-solid fa-arrow-right"></i>
       </motion.div>
-      <img className="vector" src={vector}/>
-      <img className="vector other" src={vector}/>
+      {/* <img className="vector" src={vector}/>
+      <img className="vector other" src={vector}/> */}
     </Container>
   );
 };
