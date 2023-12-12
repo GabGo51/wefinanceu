@@ -47,6 +47,9 @@ const Container = styled.div`
   justify-content: center;
   padding-top: 50px;
   text-align: center;
+  p{
+    width: 90%;
+  }
 
   .quote {
     max-width: 1100px;

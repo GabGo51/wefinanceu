@@ -52,10 +52,27 @@ const Footer = () => {
               <li>WeFinanceU@gmail.com</li>
             </motion.div>
           </ul>
-          <button className="login-button">Login</button>
+          <motion.button
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="try-button"
+          >
+            Try it free
+          </motion.button>
+          
         </div>
 
         <ul className="noselect">
+        <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+            onClick={() => handleNavigate("/product")}
+          >
+            <li>Our Solution</li>
+          </motion.div>
           <motion.div
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -63,26 +80,10 @@ const Footer = () => {
             viewport={{ once: true }}
             onClick={() => handleNavigate("/about")}
           >
-            <li>About</li>
+            <li>About Us</li>
           </motion.div>
-          <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-            onClick={() => handleNavigate("/product")}
-          >
-            <li>Product</li>
-          </motion.div>
-          <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true }}
-            onClick={() => handleNavigate("/team")}
-          >
-            <li>Team</li>
-          </motion.div>
+          
+          
           <motion.div
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -91,6 +92,15 @@ const Footer = () => {
             onClick={() => handleNavigate("/contact")}
           >
             <li>Contact Us</li>
+          </motion.div>
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            viewport={{ once: true }}
+            onClick={() => handleNavigate("/contact")}
+          >
+            <li>Login</li>
           </motion.div>
         </ul>
       </div>
@@ -106,7 +116,7 @@ const Footer = () => {
       </div>
       <button
         className="powered-button"
-        onClick={() => handleNavigate("/poweredby")}
+        
       >
         powered by
       </button>
@@ -134,7 +144,7 @@ const Container = styled(motion.footer)`
         transition: 300ms;
         text-align: end;
         margin: 20px 0;
-        width: 100px;
+        width: 120px;
         &:hover {
           transform: translateX(5%);
         }

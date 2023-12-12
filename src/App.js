@@ -6,7 +6,7 @@ import Product from "./components/Product/Product";
 import Contact from "./components/Contact/Contact";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
-import PoweredBy from "./components/PoweredBy";
+
 
 function App() {
   return (
@@ -16,10 +16,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/product" element={<Product />} />
-          
+          <Route path="/product" element={<Product />} /> 
           <Route path="/contact" element={<Contact />} />
-          <Route path="/poweredby" element={<PoweredBy />} />
         </Routes>
         <Footer />
       </Container>

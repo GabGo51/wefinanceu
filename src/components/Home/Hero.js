@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import desktop from "./img/desktop.png";
 import { motion } from "framer-motion";
-import mobile from "./img/mobile.png";
+import mobile from "./img/mobilehero.png";
 
 const Hero = () => {
   return (
@@ -83,7 +83,7 @@ const Container = styled.div`
       }
 
       button {
-        margin: 30px 0;
+        margin: 20px 0;
         padding: 18px 0;
       }
     }
