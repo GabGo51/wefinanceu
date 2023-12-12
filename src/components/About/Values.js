@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import client from "./img/client.png";
+import agility from "./img/agility.png";
+import collab from "./img/collab.png";
 import integrity from "./img/integrity.png";
-import agile from "./img/agile.png";
-import collaborate from "./img/collaborate.png";
+import client from "./img/client.png";
 import { motion } from "framer-motion";
 
 const Values = () => {
@@ -18,14 +18,16 @@ const Values = () => {
   };
   return (
     <Container>
-      <motion.h2
-        initial={initial}
-        whileInView={animate}
-        transition={{ duration: 1, delay: 0.2 }}
-        viewport={{ once: true }}
-      >
-        What drives us
-      </motion.h2>
+      <div className="wrapper">
+        <motion.h2
+          initial={initial}
+          whileInView={animate}
+          transition={{ duration: 1, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          What drives us
+        </motion.h2>{" "}
+      </div>
       <div className="wrapper">
         <motion.div
           initial={initial}
@@ -34,8 +36,7 @@ const Values = () => {
           viewport={{ once: true }}
           classname="value"
         >
-          <img alt="icon" className="icon" src={client} />
-          <div></div>
+          <img alt="icon" src={client} />
           <h3>Client Oriented</h3>
           <p>
             {" "}
@@ -52,8 +53,7 @@ const Values = () => {
           viewport={{ once: true }}
           classname="value"
         >
-          <img alt="icon" className="icon" src={integrity} />
-          <div></div>
+          <img alt="icon" src={integrity} />
           <h3>Integrity</h3>
           <p>
             {" "}
@@ -70,8 +70,7 @@ const Values = () => {
           viewport={{ once: true }}
           classname="value"
         >
-          <img alt="icon" className="icon" src={agile} />
-          <div></div>
+          <img alt="icon" src={agility} />
           <h3>Agility</h3>
           <p>
             {" "}
@@ -88,8 +87,7 @@ const Values = () => {
           viewport={{ once: true }}
           classname="value"
         >
-          <img alt="icon" className="icon" src={collaborate} />
-          <div></div>
+          <img alt="icon" src={collab} />
           <h3>Collaboration</h3>
           <p>
             La collaboration est essentielle dans notre démarche. Qu’il s’agisse
@@ -110,30 +108,29 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: var(--secondary);
 
-  h2{
+  h2 {
     margin-bottom: 80px;
+    color: var(--main);
   }
 
   .wrapper {
     flex-wrap: wrap;
     align-items: start;
-    gap: 20px;
+    gap: 10px;
     div {
-      width: 45%;
-      margin-bottom: 40px;
+      width: 49%;
+      margin-bottom: 10px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      div {
-        width: 90px;
-        height: 90px;
-        margin-top: -75px;
-        margin-left: -2px;
-        background-color: var(--yellow-light);
-        border-radius: 50%;
-        margin-bottom: 20px;
-      }
+      background-color: white;
+      padding: 25px 20px;
+      border-radius: 30px;
+      min-height: 345px;
+      box-shadow: 1px 5px 13.3px 0px rgba(0, 0, 0, 0.10);
+      
     }
 
     @media (max-width: 900px) {
@@ -146,18 +143,8 @@ const Container = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
-        div {
-          margin-left: -3px;
-        }
       }
     }
-  }
-
-  .icon {
-    display: block;
-    width: 60px;
-    margin: 0;
-    z-index: 90;
   }
 `;
 

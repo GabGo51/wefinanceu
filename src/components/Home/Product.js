@@ -120,6 +120,7 @@ position: relative;
       height: 340px;
       background-color: white;
       border-radius: 30px;
+      box-shadow: 1px 5px 13.3px 0px rgba(0, 0, 0, 0.10);
     }
 
     p{

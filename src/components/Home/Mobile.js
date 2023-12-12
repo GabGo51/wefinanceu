@@ -14,7 +14,7 @@ const Mobile = () => {
             transition={{ duration: 1, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            Use WeFinanceU on the go with our mobile app
+           Access your dashboard from anywhere.
           </motion.h2>
           <motion.p
             initial={{ x: -50, opacity: 0 }}
@@ -22,8 +22,8 @@ const Mobile = () => {
             transition={{ duration: 1, delay: 0.7 }}
             viewport={{ once: true }}
           >
-            ahjfljabvlabvlablvabglbalgblagbl ajvfkahjf asfgahgfl b
-            agflahjbflablfablzn v.z,nm gzkjgjkhzgjkhz{" "}
+             Use WeFinanceU mobile app to take your work on the go with you.
+Download the mobile app in the App Store or Google Play.
           </motion.p>
           <motion.button
             initial={{ x: -50, opacity: 0 }}

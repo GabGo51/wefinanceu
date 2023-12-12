@@ -111,6 +111,7 @@ const Container = styled.div`
       height: 340px;
       background-color: var(--faded-grey);
       border-radius: 30px;
+      box-shadow: 1px 5px 13.3px 0px rgba(0, 0, 0, 0.10);
     }
   }
 `;
