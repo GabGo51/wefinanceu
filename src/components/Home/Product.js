@@ -86,7 +86,7 @@ const Product = () => {
 const Container = styled.div`
 position: relative;
   background-color: var(--secondary);
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -106,7 +106,7 @@ position: relative;
 
   .wrapper {
     flex-wrap: wrap;
-    align-items: start;
+    align-items: center;
     justify-content: space-around;
     div {
       display: flex;
