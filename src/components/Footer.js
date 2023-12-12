@@ -126,7 +126,7 @@ const Footer = () => {
 const Container = styled(motion.footer)`
   transform-origin: bottom;
   padding: 20px 0;
-  width: 100vw;
+  width: 100%;
   color: white;
   display: flex;
   flex-direction: column;

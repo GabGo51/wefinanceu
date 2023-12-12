@@ -64,7 +64,7 @@ const Benefits = () => {
 
 const Container = styled.div`
   position: relative;
-  padding-top: 300px;
+  padding-top: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,6 +73,8 @@ const Container = styled.div`
   h2{
     color: var(--main);
     margin-bottom: 80px;
+    text-align: center;
+    margin: 40px 20px;
   }
 
   .wave {

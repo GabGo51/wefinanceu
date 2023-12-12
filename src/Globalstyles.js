@@ -75,11 +75,11 @@ export default createGlobalStyle`
   }
 
   h2{
-    font-size: clamp(32px, 3vw, 42px);
+    font-size: clamp(28px, 3vw, 42px);
     margin: 40px 0;
   }
   h3{
-    font-size: clamp(20px, 3vw, 24px);
+    font-size: clamp(18px, 3vw, 24px);
     margin: 20px 0;
   }
 
