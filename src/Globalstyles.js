@@ -7,6 +7,7 @@ export default createGlobalStyle`
     --main-p:#003A52;
     --yellow:#ffbd14;
     --secondary:#f6f6f6;
+    --faded-grey:rgba(139, 139, 139, 0.10);
   }
 
   
@@ -113,7 +114,7 @@ export default createGlobalStyle`
     line-height: 32px;
 
     &:hover{
-      background-color:white;
+      background-color:transparent;
       color:var(--yellow);
       
     }

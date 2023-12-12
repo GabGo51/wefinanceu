@@ -69,6 +69,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 50px;
   h2{
     color: var(--main);
     margin-bottom: 80px;
@@ -78,6 +79,12 @@ const Container = styled.div`
     position: absolute;
     top: 0;
     width: 100vw;
+  }
+
+  .wrapper{
+    @media (max-width:1350px){
+      flex-direction: column;
+    }
   }
 `;
 
@@ -96,7 +103,7 @@ const Text = styled.div`
   }
 
   div {
-    width: 40%; /* Adjust the width as needed */
+    width: clamp(270px, 50%, 320px); /* Adjust the width as needed */
     margin-bottom: 10px; /* Add margin between items */
     box-sizing: border-box;
     
