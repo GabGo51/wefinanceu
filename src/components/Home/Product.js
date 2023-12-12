@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import form from './img/form.png'
+import survey from './img/survey.png'
 import chart from './img/chart.png'
-import dashboard from './img/dashboard.png'
+import dash from './img/dash.png'
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+
+
+
 
 const Product = () => {
   const navigate = useNavigate();
@@ -12,7 +15,6 @@ const Product = () => {
     navigate(page);
     window.scrollTo({
       top: 0,
-      
     });
   };
 
@@ -24,7 +26,7 @@ const Product = () => {
         transition={{ duration: 1, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        How WeFinanceU Works 
+        How WeFinanceU Works
       </motion.h2>
 
       <div className="wrapper">
@@ -34,15 +36,11 @@ const Product = () => {
           transition={{ duration: 1, delay: 0.5 }}
           viewport={{ once: true }}
         >
-          <img alt="icon" className="icon" src={form} />
-          <h3>Take a short survey</h3>
+          <img alt="icon" src={survey}/>
+          <h3>1. Take a short survey</h3>
           <p>
-          En répondant à un questionnaire de 18 à 30 questions, l'utilisateur reçoit en moins de 10 minutes
-une fourchette précise du financement possible pour une propriété commerciale, ajustée aux taux d'intérêt du marché et
-aux programmes de financement en vigueur. 
-
+          Disponible 24/7 sur mobile et web, notre plateforme offre une analyse détaillée des options de financemente
           </p>
-          
         </motion.div>
         <motion.div
           initial={{ y: 50, opacity: 0 }}
@@ -50,14 +48,11 @@ aux programmes de financement en vigueur.
           transition={{ duration: 1, delay: 0.7 }}
           viewport={{ once: true }}
         >
-          <img alt="icon" className="icon" src={chart} />
-          <h3>Get an accurate finance range</h3>
+          <img alt="icon" src={chart}/>
+          <h3>2. Get an accurate finance range</h3>
           <p>
-            {" "}
-            some text about how to go about the about form and what it do for ur
-            business
+          Obtebez une fourchette de prêts actualisée selon les taux et programmes du marché adaptés à tous types de propriétés.
           </p>
-          
         </motion.div>
         <motion.div
           initial={{ x: 50, opacity: 0 }}
@@ -65,42 +60,48 @@ aux programmes de financement en vigueur.
           transition={{ duration: 1, delay: 0.9 }}
           viewport={{ once: true }}
         >
-          <img alt="icon" className="icon" src={dashboard} />
-          <h3>Review your submissions on dashboard </h3>
+          <img alt="icon" src={dash}/>
+          <h3>3. Review your submissions on dashboard </h3>
           <p>
-            some text about how to go about the about form and what it do for ur
-            business
+          Tableau de bord intégré pour la gestion de vos projets etc.
           </p>
-          
         </motion.div>
       </div>
       <div className="button-wrapper">
-        <h4>Get more details on</h4>
+        <h4>See our</h4>
         <motion.button
           onClick={() => handleNavigate("/product")}
           whileHover={{ paddingRight: 20 }}
           transition={{ duration: 0.3 }}
         >
-          our product
+           product
         </motion.button>
         <i class="fa-solid fa-arrow-right"></i>
       </div>
+      
     </Container>
   );
 };
 
 const Container = styled.div`
+position: relative;
+  background-color: var(--secondary);
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 100px;
-  
+  padding-top: 50px;
+
   h2 {
     text-align: center;
     margin: 50px 50px;
     max-width: 550px;
+  }
+
+  h2,
+  h3 {
+    color: var(--main);
   }
 
   .wrapper {
@@ -111,20 +112,25 @@ const Container = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      margin: 20px;
-      width: clamp(300px, 30%, 420px);
-    }
-    img {
-      margin: 40px;
-      width: clamp(300px, 30%, 470px);
+      justify-content: flex-start;
+      text-align: center;
+      margin: 10px;
+      padding: 25px 20px;
+      width: clamp(300px, 30%, 345px);
+      height: 340px;
+      background-color: white;
+      border-radius: 30px;
     }
 
-    .icon {
-      width: 40px;
-      margin: 0;
+    p{
+      color: var(--main-p);
     }
+    
+
+    
   }
+
+  
 `;
 
 export default Product;

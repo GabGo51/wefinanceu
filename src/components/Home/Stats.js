@@ -117,10 +117,12 @@ const Container = styled(motion.div)`
       font-size: clamp(22px, 3vw, 42px);
       margin: 10px 0px;
       color: white;
+      
     }
 
     p {
       color: var(--yellow);
+      font-weight: 600;
     }
 
     .button-wrapper{

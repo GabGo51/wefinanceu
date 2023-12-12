@@ -21,9 +21,9 @@ const Hero = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            WeFinanceU se consacre à démocratiser l'accès au financement en
-            immobilier commercial pour tous, que vous soyez des débutants ou des
-            experts dans le secteur.
+            Nous simplifions l'accès au financement en immobilier commercial
+            pour tous, que vous soyez des débutants ou des experts dans le
+            secteur.
           </motion.p>
           <motion.button
             initial={{ y: 50, opacity: 0 }}
@@ -36,24 +36,21 @@ const Hero = () => {
         </div>
         <div className="image-box">
           <motion.img
-          alt="device"
-          initial={{ scaleY: 0.5,opacity: 0 }}
-      animate={{ scaleY: 1, opacity: 1 }}
-      
-          transition={{ duration: 1, delay: 0.5 }}
-          src={desktop}
-        />
-        <motion.img
-          alt="device"
-          initial={{ scaleY: 0.5, opacity: 0 }}
-      animate={{ scaleY: 1 ,opacity: 1 }}
-      
-          transition={{ duration: 1, delay: 0.7 }}
-          src={mobile}
-          className="mobile"
-        />
+            alt="device"
+            initial={{ scaleY: 0.5, opacity: 0 }}
+            animate={{ scaleY: 1, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            src={desktop}
+          />
+          <motion.img
+            alt="device"
+            initial={{ scaleY: 0.5, opacity: 0 }}
+            animate={{ scaleY: 1, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.7 }}
+            src={mobile}
+            className="mobile"
+          />
         </div>
-        
       </div>
     </Container>
   );
@@ -64,7 +61,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  
 
   .wrapper {
     flex-direction: column;
@@ -77,21 +73,22 @@ const Container = styled.div`
       align-items: center;
 
       h1 {
-        margin-bottom: 40px;
-        font-size: clamp(24px, 3vw, 40px);
+        margin-bottom: 25px;
+        font-size: clamp(34px, 3vw, 56px);
       }
 
       p {
         max-width: 600px;
+        color: var(--main-p);
       }
 
       button {
-        margin: 40px 0;
+        margin: 30px 0;
         padding: 18px 0;
       }
     }
 
-    .image-box{
+    .image-box {
       position: relative;
     }
 
@@ -100,17 +97,15 @@ const Container = styled.div`
       transform-origin: bottom;
     }
 
-    .mobile{
+    .mobile {
       width: clamp(100px, 25%, 350px);
       position: absolute;
       right: -50px;
       bottom: 4px;
-      @media (max-width:800px){
+      @media (max-width: 800px) {
         display: none;
       }
     }
-
-    
   }
 `;
 

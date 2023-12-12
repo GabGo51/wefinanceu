@@ -4,8 +4,9 @@ export default createGlobalStyle`
 
   :root{
     --main:#002332;
-    --yellow:rgb(255, 178, 43);
-    --yellow-light:rgb(255, 178, 43, 0.5);
+    --main-p:#003A52;
+    --yellow:#ffbd14;
+    --secondary:#f6f6f6;
   }
 
   
@@ -73,7 +74,7 @@ export default createGlobalStyle`
   }
 
   h2{
-    font-size: clamp(22px, 3vw, 30px);
+    font-size: clamp(32px, 3vw, 42px);
     margin: 40px 0;
   }
   h3{
@@ -81,31 +82,32 @@ export default createGlobalStyle`
     margin: 20px 0;
   }
 
+  p{
+    line-height: 26px;
+  }
+
   .wrapper {
     display: flex;
     justify-content: space-between;
-    width: clamp(300px, 80%, 1400px);
+    width: clamp(300px, 80%, 1200px);
     align-items: center;
   }
 
   .try-button{
     transition: 500ms;
-    width: clamp(100px, 20%, 165px);
-    
-    height: clamp(20px, 5vw, 60px);
+    width: 150px;
+    height: 50px;
     display: flex;
     align-items: center;
-
     justify-content: center;
-    
-    border-radius: 8px;
+    border-radius: 30px;
     background: var(--yellow, #FFB22B);
     box-shadow: 0px 18px 40px 0px rgba(242, 108, 67, 0.22);
     color: #FFF;
     border: 2px solid var(--yellow);
     text-align: center;
     font-family: Inter;
-    font-size: clamp(14px, 1.5vw, 20px);
+    font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: 32px;
@@ -115,32 +117,30 @@ export default createGlobalStyle`
       color:var(--yellow);
       
     }
+
+    @media (max-width:800px){
+      font-size: 14px;
+      width: 120px;
+      height: 40px;
+    }
   }
 
   .login-button{
-    cursor: pointer;
-    font-weight: 600;
-    transition: 300ms;
-    background-color: transparent;
-    height: 35px;
-    width: 120px;
-    border-radius: 10px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #015d85;
-      color:var(--main-color);
-    .arrow{
-      margin-left: 10px;
-      transition: 300ms;
-    }
-
-    &:hover{
-      background-color: #015d85;
-      color:white;
-    }
+      all: unset;
+      transition: 500ms;
+      padding: 10px 5px;
+      margin: 5px 0;
+      margin-right: 20px;
+      color: var(--main);
+      cursor: pointer;
+      border-bottom: 1px solid white;
+      &:hover {
+        border-bottom: 1px solid #015d85;
+        transform: translateY(-5%);
+      }
   }
+
+  
 
   .button-wrapper {
     transition: 300ms;

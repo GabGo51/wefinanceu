@@ -98,14 +98,7 @@ const Header = () => {
               <ul className="noselect">
                 <li onClick={() => handleNavigate("/product")}>Our Solution</li>
                 <li onClick={() => handleNavigate("/about")}>About Us</li>
-
                 <li onClick={() => handleNavigate("/contact")}>Contact</li>
-              </ul>
-              <div className="button-box">
-                <button className="login-button">
-                  <p>Login</p>
-                </button>
-
                 <div className="lang-button">
                   <button
                     style={{ opacity: !lang ? 1 : 0.5 }}
@@ -127,6 +120,17 @@ const Header = () => {
                     EN
                   </button>
                 </div>
+              </ul>
+              <div className="button-box">
+                <button className="login-button">
+                  <p>Login</p>
+                </button>
+                <button
+                  
+                  className="try-button"
+                >
+                  Try it free
+                </button>
               </div>
               <i onClick={toggleMenu} className="fa-solid fa-bars"></i>
             </div>
@@ -214,7 +218,16 @@ const DesktopHeader = styled(motion.header)`
     background-color: black;
   }
 
-  @media (max-width: 1100px) {
+  .button-box{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    
+  }
+
+  @media (max-width: 1300px) {
     i {
       display: block;
     }
@@ -222,6 +235,10 @@ const DesktopHeader = styled(motion.header)`
       display: none;
     }
     div {
+      display: none;
+    }
+
+    .button-box{
       display: none;
     }
   }
