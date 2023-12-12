@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import star from "./img/star.jpg";
+import quote from "./img/quote.png";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 const Review = () => {
@@ -9,57 +9,33 @@ const Review = () => {
     navigate(page);
     window.scrollTo({
       top: 0,
-      
     });
   };
   return (
     <Container>
+      <img src={quote} />
       <h2>What our customers are saying</h2>
-      <div className="wrapper">
-        <div className="review">
-          <img alt="star" src={star} />
-          <h3>No more waiting to get a quote!</h3>
-          <div></div>
-          <p>
-            WeFinanceU saves me so much time. I originally had to wait weeks and
-            talk to at least 3 different person before knowing. The app did all
-            the calculation and gave me a price range in less than 10 minutes!
-          </p>
-          <h4>Gabriel Gosselin</h4>
-        </div>
-        <div className="review">
-          <img alt="star" src={star} />
-          <h3>No more waiting to get a quote!</h3>
-          <div></div>
-          <p>
-            WeFinanceU saves me so much time. I originally had to wait weeks and
-            talk to at least 3 different person before knowing. The app did all
-            the calculation and gave me a price range in less than 10 minutes!
-          </p>
-          <h4>Gabriel Gosselin</h4>
-        </div>
-        <div className="review">
-          <img alt="star" src={star} />
-          <h3>No more waiting to get a quote!</h3>
-          <div></div>
-          <p>
-            WeFinanceU saves me so much time. I originally had to wait weeks and
-            talk to at least 3 different person before knowing. The app did all
-            the calculation and gave me a price range in less than 10 minutes!
-          </p>
-          <h4>Gabriel Gosselin</h4>
-        </div>
-      </div>
+      <p className="quote">
+        After 25 years I've finally found the CRM that has helped me reduce cost
+        and increase revenue.
+      </p>
+
+      <div className="pic"></div>
+      <p>
+        <span>Brady Webb, CEO</span> American Mortgage Solutions Inc.
+      </p>
       <div className="button-wrapper">
         <h4>Want to tell us something ? </h4>
-        <motion.button
-          onClick={() => handleNavigate("/contact")}
-          whileHover={{ paddingRight: 20 }}
-          transition={{ duration: 0.3 }}
-        >
-          Contact us
-        </motion.button>
-        <i class="fa-solid fa-arrow-right"></i>
+        <div>
+          <motion.button
+            onClick={() => handleNavigate("/contact")}
+            whileHover={{ paddingRight: 20 }}
+            transition={{ duration: 0.3 }}
+          >
+            Contact us
+          </motion.button>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
       </div>
     </Container>
   );
@@ -69,45 +45,29 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+  padding-top: 50px;
+  text-align: center;
 
-  h3 {
-    font-size: 20px;
-    margin: 10px 0;
+  .quote {
+    max-width: 1100px;
+    font-size: clamp(24px, 3vw, 34px);
+    line-height: 36px;
+    margin: 0 40px;
   }
 
-  p {
-    margin-bottom: 40px;
+  .pic {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50px;
+    margin: 50px 0;
   }
 
-  img {
-    width: 150px;
-    transform: translateX(-8%);
+  span {
+    font-weight: bold;
   }
-
-  .wrapper {
-    flex-wrap: wrap;
-    align-items: start;
-    justify-content: space-around;
-    margin-bottom: 40px;
-  }
-
-  .review {
-    display: flex;
+  .button-wrapper {
     flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    margin: 20px;
-    width: clamp(300px, 30%, 420px);
-
-    div {
-      height: 1px;
-      width: 100%;
-      background-color: grey;
-      margin: 20px 0;
-      margin-bottom: 40px;
-      opacity: 0.7;
-    }
   }
 `;
 
