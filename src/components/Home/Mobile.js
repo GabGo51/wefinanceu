@@ -14,7 +14,7 @@ const Mobile = () => {
             transition={{ duration: 1, delay: 0.5 }}
             viewport={{ once: true }}
           >
-           Access your dashboard from anywhere.
+            Access your dashboard from anywhere.
           </motion.h2>
           <motion.p
             initial={{ x: -50, opacity: 0 }}
@@ -22,8 +22,8 @@ const Mobile = () => {
             transition={{ duration: 1, delay: 0.7 }}
             viewport={{ once: true }}
           >
-             Use WeFinanceU mobile app to take your work on the go with you.
-Download the mobile app in the App Store or Google Play.
+            Use WeFinanceU mobile app to take your work on the go with you.
+            Download the mobile app in the App Store or Google Play.
           </motion.p>
           <motion.button
             initial={{ x: -50, opacity: 0 }}
@@ -45,17 +45,17 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   padding-top: 50px;
   margin-top: 50px;
   background-color: #fbfbfb;
   height: 700px;
   img {
-      width: clamp(300px, 35%, 500px);
-      position: absolute;
-      left: 0;
-      bottom: 0;
-    }
+    width: clamp(300px, 35%, 500px);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 
   .wrapper {
     position: relative;
@@ -65,7 +65,7 @@ const Container = styled.div`
       flex-direction: column;
       right: 0;
       margin-right: 50px;
-      width: clamp(320px, 60% ,600px);
+      width: clamp(320px, 60%, 600px);
       margin: 20px;
 
       h2 {
@@ -82,32 +82,28 @@ const Container = styled.div`
         padding: 18px 0;
       }
     }
-
-   
   }
 
   @media (max-width: 800px) {
-    .text-box{
+    .text-box {
       transform: translateX(20%);
     }
-    
   }
   @media (max-width: 650px) {
-    .text-box{
+    .text-box {
       transform: translate(-0%, -60%);
-      width:500px;
-      
+      width: 500px;
     }
-    
   }
   @media (max-width: 650px) {
-    .text-box{
+    .text-box {
       transform: translate(10%, -60%);
-      width:500px;
-      
+      width: 500px;
     }
-    
   }
+
+
+  
 `;
 
 export default Mobile;

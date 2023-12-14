@@ -182,7 +182,7 @@ const DesktopHeader = styled(motion.header)`
       cursor: pointer;
       border-bottom: 1px solid white;
       &:hover {
-        border-bottom: 1px solid #015d85;
+        border-bottom: 1px solid var(--green);
         transform: translateY(-5%);
       }
     }

@@ -3,9 +3,9 @@ import { createGlobalStyle } from "styled-components";
 export default createGlobalStyle`
 
   :root{
-    --main:#002332;
+    --main:#002F5A;
     --main-p:#003A52;
-    --yellow:#ffbd14;
+    --green:#00cf9d;
     --secondary:#f6f6f6;
     --faded-grey:rgba(139, 139, 139, 0.10);
   }
@@ -102,10 +102,11 @@ export default createGlobalStyle`
     align-items: center;
     justify-content: center;
     border-radius: 30px;
-    background: var(--yellow, #FFB22B);
-    box-shadow: 0px 18px 40px 0px rgba(242, 108, 67, 0.22);
+    background: var(--green, #FFB22B);
+    box-shadow: 2px 4px 20.3px 0px rgba(107, 240, 192, 0.50);
+
     color: #FFF;
-    border: 2px solid var(--yellow);
+    border: 2px solid var(--green);
     text-align: center;
     font-family: Inter;
     font-size: 16px;
@@ -115,7 +116,7 @@ export default createGlobalStyle`
 
     &:hover{
       background-color:transparent;
-      color:var(--yellow);
+      color:var(--green);
       
     }
 
@@ -136,7 +137,7 @@ export default createGlobalStyle`
       cursor: pointer;
       border-bottom: 1px solid white;
       &:hover {
-        border-bottom: 1px solid #015d85;
+        border-bottom: 1px solid var(--green);
         transform: translateY(-5%);
       }
   }

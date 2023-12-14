@@ -121,7 +121,7 @@ const Container = styled(motion.div)`
     }
 
     p {
-      color: var(--yellow);
+      color: var(--green);
       font-weight: 600;
     }
 
