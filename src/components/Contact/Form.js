@@ -61,22 +61,22 @@ const Form = () => {
         </p>
         <div className="bottom">
           {loading && (
-            <button disabled="true" className="login-button loading">
+            <button disabled="true" className="try-button loading">
               <img src={loadingCircle} />
             </button>
           )}
           {sent && (
-            <button disabled="true" className="login-button loading">
+            <button disabled="true" className="try-button loading">
               <i className="fa-solid fa-check"></i>
             </button>
           )}
           {error && (
-            <button disabled="true" className="login-button loading">
+            <button disabled="true" className="try-button loading">
               <i className="fa-solid fa-xmark"></i>
             </button>
           )}
           {!loading && !sent && !error && (
-            <button type="submit" className="login-button">
+            <button type="submit" className="try-button">
               Submit
             </button>
           )}
@@ -150,13 +150,15 @@ const Container = styled.div`
     button {
       margin-top: 20px;
       margin-right: 20px;
+      width: 100px;
+      height: 40px;
       img {
         width: 30px;
       }
     }
 
     .loading {
-      background-color: var(--main-color);
+      background-color: var(--green);
       color: white;
       cursor: not-allowed;
     }

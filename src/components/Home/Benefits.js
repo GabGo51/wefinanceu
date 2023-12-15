@@ -116,7 +116,7 @@ const Text = styled.div`
 const Img = styled.div`
   position: relative;
   div {
-    background-color: green;
+    background-color: grey;
     width: 400px;
     height: 600px;
     border-radius: 40px;

@@ -6,6 +6,7 @@ export default createGlobalStyle`
     --main:#002F5A;
     --main-p:#003A52;
     --green:#00cf9d;
+    --green-light:#00cf9d55; //the two last number are for opacity
     --secondary:#f6f6f6;
     --faded-grey:rgba(139, 139, 139, 0.10);
   }
@@ -103,7 +104,7 @@ export default createGlobalStyle`
     justify-content: center;
     border-radius: 30px;
     background: var(--green, #FFB22B);
-    box-shadow: 2px 4px 20.3px 0px rgba(107, 240, 192, 0.50);
+    box-shadow: 2px 2px 10.3px 0px rgba(107, 240, 192, 0.50);
 
     color: #FFF;
     border: 2px solid var(--green);

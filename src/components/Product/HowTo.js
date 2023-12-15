@@ -6,7 +6,7 @@ const HowTo = () => {
   return (
     <Container>
       
-      <motion.div initial={{scaleY:0, opacity:0.5}} animate= {{scaleY:1, opacity:1}} transition={{duration:0.75, delay:0.2, type:spring}} className="video"></motion.div>
+      {/* <motion.div initial={{scaleY:0, opacity:0.5}} animate= {{scaleY:1, opacity:1}} transition={{duration:0.75, delay:0.2, type:spring}} className="video"></motion.div> */}
       <h2>How WeFinanceU works</h2>
       <div className="wrapper">
         <div className="text">

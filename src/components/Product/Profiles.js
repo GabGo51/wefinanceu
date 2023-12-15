@@ -109,12 +109,12 @@ const Container = styled.div`
     li {
       transition: 500ms;
       padding: 15px 30px;
-      border-radius: 10px;
+      border-radius: 30px;
       margin: 0 20px;
       cursor: pointer;
 
       &.active {
-        background-color: var(--light-color);
+        background-color: var(--green);
       }
     }
   }

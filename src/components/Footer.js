@@ -197,6 +197,10 @@ const Container = styled(motion.footer)`
     font-size: 12px;
     cursor: pointer;
   }
+
+  .try-button{
+    margin-top: 20px;
+  }
 `;
 
 export default Footer;

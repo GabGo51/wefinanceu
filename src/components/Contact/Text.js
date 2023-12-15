@@ -41,7 +41,7 @@ div{
 
   i{
     margin-right: 20px;
-    color: var(--main-color);
+    color: var(--green);
   }
 }
 @media (max-width:950px){
