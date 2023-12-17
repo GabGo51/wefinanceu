@@ -6,6 +6,7 @@ import integrity from "./img/integrity.png";
 import client from "./img/client.png";
 import { motion } from "framer-motion";
 
+
 const Values = () => {
   const initial = {
     opacity: 0,
@@ -18,6 +19,7 @@ const Values = () => {
   };
   return (
     <Container>
+      
       <div className="wrapper">
         <motion.h2
           initial={initial}
@@ -109,8 +111,11 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   background-color: var(--secondary);
+  padding-bottom: 150px;
+ 
 
   h2 {
+    margin-top: 200px;
     margin-bottom: 80px;
     color: var(--main);
   }

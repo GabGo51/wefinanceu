@@ -14,7 +14,7 @@ const Who = () => {
         transition={{ duration: 1, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        A solution accesible for everybody
+        A solution accesible <span>for everybody</span>
       </motion.h2>
 
       <div className="wrapper">
@@ -92,6 +92,10 @@ const Container = styled.div`
 
   h2 ,h3 {
     color: white;
+  }
+
+  span{
+    color: var(--green);
   }
 
   .wrapper {

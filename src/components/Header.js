@@ -45,11 +45,14 @@ const Header = () => {
               <li onClick={() => handleNavigate("/product")}>Our Solution</li>
               <li onClick={() => handleNavigate("/about")}>About Us</li>
               <li onClick={() => handleNavigate("/contact")}>Contact</li>
+              <li onClick={() => handleNavigate("/contact")}>Login</li>
             </ul>
+
+            
             <div className="button-box">
-              <button className="login-button">
-                <p>Login</p>
-              </button>
+              <button className="try-button">
+              Try for Free
+            </button>
 
               <div className="lang-button">
                 <button
@@ -179,6 +182,7 @@ const DesktopHeader = styled(motion.header)`
       margin: 5px 0;
       margin-right: 20px;
       color: var(--main);
+      font-weight: 500;
       cursor: pointer;
       border-bottom: 1px solid white;
       &:hover {
@@ -318,6 +322,7 @@ const PhoneHeader = styled(motion.header)`
 
   .button-box {
     z-index: 100;
+    margin-top: 60px;
   }
 
   .login-button {

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import account from "./img/account.PNG";
 import { useState } from "react";
 
+
 const Profiles = () => {
   const [profile, setProfile] = useState("profile1");
 
@@ -101,7 +102,9 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   padding-bottom: 100px;
+  background-color: var(--secondary);
 
+  
   ul {
     display: flex;
     margin: 20px 0;
@@ -121,10 +124,10 @@ const Container = styled.div`
 
   .wrapper {
     height: 500px;
-    border: 1px solid black;
+  
     border-radius: 30px;
     padding: 40px;
-
+    background-color: white;
     @media (max-width: 950px) {
       flex-direction: column;
     }

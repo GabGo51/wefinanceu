@@ -22,7 +22,10 @@ align-items: center;
 justify-content: center;
 flex-direction: column;
 padding-bottom: 100px;
-
+background-color: var(--main);
+h2{
+  color: white;
+}
 .wrapper{
   gap: 20px;
   flex-wrap: wrap;

@@ -26,6 +26,7 @@ const Form = () => {
           setLoading(false);
           console.log(result.text);
           setSent(true);
+          form.current.reset();
         },
         (error) => {
           setLoading(false);
@@ -145,6 +146,7 @@ const Container = styled.div`
       width: 90%;
       font-size: 10px;
       font-style: italic;
+      line-height: 16px;
     }
 
     button {

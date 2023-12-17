@@ -8,7 +8,7 @@ export default createGlobalStyle`
     --green:#00cf9d;
     --green-light:#00cf9d55; //the two last number are for opacity
     --secondary:#f6f6f6;
-    --faded-grey:rgba(139, 139, 139, 0.10);
+    --faded-grey:rgba(0, 163, 255, 0.26);
   }
 
   
@@ -73,6 +73,10 @@ export default createGlobalStyle`
   h1 , h2 , h3  {
     font-family: 'Inter', sans-serif;
     color: var(--main);
+  }
+
+  h1{
+    font-size: clamp(32px, 3vw, 48px);
   }
 
   h2{

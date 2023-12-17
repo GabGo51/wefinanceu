@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-
+import bluewave from './img/bluewave.png'
 const Partner = () => {
   return (
     <Container>
+      <img src={bluewave} alt="wave" className="wave"/>
       <div className="wrapper">
         <h2>With the supports of our partners</h2>
         <div className="compagnies">
@@ -23,7 +24,9 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px 0;
+  .wave{
+    width: 100vw;
+  }
 
   .wrapper{
     flex-direction: column;

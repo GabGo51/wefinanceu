@@ -2,6 +2,7 @@ import React from "react";
 import { motion, spring } from "framer-motion";
 import styled from "styled-components";
 import account from "./img/account.PNG";
+import greywave from './img/greywave.png'
 const HowTo = () => {
   return (
     <Container>
@@ -68,6 +69,7 @@ const HowTo = () => {
 
         <img alt='device' src={account} />
       </div>
+      <img src={greywave} alt="wave" className="wave"/>
     </Container>
   );
 };
@@ -130,6 +132,11 @@ const Container = styled.div`
     @media (max-width: 950px) {
       flex-direction: column;
     }
+  }
+
+  .wave{
+    width: 100vw;
+    margin-bottom: -2px;
   }
 `;
 
