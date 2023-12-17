@@ -51,7 +51,9 @@ const Hero = () => {
             className="mobile"
           />
         </div>
+        
       </div>
+      
     </Container>
   );
 };
@@ -106,6 +108,12 @@ const Container = styled.div`
         display: none;
       }
     }
+  }
+
+  .wave{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
   }
 `;
 

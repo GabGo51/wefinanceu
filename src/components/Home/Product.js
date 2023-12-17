@@ -20,6 +20,7 @@ const Product = () => {
 
   return (
     <Container>
+      
       <motion.h2
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -91,7 +92,12 @@ position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 50px;
+  
+
+  .wave{
+    margin-top: -2px;
+    width: 100vw;
+  }
 
   h2 {
     text-align: center;

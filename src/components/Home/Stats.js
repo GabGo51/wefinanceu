@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-
+import bluewave from './img/bluewave.png'
 
 const Stats = () => {
   const initial = {
@@ -25,12 +25,15 @@ const Stats = () => {
 
   return (
     <Container
+    
       //using scale makes it go bottom to top
       //height:top-bottom scale:bottom-top
       initial={{ scaleY: 0 }}
       animate={{ scaleY: 1 }}
       transition={{ duration: 1 }}
     >
+      <img alt="wave" className="wave" src={bluewave}/>
+      
       <div className="wrapper">
         <motion.div
           initial={initial}
@@ -88,6 +91,7 @@ const Stats = () => {
       </motion.div>
       {/* <img className="vector" src={vector}/>
       <img className="vector other" src={vector}/> */}
+      
     </Container>
   );
 };
@@ -106,6 +110,13 @@ const Container = styled(motion.div)`
   background-color: var(--main);
   color: white;
   padding-top: 50px;
+
+  .wave{
+    position: absolute;
+    top: -4.5vw;
+    width: 100vw;
+  }
+  
   .wrapper {
     div {
       margin: 40px 0;

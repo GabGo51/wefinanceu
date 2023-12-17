@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Form from "./Form";
 import Text from "./Text";
+import Review from "./Review";
 const Contact = () => {
   return (
     <Container>
@@ -11,6 +12,7 @@ const Contact = () => {
           <Form />
         </div>
       </div>
+      <Review/>
     </Container>
   );
 };
@@ -26,7 +28,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
     width: 100%;
-    background-color: var(--light-color);
+    background-color: var(--main);
   }
 
   .wrapper {

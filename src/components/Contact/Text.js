@@ -30,9 +30,11 @@ const Text = () => {
 
 const Container = styled.div`
 width: 65%;
+color: white;
 
 h1{
   margin-bottom: 40px;
+  color: white;
 }
 
 div{
