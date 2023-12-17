@@ -34,6 +34,7 @@ const Container = styled.div`
   .wrapper {
     @media (max-width: 950px) {
       flex-direction: column;
+      
     }
   }
 `;

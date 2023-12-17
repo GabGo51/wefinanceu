@@ -103,17 +103,20 @@ const Container = styled.div`
   justify-content: center;
   padding-bottom: 100px;
   background-color: var(--secondary);
+  text-align: center;
+  
 
   
   ul {
     display: flex;
     margin: 20px 0;
+    
 
     li {
       transition: 500ms;
-      padding: 15px 30px;
+      padding: 15px 20px;
       border-radius: 30px;
-      margin: 0 20px;
+      margin: 0 10px;
       cursor: pointer;
 
       &.active {

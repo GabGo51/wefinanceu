@@ -97,6 +97,10 @@ export default createGlobalStyle`
     justify-content: space-between;
     width: clamp(300px, 80%, 1200px);
     align-items: center;
+
+    @media (max-width: 950px) {
+      width: 90%;
+    }
   }
 
   .try-button{

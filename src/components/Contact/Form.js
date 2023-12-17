@@ -113,6 +113,10 @@ const Container = styled.div`
     width: clamp(300px, 80%, 500px);
     background-color: white;
 
+    @media (max-width: 950px) {
+    width: 100%;
+  }
+
     div {
       display: flex;
       flex-direction: column;
