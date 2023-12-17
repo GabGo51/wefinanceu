@@ -200,6 +200,7 @@ const DesktopHeader = styled(motion.header)`
     display: none;
     cursor: pointer;
     scale: 1.5;
+    transform: translateX(-25%);
   }
 
   .lang {
