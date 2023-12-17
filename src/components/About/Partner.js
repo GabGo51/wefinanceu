@@ -26,6 +26,7 @@ const Container = styled.div`
   justify-content: center;
   .wave{
     width: 100vw;
+    margin-top: -2px;
   }
 
   .wrapper{
