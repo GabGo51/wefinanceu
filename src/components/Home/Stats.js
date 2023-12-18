@@ -1,10 +1,15 @@
-import React from "react";
+import React, {useContext} from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import bluewave from './img/bluewave.png'
+import { SettingContext } from "../../context/SettingContext";
+import text from "./text";
+
 
 const Stats = () => {
+  const { lang } = useContext(SettingContext);
+
   const initial = {
     opacity: 0,
     y: 50,
@@ -42,7 +47,7 @@ const Stats = () => {
           viewport={{ once: true }}
         >
           <h3>100+</h3>
-          <p>Lenders</p>
+          <p>{text.stat1[lang]}</p>
         </motion.div>
         <motion.div
           initial={initial}
@@ -51,7 +56,7 @@ const Stats = () => {
           viewport={{ once: true }}
         >
           <h3>400M+</h3>
-          <p>Funded</p>
+          <p>{text.stat2[lang]}</p>
         </motion.div>
         <motion.div
           initial={initial}
@@ -60,7 +65,7 @@ const Stats = () => {
           viewport={{ once: true }}
         >
           <h3>25+</h3>
-          <p>Years of Experience</p>
+          <p>{text.stat3[lang]}</p>
         </motion.div>
         <motion.div
           initial={initial}
@@ -69,7 +74,7 @@ const Stats = () => {
           viewport={{ once: true }}
         >
           <h3>15+</h3>
-          <p>Market Covered</p>
+          <p>{text.stat4[lang]}</p>
         </motion.div>
       </div>
       <motion.div
@@ -79,13 +84,13 @@ const Stats = () => {
         viewport={{ once: true }}
         className="button-wrapper"
       >
-        <h4>Learn more</h4>
+        <h4>{text.aboutLink1[lang]}</h4>
         <motion.button
           onClick={() => handleNavigate("/about")}
           whileHover={{ paddingRight: 20 }}
           transition={{ duration: 0.3 }}
         >
-          about us
+          {text.aboutLink2[lang]}
         </motion.button>
         <i class="fa-solid fa-arrow-right"></i>
       </motion.div>

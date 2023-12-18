@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import desktop from "./img/desktop.png";
 import { motion } from "framer-motion";
 import mobile from "./img/mobilehero.png";
-
+import text from "./text";
+import { SettingContext } from "../../context/SettingContext";
 const Hero = () => {
+  
+  const { lang } = useContext(SettingContext);
+
   return (
     <Container>
       <div className="wrapper">
@@ -14,16 +18,14 @@ const Hero = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            Commercial real estate financing, simplified
+            {text.title[lang]}
           </motion.h1>
           <motion.p
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            Nous simplifions l'accès au financement en immobilier commercial
-            pour tous, que vous soyez des débutants ou des experts dans le
-            secteur.
+            {text.p1[lang]}
           </motion.p>
           <motion.button
             initial={{ y: 50, opacity: 0 }}
@@ -31,7 +33,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.6 }}
             className="try-button"
           >
-            Try it free
+            {text.tryButton[lang]}
           </motion.button>
         </div>
         <div className="image-box">
@@ -51,9 +53,7 @@ const Hero = () => {
             className="mobile"
           />
         </div>
-        
       </div>
-      
     </Container>
   );
 };
@@ -110,7 +110,7 @@ const Container = styled.div`
     }
   }
 
-  .wave{
+  .wave {
     position: absolute;
     bottom: 0;
     width: 100vw;
