@@ -6,6 +6,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import blueLogo from "../img/blueLogo.PNG";
 import logo from "../img/logopng.png";
+import text from "./text";
+
 const Header = () => {
   const { open, lang, setLang, setOpen } = useContext(SettingContext);
 
@@ -42,16 +44,16 @@ const Header = () => {
             />
 
             <ul className="noselect">
-              <li onClick={() => handleNavigate("/product")}>Our Solution</li>
-              <li onClick={() => handleNavigate("/about")}>About Us</li>
-              <li onClick={() => handleNavigate("/contact")}>Contact</li>
-              <li onClick={() => handleNavigate("/contact")}>Login</li>
+            <li onClick={() => handleNavigate("/product")}>{text.solution[lang]}</li>
+                <li onClick={() => handleNavigate("/about")}>{text.about[lang]}</li>
+                <li onClick={() => handleNavigate("/contact")}>{text.contact[lang]}</li>
+              <li onClick={() => handleNavigate("/contact")}>{text.login[lang]}</li>
             </ul>
 
             
             <div className="button-box">
               <button className="try-button">
-              Try for Free
+              {text.tryButton[lang]}
             </button>
 
               <div className="lang-button">
@@ -99,9 +101,9 @@ const Header = () => {
                 onClick={() => handleNavigate("/")}
               />
               <ul className="noselect">
-                <li onClick={() => handleNavigate("/product")}>Our Solution</li>
-                <li onClick={() => handleNavigate("/about")}>About Us</li>
-                <li onClick={() => handleNavigate("/contact")}>Contact</li>
+                <li onClick={() => handleNavigate("/product")}>{text.solution[lang]}</li>
+                <li onClick={() => handleNavigate("/about")}>{text.about[lang]}</li>
+                <li onClick={() => handleNavigate("/contact")}>{text.contact[lang]}</li>
                 <div className="lang-button">
                   <button
                     style={{ opacity: !lang ? 1 : 0.5 }}
@@ -126,13 +128,13 @@ const Header = () => {
               </ul>
               <div className="button-box">
                 <button className="login-button">
-                  <p>Login</p>
+                  <p>{text.login[lang]}</p>
                 </button>
                 <button
                   
                   className="try-button"
                 >
-                  Try it free
+                  {text.tryButton[lang]}
                 </button>
               </div>
               <i onClick={toggleMenu} className="fa-solid fa-bars"></i>

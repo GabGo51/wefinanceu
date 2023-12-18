@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import survey from './img/survey.png'
 import chart from './img/chart.png'
 import dash from './img/dash.png'
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import text from "./text";
+import { SettingContext } from "../../context/SettingContext";
 
 
 
 
 const Product = () => {
+  const { lang } = useContext(SettingContext);
+
   const navigate = useNavigate();
   const handleNavigate = (page) => {
     navigate(page);
@@ -27,7 +31,7 @@ const Product = () => {
         transition={{ duration: 1, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        How WeFinanceU Works
+        {text.productTitle[lang]}
       </motion.h2>
 
       <div className="wrapper">

@@ -38,6 +38,10 @@ const text = {
     true: "about us",
     false: "notre équipe",
   },
+  productTitle: {
+    true: "This is our solution",
+    false: "Voici notre solution",
+  },
 
 };
 
