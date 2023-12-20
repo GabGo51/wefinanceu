@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import bluewave from './img/bluewave.png'
 import { SettingContext } from "../../context/SettingContext";
-import text from "./text";
+import text from "./text/statsText";
 
 
 const Stats = () => {

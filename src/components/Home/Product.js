@@ -1,15 +1,12 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import survey from './img/survey.png'
-import chart from './img/chart.png'
-import dash from './img/dash.png'
+import survey from "./img/survey.png";
+import chart from "./img/chart.png";
+import dash from "./img/dash.png";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import text from "./text";
+import text from "./text/productText";
 import { SettingContext } from "../../context/SettingContext";
-
-
-
 
 const Product = () => {
   const { lang } = useContext(SettingContext);
@@ -24,7 +21,6 @@ const Product = () => {
 
   return (
     <Container>
-      
       <motion.h2
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -41,11 +37,9 @@ const Product = () => {
           transition={{ duration: 1, delay: 0.5 }}
           viewport={{ once: true }}
         >
-          <img alt="icon" src={survey}/>
-          <h3>1. Take a short survey</h3>
-          <p>
-          Disponible 24/7 sur mobile et web, notre plateforme offre une analyse détaillée des options de financemente
-          </p>
+          <img alt="icon" src={survey} />
+          <h3>{text.subtitle1[lang]}</h3>
+          <p>{text.p1[lang]}</p>
         </motion.div>
         <motion.div
           initial={{ y: 50, opacity: 0 }}
@@ -53,11 +47,9 @@ const Product = () => {
           transition={{ duration: 1, delay: 0.7 }}
           viewport={{ once: true }}
         >
-          <img alt="icon" src={chart}/>
-          <h3>2. Get an accurate finance range</h3>
-          <p>
-          Obtebez une fourchette de prêts actualisée selon les taux et programmes du marché adaptés à tous types de propriétés.
-          </p>
+          <img alt="icon" src={chart} />
+          <h3>{text.subtitle2[lang]}</h3>
+          <p>{text.p1[lang]} </p>
         </motion.div>
         <motion.div
           initial={{ x: 50, opacity: 0 }}
@@ -65,40 +57,36 @@ const Product = () => {
           transition={{ duration: 1, delay: 0.9 }}
           viewport={{ once: true }}
         >
-          <img alt="icon" src={dash}/>
-          <h3>3. Review your submissions on dashboard </h3>
-          <p>
-          Tableau de bord intégré pour la gestion de vos projets etc.
-          </p>
+          <img alt="icon" src={dash} />
+          <h3>{text.subtitle3[lang]}</h3>
+          <p>{text.p1[lang]}</p>
         </motion.div>
       </div>
       <div className="button-wrapper">
-        <h4>See our</h4>
+        <h4>{text.nav1[lang]}</h4>
         <motion.button
           onClick={() => handleNavigate("/product")}
           whileHover={{ paddingRight: 20 }}
           transition={{ duration: 0.3 }}
         >
-           product
+          {text.nav2[lang]}
         </motion.button>
         <i class="fa-solid fa-arrow-right"></i>
       </div>
-      
     </Container>
   );
 };
 
 const Container = styled.div`
-position: relative;
+  position: relative;
   background-color: var(--secondary);
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 
-  .wave{
+  .wave {
     margin-top: -2px;
     width: 100vw;
   }
@@ -130,18 +118,13 @@ position: relative;
       height: 340px;
       background-color: white;
       border-radius: 30px;
-      box-shadow: 1px 5px 13.3px 0px rgba(0, 0, 0, 0.10);
+      box-shadow: 1px 5px 13.3px 0px rgba(0, 0, 0, 0.1);
     }
 
-    p{
+    p {
       color: var(--main-p);
     }
-    
-
-    
   }
-
-  
 `;
 
 export default Product;
