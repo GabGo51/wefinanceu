@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import investor from "./img/investors.png";
 import broker from "./img/brokers.png";
 import banks from "./img/banks.png";
+import text from './text/whoText'
+import { SettingContext } from "../../context/SettingContext";
 
 const Who = () => {
+
+  const {lang} = useContext(SettingContext)
   return (
     <Container>
       <motion.h2
@@ -14,7 +18,7 @@ const Who = () => {
         transition={{ duration: 1, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        A solution accesible <span>for everybody</span>
+        {text.title[lang]} <span>{text.span[lang]}</span>
       </motion.h2>
 
       <div className="wrapper">
@@ -25,11 +29,9 @@ const Who = () => {
           viewport={{ once: true }}
         >
           <img alt="icon" src={investor} />
-          <h3>Investors</h3>
+          <h3>{text.sub1[lang]}</h3>
           <p>
-            Aimeraient une plateforme en ligne pour suivre toutes leurs analyses
-            facilement ainsi qu’un espace sécurisé pour analyser des propriétés
-            qui ne sont pas publiquement annoncées
+          {text.p1[lang]}
           </p>
         </motion.div>
         <motion.div
@@ -39,11 +41,9 @@ const Who = () => {
           viewport={{ once: true }}
         >
           <img alt="icon" src={broker} />
-          <h3>Brokers</h3>
+          <h3>{text.sub2[lang]}</h3>
           <p>
-            Aimeraient une plateforme en ligne pour suivre toutes leurs analyses
-            facilement ainsi qu’un espace sécurisé pour analyser des propriétés
-            qui ne sont pas publiquement annoncées
+          {text.p2[lang]}
           </p>
         </motion.div>
         <motion.div
@@ -53,11 +53,9 @@ const Who = () => {
           viewport={{ once: true }}
         >
           <img alt="icon" src={banks} />
-          <h3>Banks</h3>
+          <h3>{text.sub3[lang]}</h3>
           <p>
-            Recherchent une solution simple sous forme de calculatrice intégrée
-            ainsi qu'un logiciel pour évaluer de manière rapide et précise la
-            faisabilité des projets immobiliers..
+          {text.p3[lang]}
           </p>
         </motion.div>
       </div>
@@ -67,7 +65,7 @@ const Who = () => {
         transition={{ duration: 0.5, delay: 0.6 }}
         className="try-button"
       >
-        Try it free
+        {text.button[lang]}
       </motion.button>
     </Container>
   );

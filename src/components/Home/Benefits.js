@@ -1,48 +1,40 @@
-import React from "react";
+import React, { useContext } from "react";
 import wave from "./img/productwave.png";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import text from './text/benefitsText'
+import { SettingContext } from "../../context/SettingContext";
 const Benefits = () => {
+
+  const {lang} = useContext(SettingContext)
   return (
     <Container>
       <img className="wave" src={wave} />
-      <h2>Save time & money with one complete solution.</h2>
+      <h2>{text.title[lang]}</h2>
       <div className="wrapper">
         <Text>
           <div>
-            <h3>Avantage 1</h3>
+            <h3>{text.sub1[lang]}</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. A arcu
-              cursus vitae congue. Sed blandit libero volutpat sed cras ornare
-              arcu dui. Dictum non consectetur a erat nam at lectus urna
+            {text.p1[lang]}
             </p>
           </div>
           <div>
-            <h3>Avantage 2</h3>
+            <h3>{text.sub2[lang]}</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. A arcu
-              cursus vitae congue. Sed blandit libero volutpat sed cras ornare
-              arcu dui. Dictum non consectetur a erat nam at lectus urna
+            {text.p2[lang]}
             </p>
           </div>
           <div>
-            <h3>Avantage 3</h3>
+            <h3>{text.sub3[lang]}</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. A arcu
-              cursus vitae congue. Sed blandit libero volutpat sed cras ornare
-              arcu dui. Dictum non consectetur a erat nam at lectus urna
+            {text.p3[lang]}
             </p>
           </div>
           <div>
-            <h3>Avantage 4</h3>
+            <h3>{text.sub4[lang]}</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. A arcu
-              cursus vitae congue. Sed blandit libero volutpat sed cras ornare
-              arcu dui. Dictum non consectetur a erat nam at lectus urna
+            {text.p4[lang]}
             </p>
           </div>
         </Text>
@@ -54,7 +46,7 @@ const Benefits = () => {
             transition={{ duration: 0.5, delay: 0.6 }}
             className="try-button"
           >
-            Try it free
+           {text.button[lang]}
           </motion.button>
         </Img>
       </div>

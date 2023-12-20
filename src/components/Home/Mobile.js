@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import mobile from "./img/mobile.png";
+
+import text from './text/mobileText'
+import { SettingContext } from "../../context/SettingContext";
+
 const Mobile = () => {
+
+  const {lang} = useContext(SettingContext)
   return (
     <Container>
       <img alt="phone" src={mobile} />
@@ -14,7 +20,7 @@ const Mobile = () => {
             transition={{ duration: 1, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            Access your dashboard from anywhere.
+            {text.title[lang]}
           </motion.h2>
           <motion.p
             initial={{ x: -50, opacity: 0 }}
@@ -22,8 +28,7 @@ const Mobile = () => {
             transition={{ duration: 1, delay: 0.7 }}
             viewport={{ once: true }}
           >
-            Use WeFinanceU mobile app to take your work on the go with you.
-            Download the mobile app in the App Store or Google Play.
+            {text.p[lang]}
           </motion.p>
           <motion.button
             initial={{ x: -50, opacity: 0 }}
@@ -32,7 +37,7 @@ const Mobile = () => {
             viewport={{ once: true }}
             className="try-button"
           >
-            Try it free
+            {text.button[lang]}
           </motion.button>
         </div>
       </div>

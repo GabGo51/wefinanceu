@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import quote from "./img/quote.png";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import bluewave2 from './img/bluewave2.png'
+import text from './text/reviewText'
+import { SettingContext } from "../../context/SettingContext";
 
 const Review = () => {
+  const {lang} = useContext(SettingContext)
   const navigate = useNavigate();
   const handleNavigate = (page) => {
     navigate(page);
@@ -17,10 +20,9 @@ const Review = () => {
     <Container>
       <img className="wave" alt="wavy" src={bluewave2}/>
       <img src={quote} />
-      <h2>What our customers are saying</h2>
+      <h2>{text.title[lang]}</h2>
       <p className="quote">
-        After 25 years I've finally found the CRM that has helped me reduce cost
-        and increase revenue.
+      {text.quote[lang]}
       </p>
 
       <div className="pic"></div>
@@ -28,14 +30,14 @@ const Review = () => {
         <span>Brady Webb, CEO</span> American Mortgage Solutions Inc.
       </p>
       <div className="button-wrapper">
-        <h4>Want to tell us something ? </h4>
+        <h4>{text.nav1[lang]} </h4>
         <div>
           <motion.button
             onClick={() => handleNavigate("/contact")}
             whileHover={{ paddingRight: 20 }}
             transition={{ duration: 0.3 }}
           >
-            Contact us
+            {text.nav2[lang]}
           </motion.button>
           <i class="fa-solid fa-arrow-right"></i>
         </div>

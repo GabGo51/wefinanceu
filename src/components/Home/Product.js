@@ -59,7 +59,7 @@ const Product = () => {
         >
           <img alt="icon" src={dash} />
           <h3>{text.subtitle3[lang]}</h3>
-          <p>{text.p1[lang]}</p>
+          <p>{text.p3[lang]}</p>
         </motion.div>
       </div>
       <div className="button-wrapper">
