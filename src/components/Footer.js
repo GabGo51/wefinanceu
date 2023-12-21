@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-
+import text from './text'
 import logo from "../img/logopng.png";
+import { SettingContext } from "../context/SettingContext";
+
 const Footer = () => {
+
+  const {lang}  = useContext(SettingContext)
   const navigate = useNavigate();
   const handleNavigate = (page) => {
     navigate(page);
@@ -58,7 +62,7 @@ const Footer = () => {
             transition={{ duration: 0.5, delay: 0.6 }}
             className="try-button"
           >
-            Try it free
+            {text.tryButton[lang]}
           </motion.button>
           
         </div>
@@ -71,7 +75,7 @@ const Footer = () => {
             viewport={{ once: true }}
             onClick={() => handleNavigate("/product")}
           >
-            <li>Our Solution</li>
+            <li>{text.solution[lang]}</li>
           </motion.div>
           <motion.div
             initial={{ x: 50, opacity: 0 }}
@@ -80,7 +84,7 @@ const Footer = () => {
             viewport={{ once: true }}
             onClick={() => handleNavigate("/about")}
           >
-            <li>About Us</li>
+            <li>{text.about[lang]}</li>
           </motion.div>
           
           
@@ -91,7 +95,7 @@ const Footer = () => {
             viewport={{ once: true }}
             onClick={() => handleNavigate("/contact")}
           >
-            <li>Contact Us</li>
+            <li>{text.contact[lang]}</li>
           </motion.div>
           <motion.div
             initial={{ x: 50, opacity: 0 }}
@@ -100,7 +104,7 @@ const Footer = () => {
             viewport={{ once: true }}
             onClick={() => handleNavigate("/contact")}
           >
-            <li>Login</li>
+            <li>{text.login[lang]}</li>
           </motion.div>
         </ul>
       </div>
@@ -112,13 +116,13 @@ const Footer = () => {
         viewport={{ once: true }}
       ></motion.div>
       <div className="powered">
-        <p>© {currentYear} WeFinanceU</p> <>|</> <p>All rights reserved</p>
+        <p>© {currentYear} WeFinanceU</p> <>|</> <p>{text.rights[lang]}</p>
       </div>
       <button
         className="powered-button"
         
       >
-        powered by
+        {text.powered[lang]}
       </button>
     </Container>
   );

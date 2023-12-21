@@ -20,6 +20,14 @@ const text = {
     true:'Try it free',
     false:'Essai Gratuit',
   },
+  rights:{
+    true:'All rights reserved',
+    false:'Tout droit réservé',
+  },
+  powered:{
+    true:'powered by',
+    false:'Propulsé par',
+  },
 }
 
 export default text;
