@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import text from './text/introText'
+import { SettingContext } from "../../context/SettingContext";
 
-const Text = () => {
+const Intro = () => {
+
+  const {lang} = useContext(SettingContext)
   return (
     <Container>
-      <h1>Get in touch with us</h1>
+      <h1>{text.title[lang]}</h1>
       <p>
         Ready to revolutionize your sales process? We’d love to show you what
         Pipedrive can do – contact our sales experts and discover how Pipedrive
@@ -51,4 +55,4 @@ div{
   }
 `;
 
-export default Text;
+export default Intro;

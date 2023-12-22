@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { useRef, useState } from "react";
 import emailjs, { send } from "@emailjs/browser";
 import loadingCircle from "./img/loading.gif";
+import text from './text/formText'
+import { SettingContext } from "../../context/SettingContext";
 const Form = () => {
+
+  const {lang} = useContext(SettingContext)
   const form = useRef();
 
   const [loading, setLoading] = useState(false);
@@ -40,7 +44,7 @@ const Form = () => {
     <Container>
       <form ref={form} onSubmit={sendEmail}>
         <div>
-          <label>Full Name</label>
+          <label>{text.name[lang]}</label>
           <input required type="text" name="user_name" />
         </div>
         <div>
@@ -48,17 +52,15 @@ const Form = () => {
           <input required type="email" name="user_email" />
         </div>
         <div>
-          <label>Phone Number</label>
+          <label>{text.phone[lang]}</label>
           <input required type="phone" name="user_phone" />
         </div>
         <div>
-          <label>What can we help you with ?</label>
+          <label>{text.help[lang]}</label>
           <textarea required type="phone" name="user_message" />
         </div>
         <p>
-          We’re committed to your privacy. WeFinanceU uses the information you
-          provide to us to contact you about our relevant content, products, and
-          services.
+        {text.privacy[lang]}
         </p>
         <div className="bottom">
           {loading && (
@@ -78,18 +80,17 @@ const Form = () => {
           )}
           {!loading && !sent && !error && (
             <button type="submit" className="try-button">
-              Submit
+              {text.button[lang]}
             </button>
           )}
           {sent && (
             <p className="sent">
-              Your message was sent! We'll contact you as soon as we can.
+              {text.sent[lang]}
             </p>
           )}
           {error && (
             <p className="error">
-              Oops, it looks like an error occured! Please try again later or
-              email us directly.
+              {text.error[lang]}
             </p>
           )}
         </div>

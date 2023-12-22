@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import Form from "./Form";
-import Text from "./Text";
+import Intro from "./Intro";
 import Review from "./Review";
 const Contact = () => {
   return (
     <Container>
       <div className="blue">
         <div className="wrapper">
-          <Text />
+          <Intro />
           <Form />
         </div>
       </div>
