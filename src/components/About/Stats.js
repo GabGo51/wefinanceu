@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import text from './text/statsText'
+import { SettingContext } from "../../context/SettingContext";
 const Stats = () => {
+
+  const {lang} = useContext(SettingContext)
   return (
     <Container>
-      <h2>A look on our <span>past succes</span> </h2>
+      <h2>{text.title1[lang]} <span>{text.title2[lang]}</span> </h2>
       <div className="wrapper">
         <motion.div
           initial={{ x: -50, opacity: 0 }}

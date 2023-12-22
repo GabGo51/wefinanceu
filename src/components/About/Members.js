@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import alexis from "./img/alexis.PNG";
 import sabrina from "./img/sabrina.PNG";
 import greywave from './img/greywave.png'
+import text from './text/membersText'
+import { SettingContext } from "../../context/SettingContext";
 const Members = () => {
+
+  const {lang} = useContext(SettingContext)
   return (
     <Container>
-      <h1>Our Mission</h1>
+      <h1>{text.title[lang]}</h1>
       <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
       <motion.div
         className="color-box"
@@ -52,6 +56,7 @@ const Container = styled.div`
   .wave{
     width: 100vw;
     margin-bottom: -2px;
+    border-radius: 0;
   }
 
   h1{

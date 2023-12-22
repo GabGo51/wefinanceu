@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import account from "./img/account.PNG";
 import { useState } from "react";
+import text from './text/profilesText'
+import { SettingContext } from "../../context/SettingContext";
 
 
 const Profiles = () => {
+
+  const {lang} = useContext(SettingContext)
   const [profile, setProfile] = useState("profile1");
 
   const handleNav = (name) => {
@@ -13,7 +17,7 @@ const Profiles = () => {
 
   return (
     <Container>
-      <h2>Our different profiles and features</h2>
+      <h2>{text.title[lang]}</h2>
       <nav>
         <ul className="noselect">
           <li

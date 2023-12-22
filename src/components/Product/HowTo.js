@@ -1,24 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion, spring } from "framer-motion";
 import styled from "styled-components";
 import account from "./img/account.PNG";
 import greywave from './img/greywave.png'
+
+
+import text from './text/howText'
+import { SettingContext } from "../../context/SettingContext";
+
+
 const HowTo = () => {
+
+  const { lang } = useContext(SettingContext)
   return (
     <Container>
       
       {/* <motion.div initial={{scaleY:0, opacity:0.5}} animate= {{scaleY:1, opacity:1}} transition={{duration:0.75, delay:0.2, type:spring}} className="video"></motion.div> */}
-      <h2>How WeFinanceU works</h2>
+      <h2>{text.title[lang]}</h2>
       <div className="wrapper">
         <div className="text">
           <div className="title">
             <div>1</div>
-            <h3>Create an account</h3>
+            <h3>{text.sub1[lang]}</h3>
           </div>
           <p>
-            WeFinanceU se consacre à démocratiser l'accès au financement
-            immobilier commercial pour tous, que cela soit des débutants ou des
-            experts dans le secteur.
+          {text.p1[lang]}
           </p>
         </div>
 
@@ -28,12 +34,10 @@ const HowTo = () => {
         <div className="text">
           <div className="title">
             <div>2</div>
-            <h3>Fill out the survey</h3>
+            <h3>{text.sub2[lang]}</h3>
           </div>
           <p>
-            WeFinanceU se consacre à démocratiser l'accès au financement
-            immobilier commercial pour tous, que cela soit des débutants ou des
-            experts dans le secteur.
+          {text.p2[lang]}
           </p>
         </div>
 
@@ -43,12 +47,10 @@ const HowTo = () => {
         <div className="text">
           <div className="title">
             <div>3</div>
-            <h3>Get a price fork</h3>
+            <h3>{text.sub3[lang]}</h3>
           </div>
           <p>
-            WeFinanceU se consacre à démocratiser l'accès au financement
-            immobilier commercial pour tous, que cela soit des débutants ou des
-            experts dans le secteur.
+          {text.p3[lang]}
           </p>
         </div>
 
@@ -58,12 +60,10 @@ const HowTo = () => {
         <div className="text">
           <div className="title">
             <div>4</div>
-            <h3>Review your submissions</h3>
+            <h3>{text.sub4[lang]}</h3>
           </div>
           <p>
-            WeFinanceU se consacre à démocratiser l'accès au financement
-            immobilier commercial pour tous, que cela soit des débutants ou des
-            experts dans le secteur.
+          {text.p4[lang]}
           </p>
         </div>
 

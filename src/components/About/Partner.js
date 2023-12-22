@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import bluewave from './img/bluewave.png'
+import text from './text/partnerText'
+import { SettingContext } from "../../context/SettingContext";
 const Partner = () => {
+
+   const {lang} = useContext(SettingContext)
   return (
     <Container>
       <img src={bluewave} alt="wave" className="wave"/>
       <div className="wrapper">
-        <h2>With the supports of our partners</h2>
+        <h2>{text.title[lang]}</h2>
         <div className="compagnies">
           <h1>Company 1</h1>
           <h1>Company 2</h1>

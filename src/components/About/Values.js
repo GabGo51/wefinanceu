@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import agility from "./img/agility.png";
 import collab from "./img/collab.png";
 import integrity from "./img/integrity.png";
 import client from "./img/client.png";
 import { motion } from "framer-motion";
-
+import text from './text/valuesText'
+import { SettingContext } from "../../context/SettingContext";
 
 const Values = () => {
+
+  const {lang} = useContext(SettingContext)
   const initial = {
     opacity: 0,
     y: 100,
@@ -27,7 +30,7 @@ const Values = () => {
           transition={{ duration: 1, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          What drives us
+          {text.title[lang]}
         </motion.h2>{" "}
       </div>
       <div className="wrapper">
@@ -39,13 +42,9 @@ const Values = () => {
           classname="value"
         >
           <img alt="icon" src={client} />
-          <h3>Client Oriented</h3>
+          <h3>{text.sub1[lang]}</h3>
           <p>
-            {" "}
-            Le client est au cœur de notre mission. Grâce à nos solutions
-            personnalisées et notre service client d'exception, nous rendons le
-            secteur du financement immobilier commercial accessible à tous,
-            indépendamment de leur niveau d'expérience ou de leur origine.
+          {text.p1[lang]}
           </p>
         </motion.div>
         <motion.div
@@ -56,13 +55,9 @@ const Values = () => {
           classname="value"
         >
           <img alt="icon" src={integrity} />
-          <h3>Integrity</h3>
+          <h3>{text.sub2[lang]}</h3>
           <p>
-            {" "}
-            Nous instaurons la confiance en agissant toujours de manière
-            honnête, transparente et éthique. Nous nous engageons à fournir des
-            informations fiables et faciles à comprendre pour aider nos clients
-            à prendre des décisions éclairées.
+          {text.p2[lang]}
           </p>
         </motion.div>
         <motion.div
@@ -73,13 +68,9 @@ const Values = () => {
           classname="value"
         >
           <img alt="icon" src={agility} />
-          <h3>Agility</h3>
+          <h3>{text.sub3[lang]}</h3>
           <p>
-            {" "}
-            Nous restons continuellement à l'avant-garde des changements et
-            innovations dans le secteur du financement immobilier commercial.
-            WeFinanceU offre une alternative aux processus de financement
-            archaïques établis depuis des décennies.
+          {text.p3[lang]}
           </p>
         </motion.div>
         <motion.div
@@ -90,14 +81,9 @@ const Values = () => {
           classname="value"
         >
           <img alt="icon" src={collab} />
-          <h3>Collaboration</h3>
+          <h3>{text.sub4[lang]}</h3>
           <p>
-            La collaboration est essentielle dans notre démarche. Qu’il s’agisse
-            de cerner les besoins spécifiques de nos clients ou de nouer des
-            partenariats stratégiques avec des acteurs clés tels que Centris,
-            CORPIQ, ainsi que diverses plateformes et institutions bancaires de
-            courtage, notre objectif est de créer des relations durables et
-            bénéfiques pour toutes les parties.
+          {text.p4[lang]}
           </p>
         </motion.div>
       </div>
