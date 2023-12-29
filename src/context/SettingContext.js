@@ -1,7 +1,7 @@
 import { createContext} from "react";
 import { useState } from "react";
 
-//Context to keep track of the user logged in 
+//Context to keep track of the language selected 
 export const SettingContext = createContext(null);
 export const SettingProvider = ({ children }) => {
   const [lang, setLang] = useState(true);

@@ -2,13 +2,15 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import mobile from "./img/mobile.png";
-
 import text from './text/mobileText'
 import { SettingContext } from "../../context/SettingContext";
 
+
+//component showcasing the phone version and another link to try free
 const Mobile = () => {
 
   const {lang} = useContext(SettingContext)
+
   return (
     <Container>
       <img alt="phone" src={mobile} />
@@ -50,11 +52,11 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding-top: 50px;
   margin-top: 50px;
   background-color: #fbfbfb;
   height: 700px;
+
   img {
     width: clamp(300px, 35%, 500px);
     position: absolute;
@@ -64,6 +66,7 @@ const Container = styled.div`
 
   .wrapper {
     position: relative;
+
     .text-box {
       position: absolute;
       display: flex;
@@ -90,17 +93,20 @@ const Container = styled.div`
   }
 
   @media (max-width: 800px) {
+
     .text-box {
       transform: translateX(20%);
     }
   }
   @media (max-width: 650px) {
+
     .text-box {
       transform: translate(-0%, -60%);
       width: 500px;
     }
   }
   @media (max-width: 650px) {
+    
     .text-box {
       transform: translate(10%, -60%);
       width: 500px;

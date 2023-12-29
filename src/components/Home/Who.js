@@ -7,9 +7,13 @@ import banks from "./img/banks.png";
 import text from './text/whoText'
 import { SettingContext } from "../../context/SettingContext";
 
+
+//section showing target audience of the app 
+
 const Who = () => {
 
   const {lang} = useContext(SettingContext)
+
   return (
     <Container>
       <motion.h2
@@ -20,7 +24,6 @@ const Who = () => {
       >
         {text.title[lang]} <span>{text.span[lang]}</span>
       </motion.h2>
-
       <div className="wrapper">
         <motion.div
           initial={{ x: -50, opacity: 0 }}
@@ -101,6 +104,7 @@ const Container = styled.div`
     align-items: center;
     justify-content: space-around;
     padding-bottom: 50px;
+    
     div {
       display: flex;
       flex-direction: column;

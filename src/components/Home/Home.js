@@ -8,7 +8,7 @@ import Mobile from "./Mobile";
 import Benefits from "./Benefits";
 import Who from "./Who";
 
-
+//main component for the home page with all sections 
 const Home = () => {
   return (
     <Container>

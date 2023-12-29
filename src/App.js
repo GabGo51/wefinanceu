@@ -7,7 +7,7 @@ import Contact from "./components/Contact/Contact";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 
-
+//main app component representing home about product and contact page
 function App() {
   return (
     <Router>

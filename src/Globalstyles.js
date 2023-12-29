@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
 
+  /* colors and shades used  */
   :root{
     --main:#002F5A;
     --main-p:#003A52;
@@ -92,6 +93,7 @@ export default createGlobalStyle`
     line-height: 26px;
   }
 
+  /* surrounding all main section div  */
   .wrapper {
     display: flex;
     justify-content: space-between;
@@ -102,7 +104,7 @@ export default createGlobalStyle`
       width: 90%;
     }
   }
-
+ /* try it free button styles   */
   .try-button{
     transition: 500ms;
     width: 150px;

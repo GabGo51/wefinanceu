@@ -1,3 +1,5 @@
+//text found in header and footer
+
 const text = {
 
   solution:{

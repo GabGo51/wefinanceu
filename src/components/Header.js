@@ -8,9 +8,12 @@ import blueLogo from "../img/blueLogo.PNG";
 import logo from "../img/logopng.png";
 import text from "./text";
 
+// header component with nav links, language button, loging and try button
 const Header = () => {
+
   const { open, lang, setLang, setOpen } = useContext(SettingContext);
 
+  // open and close menu in phone design
   const toggleMenu = () => {
     setOpen(!open);
   };
@@ -24,11 +27,11 @@ const Header = () => {
     });
   };
 
-  console.log(open);
   return (
     <Container>
       <AnimatePresence>
         {open ? (
+          //phone design header
           <PhoneHeader
             key="phone-header" //must have for exit
             initial={{ left: "100vw", width: 0 }}
@@ -49,13 +52,10 @@ const Header = () => {
                 <li onClick={() => handleNavigate("/contact")}>{text.contact[lang]}</li>
               <li onClick={() => handleNavigate("/contact")}>{text.login[lang]}</li>
             </ul>
-
-            
             <div className="button-box">
               <button className="try-button">
               {text.tryButton[lang]}
             </button>
-
               <div className="lang-button">
                 <button
                   style={{ opacity: !lang ? 1 : 0.5 }}
@@ -88,6 +88,7 @@ const Header = () => {
             />
           </PhoneHeader>
         ) : (
+          //Desktop desgign header
           <DesktopHeader
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 80, opacity: 1 }}
@@ -176,8 +177,10 @@ const DesktopHeader = styled(motion.header)`
     display: flex;
     align-items: center;
   }
+
   ul {
     display: flex;
+
     li {
       transition: 500ms;
       padding: 10px 5px;
@@ -193,6 +196,7 @@ const DesktopHeader = styled(motion.header)`
       }
     }
   }
+
   div {
     display: flex;
     margin-left: 10px;
@@ -214,6 +218,8 @@ const DesktopHeader = styled(motion.header)`
     color: var(--main);
     cursor: pointer;
     color: black;
+
+
     &:hover {
       scale: 1.1;
     }
@@ -231,16 +237,18 @@ const DesktopHeader = styled(motion.header)`
     align-items: center;
     justify-content: flex-end;
 
-    
   }
 
   @media (max-width: 1300px) {
+
     i {
       display: block;
     }
+
     ul {
       display: none;
     }
+
     div {
       display: none;
     }
@@ -279,6 +287,7 @@ const PhoneHeader = styled(motion.header)`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     li {
       margin: 20px 0;
       font-weight: 600;
@@ -318,6 +327,7 @@ const PhoneHeader = styled(motion.header)`
     cursor: pointer;
     color: white;
     font-weight: 600;
+    
     &:hover {
       scale: 1.1;
     }

@@ -7,8 +7,12 @@ import bluewave2 from './img/bluewave2.png'
 import text from './text/reviewText'
 import { SettingContext } from "../../context/SettingContext";
 
+
+//review section with a costumer review and contact us link 
 const Review = () => {
+
   const {lang} = useContext(SettingContext)
+
   const navigate = useNavigate();
   const handleNavigate = (page) => {
     navigate(page);
@@ -16,6 +20,7 @@ const Review = () => {
       top: 0,
     });
   };
+
   return (
     <Container>
       <img className="wave" alt="wavy" src={bluewave2}/>
@@ -24,7 +29,6 @@ const Review = () => {
       <p className="quote">
       {text.quote[lang]}
       </p>
-
       <div className="pic"></div>
       <p>
         <span>Brady Webb, CEO</span> American Mortgage Solutions Inc.
@@ -45,12 +49,12 @@ const Review = () => {
     </Container>
   );
 };
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   text-align: center;
 
   .wave{

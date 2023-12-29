@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import mobile from "./img/mobilehero.png";
 import text from "./text/heroText";
 import { SettingContext } from "../../context/SettingContext";
+
+//Hero components: title, text , button , application mockup 
 const Hero = () => {
   
   const { lang } = useContext(SettingContext);
@@ -69,6 +71,7 @@ const Container = styled.div`
     text-align: center;
     justify-content: center;
     align-items: center;
+
     .text-box {
       display: flex;
       flex-direction: column;
@@ -104,6 +107,7 @@ const Container = styled.div`
       position: absolute;
       right: -50px;
       bottom: 4px;
+      
       @media (max-width: 800px) {
         display: none;
       }

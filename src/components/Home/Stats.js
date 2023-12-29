@@ -6,15 +6,15 @@ import bluewave from './img/bluewave.png'
 import { SettingContext } from "../../context/SettingContext";
 import text from "./text/statsText";
 
-
+//stats under hero section with an about us link 
 const Stats = () => {
   const { lang } = useContext(SettingContext);
 
+  //animation for the framer components
   const initial = {
     opacity: 0,
     y: 50,
   };
-
   const animate = {
     opacity: 1,
     y: 0,
@@ -30,7 +30,6 @@ const Stats = () => {
 
   return (
     <Container
-    
       //using scale makes it go bottom to top
       //height:top-bottom scale:bottom-top
       initial={{ scaleY: 0 }}
@@ -38,7 +37,6 @@ const Stats = () => {
       transition={{ duration: 1 }}
     >
       <img alt="wave" className="wave" src={bluewave}/>
-      
       <div className="wrapper">
         <motion.div
           initial={initial}
@@ -95,8 +93,7 @@ const Stats = () => {
         <i class="fa-solid fa-arrow-right"></i>
       </motion.div>
       {/* <img className="vector" src={vector}/>
-      <img className="vector other" src={vector}/> */}
-      
+      <img className="vector other" src={vector}/> */} 
     </Container>
   );
 };
@@ -123,17 +120,18 @@ const Container = styled(motion.div)`
   }
   
   .wrapper {
+
     div {
       margin: 40px 0;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
     h3 {
       font-size: clamp(22px, 3vw, 42px);
       margin: 10px 0px;
       color: white;
-      
     }
 
     p {
@@ -142,6 +140,7 @@ const Container = styled(motion.div)`
     }
 
     .button-wrapper{
+
       h4{
         color: white;
       }
@@ -167,8 +166,10 @@ const Container = styled(motion.div)`
   
 
   @media (max-width: 950px) {
+
     .wrapper {
       flex-wrap: wrap;
+      
       div {
         display: flex;
         flex-direction: column;

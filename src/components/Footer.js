@@ -6,9 +6,12 @@ import text from './text'
 import logo from "../img/logopng.png";
 import { SettingContext } from "../context/SettingContext";
 
-const Footer = () => {
 
+// footer component with nav buttons and contact info
+const Footer = () => {
+  
   const {lang}  = useContext(SettingContext)
+
   const navigate = useNavigate();
   const handleNavigate = (page) => {
     navigate(page);
@@ -16,7 +19,9 @@ const Footer = () => {
       top: 0,
     });
   };
+
   const currentYear = new Date().getFullYear();
+
   return (
     <Container
       initial={{ scaleY: 0.6, backgroundColor: "white" }}
@@ -63,10 +68,8 @@ const Footer = () => {
             className="try-button"
           >
             {text.tryButton[lang]}
-          </motion.button>
-          
+          </motion.button> 
         </div>
-
         <ul className="noselect">
         <motion.div
             initial={{ x: 50, opacity: 0 }}
@@ -86,8 +89,6 @@ const Footer = () => {
           >
             <li>{text.about[lang]}</li>
           </motion.div>
-          
-          
           <motion.div
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -120,7 +121,6 @@ const Footer = () => {
       </div>
       <button
         className="powered-button"
-        
       >
         {text.powered[lang]}
       </button>
@@ -138,23 +138,29 @@ const Container = styled(motion.footer)`
   justify-content: center;
 
   .wrapper {
+
     img {
       width: clamp(150px, 20%, 250px);
       cursor: pointer;
     }
+
     ul {
+
       li {
         cursor: pointer;
         transition: 300ms;
         text-align: end;
         margin: 20px 0;
         width: 120px;
+
         &:hover {
           transform: translateX(5%);
         }
       }
     }
+
     .contact-ul {
+
       li {
         text-align: start;
         margin: 10px 0;
@@ -163,6 +169,7 @@ const Container = styled(motion.footer)`
       }
     }
   }
+
   .login-button {
     border: 2px solid white;
     color: white;
@@ -187,9 +194,9 @@ const Container = styled(motion.footer)`
     margin-top: 20px;
     display: flex;
     justify-content: center;
-
     width: clamp(300px, 95%, 1400px);
     font-size: 12px;
+
     p {
       margin: 0 30px;
     }

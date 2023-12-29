@@ -8,9 +8,13 @@ import { useNavigate } from "react-router-dom";
 import text from "./text/productText";
 import { SettingContext } from "../../context/SettingContext";
 
+
+// component explaining the app and  linking to produact page 
 const Product = () => {
+
   const { lang } = useContext(SettingContext);
 
+  //navigation to product page and scroll top
   const navigate = useNavigate();
   const handleNavigate = (page) => {
     navigate(page);
@@ -29,7 +33,6 @@ const Product = () => {
       >
         {text.productTitle[lang]}
       </motion.h2>
-
       <div className="wrapper">
         <motion.div
           initial={{ x: -50, opacity: 0 }}
@@ -106,6 +109,7 @@ const Container = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    
     div {
       display: flex;
       flex-direction: column;

@@ -4,9 +4,12 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import text from './text/benefitsText'
 import { SettingContext } from "../../context/SettingContext";
+
+//benefit component under product component: 4 block of text and an image\link
 const Benefits = () => {
 
   const {lang} = useContext(SettingContext)
+
   return (
     <Container>
       <img className="wave" src={wave} />
@@ -62,6 +65,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   padding-bottom: 50px;
+
   h2{
     color: var(--main);
     margin-bottom: 80px;
@@ -99,14 +103,14 @@ const Text = styled.div`
   div {
     width: clamp(270px, 50%, 320px); /* Adjust the width as needed */
     margin-bottom: 10px; /* Add margin between items */
-    box-sizing: border-box;
-    
+    box-sizing: border-box;   
     padding: 10px;
   }
 `;
 
 const Img = styled.div`
   position: relative;
+  
   div {
     background-color: grey;
     width: 400px;
