@@ -90,7 +90,7 @@ export default createGlobalStyle`
   }
 
   p{
-    line-height: 26px;
+    font-size: clamp(16px, 3vw, 18px);
   }
 
   /* surrounding all main section div  */

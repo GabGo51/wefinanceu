@@ -87,6 +87,7 @@ const Container = styled.div`
   }
   .button-wrapper {
     flex-direction: column;
+    line-height: 34px;
   }
 `;
 

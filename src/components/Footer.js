@@ -137,6 +137,10 @@ const Container = styled(motion.footer)`
   align-items: center;
   justify-content: center;
 
+  p{
+    font-size: 12px;
+  }
+
   .wrapper {
 
     img {

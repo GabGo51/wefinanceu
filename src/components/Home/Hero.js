@@ -83,7 +83,7 @@ const Container = styled.div`
       }
 
       p {
-        max-width: 600px;
+        width: clamp(300px, 60%, 600px);
         color: var(--main-p);
       }
 
@@ -98,7 +98,7 @@ const Container = styled.div`
     }
 
     img {
-      width: 100%;
+      width: 95%;
       transform-origin: bottom;
     }
 

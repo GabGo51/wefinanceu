@@ -42,8 +42,8 @@ const Benefits = () => {
           </div>
         </Text>
         <Img>
-          <div></div>
-          <motion.button
+          <div>
+            <motion.button
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
@@ -51,6 +51,8 @@ const Benefits = () => {
           >
            {text.button[lang]}
           </motion.button>
+          </div>
+          
         </Img>
       </div>
     </Container>
@@ -59,7 +61,7 @@ const Benefits = () => {
 
 const Container = styled.div`
   position: relative;
-  padding-top: 250px;
+  padding-top: 170px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,7 +72,7 @@ const Container = styled.div`
     color: var(--main);
     margin-bottom: 80px;
     text-align: center;
-    margin: 40px 20px;
+    margin: 40px 40px;
   }
 
   .wave {
@@ -91,6 +93,7 @@ const Text = styled.div`
   flex-wrap: wrap;
   justify-content:start;
   gap: 20px;
+  max-width: 800px;
   
   h3{
     color: var(--main);
@@ -109,19 +112,20 @@ const Text = styled.div`
 `;
 
 const Img = styled.div`
-  position: relative;
+  
+  width: clamp(300px ,50% ,400px);
   
   div {
+    position: relative;
     background-color: grey;
-    width: 400px;
     height: 600px;
     border-radius: 40px;
   }
 
   button{
     position: absolute;
-    bottom: 30px;
-    right: 120px;
+    bottom:5%;
+    right: 30%;
   }
 `;
 export default Benefits;

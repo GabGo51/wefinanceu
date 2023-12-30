@@ -13,31 +13,34 @@ const Members = () => {
     <Container>
       <h1>{text.title[lang]}</h1>
       <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-      <motion.div
-        className="color-box"
-        initial={{ scaleY: 0.7 }}
-        //since % dont work have to use auto
-        whileInView={{ scaleY: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-      >
+      
         <div className="wrapper">
-          <motion.img
+          <div>
+            <motion.img
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.1 }}
             viewport={{ once: true }}
             src={alexis}
+            
           />
-          <motion.img
+          <h3>Alexis Aube-Martin </h3>
+          <p>Title </p>
+          </div>
+          <div>
+            <motion.img
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
             viewport={{ once: true }}
             src={sabrina}
           />
+          <h3>Sabrina Lateigne</h3>
+          <p>Title</p>
+          </div>
+          
         </div>
-      </motion.div>
+      
       <img src={greywave} alt="wave" className="wave"/>
     </Container>
   );
@@ -45,6 +48,7 @@ const Members = () => {
 
 const Container = styled.div`
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -64,51 +68,59 @@ const Container = styled.div`
     margin-top: 80px;
   }
 
-  img {
-    width: clamp(150px, 35%, 300px);
-    object-fit: cover;
-    margin: 5px;
-    border-radius: 30px;
-  }
+  
 
   h2 {
     color: #015d85;
     margin: 0;
     
   }
+  
 
   p {
     margin: 20px 0;
     font-size: clamp(14px, 30%, 16px);
     max-width: 600px;
     margin: 20px;
-    margin-bottom: 250px;
+    margin-bottom: -50px;
+    
+    
   }
 
-  .color-box {
-    transform-origin: bottom;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    background-color: var(--light-color);
-    padding: 50px 0;
-  }
+  
 
   .wrapper {
-    position: absolute;
+    align-items: start;
+    justify-content: center;
     justify-content: space-around;
+    transform: translateY(35%);
+    div{
+      width: clamp(150px, 35%, 300px);
+      
+    }
 
-    
+    img {
+    width: 100%;
+    object-fit: cover;
+    margin: 5px;
+    border-radius: 30px;
   }
-
-  @media (max-width:1000px){
-    
+  h3{
+    margin: 10px 0;
+    font-size: clamp(14px, 3vw, 20px);
+  }
 
     p{
-      margin-bottom: 100px;
+      color: var(--main);
+      margin: 0;
+    }
+    
+    @media (max-width:700px){
+      transform: translateY(40%);
     }
   }
+
+  
 `;
 
 export default Members;
