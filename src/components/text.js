@@ -1,4 +1,4 @@
-//text found in header and footer
+//text found in header and footer only  the reste of the the text are in th pages components 
 
 const text = {
 

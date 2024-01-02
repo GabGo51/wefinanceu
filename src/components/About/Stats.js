@@ -1,22 +1,26 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import text from './text/statsText'
+import text from "./text/statsText";
 import { SettingContext } from "../../context/SettingContext";
-const Stats = () => {
+import animations from "../animation";
 
-  const {lang} = useContext(SettingContext)
+const Stats = () => {
+  const { lang } = useContext(SettingContext);
+
   return (
     <Container>
-      <h2>{text.title1[lang]} <span>{text.title2[lang]}</span> </h2>
+      <motion.h2
+        {...animations.fadeInFromDown}
+        transition={{ duration: 1, delay: 0.1 }}
+      >
+        {text.title1[lang]} <span>{text.title2[lang]}</span>{" "}
+      </motion.h2>
       <div className="wrapper">
         <motion.div
-          initial={{ x: -50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          viewport={{ once: true }}
+          {...animations.fadeInFromDown}
+          transition={{ duration: 1, delay: 0.2 }}
         >
-          
           <h3>Investors</h3>
           <h4>Investors</h4>
           <p>
@@ -26,12 +30,9 @@ const Stats = () => {
           </p>
         </motion.div>
         <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
-          viewport={{ once: true }}
+          {...animations.fadeInFromDown}
+          transition={{ duration: 1, delay: 0.4 }}
         >
-          
           <h3>Investors</h3>
           <h4>Investors</h4>
           <p>
@@ -41,12 +42,9 @@ const Stats = () => {
           </p>
         </motion.div>
         <motion.div
-          initial={{ x: 50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.9 }}
-          viewport={{ once: true }}
+          {...animations.fadeInFromDown}
+          transition={{ duration: 1, delay: 0.6 }}
         >
-          
           <h3>Investors</h3>
           <h4>Investors</h4>
           <p>
@@ -56,12 +54,9 @@ const Stats = () => {
           </p>
         </motion.div>
         <motion.div
-          initial={{ x: -50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          viewport={{ once: true }}
+          {...animations.fadeInFromDown}
+          transition={{ duration: 1, delay: 0.2 }}
         >
-          
           <h3>Investors</h3>
           <h4>Investors</h4>
           <p>
@@ -71,12 +66,9 @@ const Stats = () => {
           </p>
         </motion.div>
         <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
-          viewport={{ once: true }}
+          {...animations.fadeInFromDown}
+          transition={{ duration: 1, delay: 0.4 }}
         >
-          
           <h3>Investors</h3>
           <h4>Investors</h4>
           <p>
@@ -86,12 +78,9 @@ const Stats = () => {
           </p>
         </motion.div>
         <motion.div
-          initial={{ x: 50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.9 }}
-          viewport={{ once: true }}
+          {...animations.fadeInFromDown}
+          transition={{ duration: 1, delay: 0.6 }}
         >
-          
           <h3>Investors</h3>
           <h4>Investors</h4>
           <p>
@@ -106,28 +95,30 @@ const Stats = () => {
 };
 
 const Container = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-padding-bottom: 50px;
-background-color: var(--main);
-color: white;
-padding-top: 50px;
-
-h2 , h3 ,h4{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 50px;
+  background-color: var(--main);
   color: white;
-}
+  padding-top: 50px;
 
-h2{
-  margin-bottom: 100px;
-}
+  h2,
+  h3,
+  h4 {
+    color: white;
+  }
 
-span{
-  color: var(--green);
-}
+  h2 {
+    margin-bottom: 100px;
+  }
 
-.wrapper {
+  span {
+    color: var(--green);
+  }
+
+  .wrapper {
     flex-wrap: wrap;
     /* align-items: center; */
     justify-content: space-around;
@@ -144,10 +135,9 @@ span{
       height: 340px;
       background-color: var(--faded-grey);
       border-radius: 30px;
-      box-shadow: 1px 5px 13.3px 0px rgba(0, 0, 0, 0.10);
+      box-shadow: 1px 5px 13.3px 0px rgba(0, 0, 0, 0.1);
     }
   }
-
 `;
 
 export default Stats;
