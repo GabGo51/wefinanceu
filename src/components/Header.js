@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import blueLogo from "../img/blueLogo.PNG";
 import logo from "../img/logopng.png";
 import text from "./text";
+import animations from "./animation";
 
 // header component with nav links, language button, loging and try button
 const Header = () => {
@@ -90,8 +91,7 @@ const Header = () => {
         ) : (
           //Desktop desgign header
           <DesktopHeader
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 80, opacity: 1 }}
+          {...animations.fadeInFromUp}
             transition={{ duration: 0.5, delay: 0.2 }}
             exit={{ height: 0, opacity: 0 }}
           >

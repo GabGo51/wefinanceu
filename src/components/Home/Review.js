@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import bluewave2 from "./img/bluewave2.png";
 import text from "./text/reviewText";
 import { SettingContext } from "../../context/SettingContext";
+import animations from "../animation";
 
 //review section with a costumer review and contact us link
 const Review = () => {
@@ -22,10 +23,11 @@ const Review = () => {
   return (
     <Container>
       <img className="wave" alt="wavy" src={bluewave2} />
-      <motion.div initial={{ y: -20, opacity: 0 }}
-    whileInView={{ y: 0, opacity: 1 }}
-    transition={{ duration: 1, delay: 0.1 }}
-    viewport={{ once: true }}  className="wrapper">
+      <motion.div
+       {...animations.fadeInFromUp}
+        transition={{ duration: 1, delay: 0.1 }}
+        className="wrapper"
+      >
         <img src={quote} />
         <h2>{text.title[lang]}</h2>
         <p className="quote">{text.quote[lang]}</p>

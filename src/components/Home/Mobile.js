@@ -2,42 +2,39 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import mobile from "./img/mobile.png";
-import text from './text/mobileText'
+import text from "./text/mobileText";
 import { SettingContext } from "../../context/SettingContext";
-
+import animations from "../animation";
 
 //component showcasing the phone version and another link to try free
 const Mobile = () => {
-
-  const {lang} = useContext(SettingContext)
+  const { lang } = useContext(SettingContext);
 
   return (
     <Container>
-      <motion.img initial={{opacity:0, x:-50}} whileInView={{opacity:1, x:0}} transition={{ duration: 1, delay: 0.2 }}
-          viewport={{ once: true }} alt="phone" src={mobile} />
+      <motion.img
+        {...animations.fadeInFromLeft}
+        transition={{ duration: 1, delay: 0.2 }}
+        alt="phone"
+        src={mobile}
+      />
       <div className="wrapper">
         <div className="text-box">
           <motion.h2
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            {...animations.fadeInFromLeft}
             transition={{ duration: 1, delay: 0.2 }}
-            viewport={{ once: true }}
           >
             {text.title[lang]}
           </motion.h2>
           <motion.p
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            {...animations.fadeInFromLeft}
             transition={{ duration: 1, delay: 0.4 }}
-            viewport={{ once: true }}
           >
             {text.p[lang]}
           </motion.p>
           <motion.button
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            viewport={{ once: true }}
+            {...animations.fadeInFromLeft}
+            transition={{ duration: 0.5, delay: 0.4 }}
             className="try-button"
           >
             {text.button[lang]}
@@ -94,28 +91,22 @@ const Container = styled.div`
   }
 
   @media (max-width: 800px) {
-
     .text-box {
       transform: translateX(20%);
     }
   }
   @media (max-width: 650px) {
-
     .text-box {
       transform: translate(-0%, -60%);
       width: 500px;
     }
   }
   @media (max-width: 650px) {
-    
     .text-box {
       transform: translate(10%, -60%);
       width: 500px;
     }
   }
-
-
-  
 `;
 
 export default Mobile;

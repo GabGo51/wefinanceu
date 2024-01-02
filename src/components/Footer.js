@@ -2,15 +2,14 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import text from './text'
+import text from "./text";
 import logo from "../img/logopng.png";
 import { SettingContext } from "../context/SettingContext";
-
+import animations from "./animation";
 
 // footer component with nav buttons and contact info
 const Footer = () => {
-  
-  const {lang}  = useContext(SettingContext)
+  const { lang } = useContext(SettingContext);
 
   const navigate = useNavigate();
   const handleNavigate = (page) => {
@@ -32,10 +31,8 @@ const Footer = () => {
       <div className="wrapper">
         <div>
           <motion.img
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            {...animations.fadeInFromLeft}
             transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
             alt="logo"
             className="noselect"
             onClick={() => handleNavigate("/")}
@@ -43,66 +40,53 @@ const Footer = () => {
           />
           <ul className="contact-ul noselect">
             <motion.div
-              initial={{ x: -50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
+              {...animations.fadeInFromLeft}
               transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
               onClick={() => handleNavigate("/about")}
             >
               <li>450-712-7842</li>
             </motion.div>
             <motion.div
-              initial={{ x: -50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
+              {...animations.fadeInFromLeft}
               transition={{ duration: 0.5, delay: 0.4 }}
-              viewport={{ once: true }}
               onClick={() => handleNavigate("/about")}
             >
               <li>WeFinanceU@gmail.com</li>
             </motion.div>
           </ul>
           <motion.button
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            {...animations.fadeInFromLeft}
             transition={{ duration: 0.5, delay: 0.6 }}
             className="try-button"
           >
             {text.tryButton[lang]}
-          </motion.button> 
+          </motion.button>
         </div>
         <ul className="noselect">
-        <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+          <motion.div
+            {...animations.fadeInFromRight}
             transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
             onClick={() => handleNavigate("/product")}
           >
             <li>{text.solution[lang]}</li>
           </motion.div>
           <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            {...animations.fadeInFromRight}
             transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
             onClick={() => handleNavigate("/about")}
           >
             <li>{text.about[lang]}</li>
           </motion.div>
           <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            {...animations.fadeInFromRight}
             transition={{ duration: 0.5, delay: 0.5 }}
-            viewport={{ once: true }}
             onClick={() => handleNavigate("/contact")}
           >
             <li>{text.contact[lang]}</li>
           </motion.div>
           <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            {...animations.fadeInFromRight}
             transition={{ duration: 0.5, delay: 0.5 }}
-            viewport={{ once: true }}
             onClick={() => handleNavigate("/contact")}
           >
             <li>{text.login[lang]}</li>
@@ -119,11 +103,7 @@ const Footer = () => {
       <div className="powered">
         <p>© {currentYear} WeFinanceU</p> <>|</> <p>{text.rights[lang]}</p>
       </div>
-      <button
-        className="powered-button"
-      >
-        {text.powered[lang]}
-      </button>
+      <button className="powered-button">{text.powered[lang]}</button>
     </Container>
   );
 };
@@ -137,19 +117,17 @@ const Container = styled(motion.footer)`
   align-items: center;
   justify-content: center;
 
-  p{
+  p {
     font-size: 12px;
   }
 
   .wrapper {
-
     img {
       width: clamp(150px, 20%, 250px);
       cursor: pointer;
     }
 
     ul {
-
       li {
         cursor: pointer;
         transition: 300ms;
@@ -164,7 +142,6 @@ const Container = styled(motion.footer)`
     }
 
     .contact-ul {
-
       li {
         text-align: start;
         margin: 10px 0;
@@ -213,7 +190,7 @@ const Container = styled(motion.footer)`
     cursor: pointer;
   }
 
-  .try-button{
+  .try-button {
     margin-top: 20px;
   }
 `;

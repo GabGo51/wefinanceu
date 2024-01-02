@@ -4,67 +4,51 @@ import { motion } from "framer-motion";
 import investor from "./img/investors.png";
 import broker from "./img/brokers.png";
 import banks from "./img/banks.png";
-import text from './text/whoText'
+import text from "./text/whoText";
 import { SettingContext } from "../../context/SettingContext";
+import animations from "../animation";
 
-
-//section showing target audience of the app 
+//section showing target audience of the app
 
 const Who = () => {
-
-  const {lang} = useContext(SettingContext)
+  const { lang } = useContext(SettingContext);
 
   return (
     <Container>
       <motion.h2
-        initial={{ y: 50, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
+        {...animations.fadeInFromUp}
         transition={{ duration: 1, delay: 0.1 }}
-        viewport={{ once: true }}
       >
         {text.title[lang]} <span>{text.span[lang]}</span>
       </motion.h2>
       <div className="wrapper">
         <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          {...animations.fadeInFromDown}
           transition={{ duration: 1, delay: 0.2 }}
-          viewport={{ once: true }}
         >
           <img alt="icon" src={investor} />
           <h3>{text.sub1[lang]}</h3>
-          <p>
-          {text.p1[lang]}
-          </p>
+          <p>{text.p1[lang]}</p>
         </motion.div>
         <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          {...animations.fadeInFromDown}
           transition={{ duration: 1, delay: 0.4 }}
-          viewport={{ once: true }}
         >
           <img alt="icon" src={broker} />
           <h3>{text.sub2[lang]}</h3>
-          <p>
-          {text.p2[lang]}
-          </p>
+          <p>{text.p2[lang]}</p>
         </motion.div>
         <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          {...animations.fadeInFromDown}
           transition={{ duration: 1, delay: 0.6 }}
-          viewport={{ once: true }}
         >
           <img alt="icon" src={banks} />
           <h3>{text.sub3[lang]}</h3>
-          <p>
-          {text.p3[lang]}
-          </p>
+          <p>{text.p3[lang]}</p>
         </motion.div>
       </div>
       <motion.button
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        {...animations.fadeInFromDown}
         transition={{ duration: 0.5, delay: 0.4 }}
         className="try-button"
       >
@@ -91,11 +75,12 @@ const Container = styled.div`
     margin: 50px 50px;
   }
 
-  h2 ,h3 {
+  h2,
+  h3 {
     color: white;
   }
 
-  span{
+  span {
     color: var(--green);
   }
 
@@ -104,7 +89,7 @@ const Container = styled.div`
     align-items: center;
     justify-content: space-around;
     padding-bottom: 50px;
-    
+
     div {
       display: flex;
       flex-direction: column;
@@ -117,7 +102,7 @@ const Container = styled.div`
       height: 340px;
       background-color: var(--faded-grey);
       border-radius: 30px;
-      box-shadow: 1px 5px 13.3px 0px rgba(0, 0, 0, 0.10);
+      box-shadow: 1px 5px 13.3px 0px rgba(0, 0, 0, 0.1);
     }
   }
 `;

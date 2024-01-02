@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import text from "./text/productText";
 import { SettingContext } from "../../context/SettingContext";
-
+import animations from "../animation";
 // component explaining the app and  linking to produact page
 const Product = () => {
   const { lang } = useContext(SettingContext);
@@ -24,39 +24,31 @@ const Product = () => {
   return (
     <Container>
       <motion.h2
-        initial={{ y: 50, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
+        {...animations.fadeInFromDown}
         transition={{ duration: 1, delay: 0 }}
-        viewport={{ once: true }}
       >
         {text.productTitle[lang]}
       </motion.h2>
       <div className="wrapper">
         <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          {...animations.fadeInFromDown}
           transition={{ duration: 1, delay: 0.2 }}
-          viewport={{ once: true }}
         >
           <img alt="icon" src={survey} />
           <h3>{text.subtitle1[lang]}</h3>
           <p>{text.p1[lang]}</p>
         </motion.div>
         <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          {...animations.fadeInFromDown}
           transition={{ duration: 1, delay: 0.4 }}
-          viewport={{ once: true }}
         >
           <img alt="icon" src={chart} />
           <h3>{text.subtitle2[lang]}</h3>
           <p>{text.p1[lang]} </p>
         </motion.div>
         <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          {...animations.fadeInFromDown}
           transition={{ duration: 1, delay: 0.6 }}
-          viewport={{ once: true }}
         >
           <img alt="icon" src={dash} />
           <h3>{text.subtitle3[lang]}</h3>
@@ -64,28 +56,16 @@ const Product = () => {
         </motion.div>
       </div>
       <motion.div
-        initial={{ y: 10, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        duration={{ transition: 1 }}
         className="button-wrapper"
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 0.2 }}
+        viewport={{ once: true }}
       >
-        <motion.h4
-          initial={{ y: 10, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          duration={{ transition: 1 }}
-        >
-          {text.nav1[lang]}
-        </motion.h4>
+        <h4>{text.nav1[lang]}</h4>
         <motion.button
-          initial={{ y: 10, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          duration={{ transition: 1 }}
           onClick={() => handleNavigate("/product")}
           whileHover={{ paddingRight: 20 }}
-          transition={{ duration: 0.3 }}
         >
           {text.nav2[lang]}
         </motion.button>

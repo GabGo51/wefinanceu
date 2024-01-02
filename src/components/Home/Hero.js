@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import mobile from "./img/mobilehero.png";
 import text from "./text/heroText";
 import { SettingContext } from "../../context/SettingContext";
+import animations from "../animation";
 
 //Hero components: title, text , button , application mockup 
 const Hero = () => {
@@ -16,15 +17,13 @@ const Hero = () => {
       <div className="wrapper">
         <div className="text-box">
           <motion.h1
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            {...animations.fadeInFromLeft}
             transition={{ duration: 1, delay: 0.2 }}
           >
             {text.title[lang]}
           </motion.h1>
           <motion.p
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            {...animations.fadeInFromLeft}
             transition={{ duration: 1, delay: 0.4 }}
           >
             {text.p1[lang]}

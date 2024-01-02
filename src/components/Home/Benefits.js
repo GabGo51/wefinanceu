@@ -4,59 +4,49 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import text from "./text/benefitsText";
 import { SettingContext } from "../../context/SettingContext";
+import animations from "../animation";
 
 //benefit component under product component: 4 block of text and an image\link
 const Benefits = () => {
+  
   const { lang } = useContext(SettingContext);
-
-  const initial = {
-    opacity: 0,
-    x: -30,
-  };
-  const animate = {
-    opacity: 1,
-    x: 0,
-  };
 
   return (
     <Container>
       <img className="wave" src={wave} />
       <motion.h2
-        initial={{y:20, opacity:0}}
-        whileInView={{y:0, opacity:1}}
+        {...animations.fadeInFromUp}
         transition={{ duration: 1, delay: 0.2 }}
-        viewport={{ once: true }}
       >
         {text.title[lang]}
       </motion.h2>
       <div className="wrapper">
         <Text>
-          <motion.div 
-          initial={initial}
-          whileInView={animate}
-          transition={{ duration: 1, delay: 0.1 }}
-          viewport={{ once: true }}>
+          <motion.div
+            {...animations.fadeInFromLeft}
+            transition={{ duration: 1, delay: 0.1 }}
+          >
             <h3>{text.sub1[lang]}</h3>
             <p>{text.p1[lang]}</p>
           </motion.div>
-          <motion.div initial={initial}
-          whileInView={animate}
-          transition={{ duration: 1, delay: 0.2 }}
-          viewport={{ once: true }}>
+          <motion.div
+            {...animations.fadeInFromLeft}
+            transition={{ duration: 1, delay: 0.2 }}
+          >
             <h3>{text.sub2[lang]}</h3>
             <p>{text.p2[lang]}</p>
           </motion.div>
-          <motion.div initial={initial}
-          whileInView={animate}
-          transition={{ duration: 1, delay: 0.3 }}
-          viewport={{ once: true }}>
+          <motion.div
+           {...animations.fadeInFromLeft}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
             <h3>{text.sub3[lang]}</h3>
             <p>{text.p3[lang]}</p>
           </motion.div>
-          <motion.div initial={initial}
-          whileInView={animate}
-          transition={{ duration: 1, delay: 0.4 }}
-          viewport={{ once: true }}>
+          <motion.div
+            {...animations.fadeInFromLeft}
+            transition={{ duration: 1, delay: 0.4 }}
+          >
             <h3>{text.sub4[lang]}</h3>
             <p>{text.p4[lang]}</p>
           </motion.div>
@@ -64,8 +54,7 @@ const Benefits = () => {
         <Img>
           <div>
             <motion.button
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+             {...animations.fadeInFromDown}
               transition={{ duration: 0.5, delay: 0.4 }}
               className="try-button"
             >

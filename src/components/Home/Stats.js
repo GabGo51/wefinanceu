@@ -5,20 +5,10 @@ import { useNavigate } from "react-router-dom";
 import bluewave from './img/bluewave.png'
 import { SettingContext } from "../../context/SettingContext";
 import text from "./text/statsText";
-
+import animations from "../animation";
 //stats under hero section with an about us link 
 const Stats = () => {
   const { lang } = useContext(SettingContext);
-
-  //animation for the framer components
-  const initial = {
-    opacity: 0,
-    y: 50,
-  };
-  const animate = {
-    opacity: 1,
-    y: 0,
-  };
 
   const navigate = useNavigate();
   const handleNavigate = (page) => {
@@ -39,47 +29,37 @@ const Stats = () => {
       <img alt="wave" className="wave" src={bluewave}/>
       <div className="wrapper">
         <motion.div
-          initial={initial}
-          whileInView={animate}
+          {...animations.fadeInFromUp}
           transition={{ duration: 1, delay: 0.1 }}
-          viewport={{ once: true }}
         >
           <h3>100+</h3>
           <p>{text.stat1[lang]}</p>
         </motion.div>
         <motion.div
-          initial={initial}
-          whileInView={animate}
+          {...animations.fadeInFromUp}
           transition={{ duration: 1, delay: 0.2 }}
-          viewport={{ once: true }}
         >
           <h3>400M+</h3>
           <p>{text.stat2[lang]}</p>
         </motion.div>
         <motion.div
-          initial={initial}
-          whileInView={animate}
-          transition={{ duration: 1, delay: 0.3 }}
-          viewport={{ once: true }}
+          {...animations.fadeInFromUp}
+          transition={{ duration: 1, delay: 0.3 }}         
         >
           <h3>25+</h3>
           <p>{text.stat3[lang]}</p>
         </motion.div>
         <motion.div
-          initial={initial}
-          whileInView={animate}
-          transition={{ duration: 1, delay: 0.4 }}
-          viewport={{ once: true }}
+          {...animations.fadeInFromUp}
+          transition={{ duration: 1, delay: 0.4 }}          
         >
           <h3>15+</h3>
           <p>{text.stat4[lang]}</p>
         </motion.div>
       </div>
       <motion.div
-        initial={initial}
-        whileInView={animate}
+        {...animations.fadeInFromUp}
         transition={{ duration: 1, delay:0.2 }}
-        viewport={{ once: true }}
         className="button-wrapper"
       >
         <h4>{text.aboutLink1[lang]}</h4>
@@ -92,8 +72,6 @@ const Stats = () => {
         </motion.button>
         <i class="fa-solid fa-arrow-right"></i>
       </motion.div>
-      {/* <img className="vector" src={vector}/>
-      <img className="vector other" src={vector}/> */} 
     </Container>
   );
 };

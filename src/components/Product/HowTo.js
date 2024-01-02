@@ -2,33 +2,43 @@ import React, { useContext } from "react";
 import { motion, spring } from "framer-motion";
 import styled from "styled-components";
 import account from "./img/account.PNG";
-import greywave from './img/greywave.png'
+import greywave from "./img/greywave.png";
 
-
-import text from './text/howText'
+import text from "./text/howText";
 import { SettingContext } from "../../context/SettingContext";
 
-
 const HowTo = () => {
-
-  const { lang } = useContext(SettingContext)
+  const { lang } = useContext(SettingContext);
   return (
     <Container>
-      
-      {/* <motion.div initial={{scaleY:0, opacity:0.5}} animate= {{scaleY:1, opacity:1}} transition={{duration:0.75, delay:0.2, type:spring}} className="video"></motion.div> */}
-      <h2>{text.title[lang]}</h2>
+      <motion.h2
+        initial={{ y: 30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 0.1 }}
+      >
+        {text.title[lang]}
+      </motion.h2>
       <div className="wrapper">
         <div className="text">
-          <div className="title">
+          <motion.div
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="title"
+          >
             <div>1</div>
             <h3>{text.sub1[lang]}</h3>
-          </div>
-          <p>
-          {text.p1[lang]}
-          </p>
+          </motion.div>
+          <motion.p
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.4 }}
+          >
+            {text.p1[lang]}
+          </motion.p>
         </div>
 
-        <img alt='device' src={account} />
+        <img alt="device" src={account} />
       </div>
       <div className="wrapper reverse">
         <div className="text">
@@ -36,12 +46,10 @@ const HowTo = () => {
             <div>2</div>
             <h3>{text.sub2[lang]}</h3>
           </div>
-          <p>
-          {text.p2[lang]}
-          </p>
+          <p>{text.p2[lang]}</p>
         </div>
 
-        <img alt='device' src={account} />
+        <img alt="device" src={account} />
       </div>
       <div className="wrapper">
         <div className="text">
@@ -49,12 +57,10 @@ const HowTo = () => {
             <div>3</div>
             <h3>{text.sub3[lang]}</h3>
           </div>
-          <p>
-          {text.p3[lang]}
-          </p>
+          <p>{text.p3[lang]}</p>
         </div>
 
-        <img alt='device' src={account} />
+        <img alt="device" src={account} />
       </div>
       <div className="wrapper reverse">
         <div className="text">
@@ -62,14 +68,12 @@ const HowTo = () => {
             <div>4</div>
             <h3>{text.sub4[lang]}</h3>
           </div>
-          <p>
-          {text.p4[lang]}
-          </p>
+          <p>{text.p4[lang]}</p>
         </div>
 
-        <img alt='device' src={account} />
+        <img alt="device" src={account} />
       </div>
-      <img src={greywave} alt="wave" className="wave"/>
+      <img src={greywave} alt="wave" className="wave" />
     </Container>
   );
 };
@@ -82,10 +86,10 @@ const Container = styled.div`
   width: 100%;
   padding-top: 50px;
 
-  .video{
+  .video {
     height: 500px;
     background-color: grey;
-    width: clamp(320px, 80% ,1000px);
+    width: clamp(320px, 80%, 1000px);
     border-radius: 20px;
     margin-bottom: 50px;
   }
@@ -98,7 +102,6 @@ const Container = styled.div`
   .wrapper {
     gap: 40px;
     margin: 40px 0;
-    
 
     .text {
       width: clamp(300px, 80%, 600px);
@@ -134,7 +137,7 @@ const Container = styled.div`
     }
   }
 
-  .wave{
+  .wave {
     width: 100vw;
     margin-bottom: -2px;
   }
