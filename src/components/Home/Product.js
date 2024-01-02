@@ -8,10 +8,8 @@ import { useNavigate } from "react-router-dom";
 import text from "./text/productText";
 import { SettingContext } from "../../context/SettingContext";
 
-
-// component explaining the app and  linking to produact page 
+// component explaining the app and  linking to produact page
 const Product = () => {
-
   const { lang } = useContext(SettingContext);
 
   //navigation to product page and scroll top
@@ -28,16 +26,16 @@ const Product = () => {
       <motion.h2
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, delay: 0.2 }}
+        transition={{ duration: 1, delay: 0 }}
         viewport={{ once: true }}
       >
         {text.productTitle[lang]}
       </motion.h2>
       <div className="wrapper">
         <motion.div
-          initial={{ x: -50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
           viewport={{ once: true }}
         >
           <img alt="icon" src={survey} />
@@ -47,7 +45,7 @@ const Product = () => {
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
+          transition={{ duration: 1, delay: 0.4 }}
           viewport={{ once: true }}
         >
           <img alt="icon" src={chart} />
@@ -55,9 +53,9 @@ const Product = () => {
           <p>{text.p1[lang]} </p>
         </motion.div>
         <motion.div
-          initial={{ x: 50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.9 }}
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.6 }}
           viewport={{ once: true }}
         >
           <img alt="icon" src={dash} />
@@ -65,9 +63,26 @@ const Product = () => {
           <p>{text.p3[lang]}</p>
         </motion.div>
       </div>
-      <div className="button-wrapper">
-        <h4>{text.nav1[lang]}</h4>
+      <motion.div
+        initial={{ y: 10, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        duration={{ transition: 1 }}
+        className="button-wrapper"
+      >
+        <motion.h4
+          initial={{ y: 10, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          duration={{ transition: 1 }}
+        >
+          {text.nav1[lang]}
+        </motion.h4>
         <motion.button
+          initial={{ y: 10, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          duration={{ transition: 1 }}
           onClick={() => handleNavigate("/product")}
           whileHover={{ paddingRight: 20 }}
           transition={{ duration: 0.3 }}
@@ -75,7 +90,7 @@ const Product = () => {
           {text.nav2[lang]}
         </motion.button>
         <i class="fa-solid fa-arrow-right"></i>
-      </div>
+      </motion.div>
     </Container>
   );
 };
@@ -109,7 +124,7 @@ const Container = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    
+
     div {
       display: flex;
       flex-direction: column;

@@ -13,13 +13,14 @@ const Mobile = () => {
 
   return (
     <Container>
-      <img alt="phone" src={mobile} />
+      <motion.img initial={{opacity:0, x:-50}} whileInView={{opacity:1, x:0}} transition={{ duration: 1, delay: 0.2 }}
+          viewport={{ once: true }} alt="phone" src={mobile} />
       <div className="wrapper">
         <div className="text-box">
           <motion.h2
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 1, delay: 0.2 }}
             viewport={{ once: true }}
           >
             {text.title[lang]}
@@ -27,7 +28,7 @@ const Mobile = () => {
           <motion.p
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.7 }}
+            transition={{ duration: 1, delay: 0.4 }}
             viewport={{ once: true }}
           >
             {text.p[lang]}
@@ -35,7 +36,7 @@ const Mobile = () => {
           <motion.button
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.7 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
             viewport={{ once: true }}
             className="try-button"
           >

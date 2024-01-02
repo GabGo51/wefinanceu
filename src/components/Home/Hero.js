@@ -85,6 +85,7 @@ const Container = styled.div`
       p {
         width: clamp(300px, 60%, 600px);
         color: var(--main-p);
+        margin-bottom: 10px;
       }
 
       button {

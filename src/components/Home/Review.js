@@ -3,15 +3,13 @@ import styled from "styled-components";
 import quote from "./img/quote.png";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import bluewave2 from './img/bluewave2.png'
-import text from './text/reviewText'
+import bluewave2 from "./img/bluewave2.png";
+import text from "./text/reviewText";
 import { SettingContext } from "../../context/SettingContext";
 
-
-//review section with a costumer review and contact us link 
+//review section with a costumer review and contact us link
 const Review = () => {
-
-  const {lang} = useContext(SettingContext)
+  const { lang } = useContext(SettingContext);
 
   const navigate = useNavigate();
   const handleNavigate = (page) => {
@@ -23,47 +21,54 @@ const Review = () => {
 
   return (
     <Container>
-      <img className="wave" alt="wavy" src={bluewave2}/>
-      <img src={quote} />
-      <h2>{text.title[lang]}</h2>
-      <p className="quote">
-      {text.quote[lang]}
-      </p>
-      <div className="pic"></div>
-      <p>
-        <span>Brady Webb, CEO</span> American Mortgage Solutions Inc.
-      </p>
-      <div className="button-wrapper">
-        <h4>{text.nav1[lang]} </h4>
-        <div>
-          <motion.button
-            onClick={() => handleNavigate("/contact")}
-            whileHover={{ paddingRight: 20 }}
-            transition={{ duration: 0.3 }}
-          >
-            {text.nav2[lang]}
-          </motion.button>
-          <i class="fa-solid fa-arrow-right"></i>
+      <img className="wave" alt="wavy" src={bluewave2} />
+      <motion.div initial={{ y: -20, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    transition={{ duration: 1, delay: 0.1 }}
+    viewport={{ once: true }}  className="wrapper">
+        <img src={quote} />
+        <h2>{text.title[lang]}</h2>
+        <p className="quote">{text.quote[lang]}</p>
+        <div className="pic"></div>
+        <p>
+          <span>Brady Webb, CEO</span> American Mortgage Solutions Inc.
+        </p>
+        <div className="button-wrapper">
+          <h4>{text.nav1[lang]} </h4>
+          <div>
+            <motion.button
+              onClick={() => handleNavigate("/contact")}
+              whileHover={{ paddingRight: 20 }}
+              transition={{ duration: 0.3 }}
+            >
+              {text.nav2[lang]}
+            </motion.button>
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
         </div>
-      </div>
+      </motion.div>
     </Container>
   );
 };
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
 
-  .wave{
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .wave {
     margin-top: -2px;
     width: 100vw;
     margin-bottom: 40px;
   }
 
-  p{
+  p {
     width: 90%;
   }
 

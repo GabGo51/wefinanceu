@@ -19,16 +19,16 @@ const Who = () => {
       <motion.h2
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, delay: 0.2 }}
+        transition={{ duration: 1, delay: 0.1 }}
         viewport={{ once: true }}
       >
         {text.title[lang]} <span>{text.span[lang]}</span>
       </motion.h2>
       <div className="wrapper">
         <motion.div
-          initial={{ x: -50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
           viewport={{ once: true }}
         >
           <img alt="icon" src={investor} />
@@ -40,7 +40,7 @@ const Who = () => {
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
+          transition={{ duration: 1, delay: 0.4 }}
           viewport={{ once: true }}
         >
           <img alt="icon" src={broker} />
@@ -50,9 +50,9 @@ const Who = () => {
           </p>
         </motion.div>
         <motion.div
-          initial={{ x: 50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.9 }}
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.6 }}
           viewport={{ once: true }}
         >
           <img alt="icon" src={banks} />
@@ -65,7 +65,7 @@ const Who = () => {
       <motion.button
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.6 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
         className="try-button"
       >
         {text.button[lang]}

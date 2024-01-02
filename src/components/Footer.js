@@ -24,7 +24,7 @@ const Footer = () => {
 
   return (
     <Container
-      initial={{ scaleY: 0.6, backgroundColor: "white" }}
+      initial={{ scaleY: 0.8, backgroundColor: "white" }}
       whileInView={{ scaleY: 1, backgroundColor: "var(--main)" }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}

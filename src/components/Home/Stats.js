@@ -41,7 +41,7 @@ const Stats = () => {
         <motion.div
           initial={initial}
           whileInView={animate}
-          transition={{ duration: 1, delay: 0.2 }}
+          transition={{ duration: 1, delay: 0.1 }}
           viewport={{ once: true }}
         >
           <h3>100+</h3>
@@ -50,7 +50,7 @@ const Stats = () => {
         <motion.div
           initial={initial}
           whileInView={animate}
-          transition={{ duration: 1, delay: 0.3 }}
+          transition={{ duration: 1, delay: 0.2 }}
           viewport={{ once: true }}
         >
           <h3>400M+</h3>
@@ -59,7 +59,7 @@ const Stats = () => {
         <motion.div
           initial={initial}
           whileInView={animate}
-          transition={{ duration: 1, delay: 0.4 }}
+          transition={{ duration: 1, delay: 0.3 }}
           viewport={{ once: true }}
         >
           <h3>25+</h3>
@@ -68,7 +68,7 @@ const Stats = () => {
         <motion.div
           initial={initial}
           whileInView={animate}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 1, delay: 0.4 }}
           viewport={{ once: true }}
         >
           <h3>15+</h3>
