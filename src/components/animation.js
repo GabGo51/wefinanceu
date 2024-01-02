@@ -1,4 +1,4 @@
-// animations.js
+// animations.js has the 4 directional fade in animations passsed using framer motion
 const fadeInFromLeft = {
   initial: { x: -30, opacity: 0 },
   whileInView: { x: 0, opacity: 1 },

@@ -3,7 +3,7 @@ import { motion, spring } from "framer-motion";
 import styled from "styled-components";
 import account from "./img/account.PNG";
 import greywave from "./img/greywave.png";
-
+import animations from "../animation";
 import text from "./text/howText";
 import { SettingContext } from "../../context/SettingContext";
 
@@ -12,8 +12,7 @@ const HowTo = () => {
   return (
     <Container>
       <motion.h2
-        initial={{ y: 30, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        {...animations.fadeInFromUp}
         transition={{ duration: 1, delay: 0.1 }}
       >
         {text.title[lang]}
@@ -21,8 +20,7 @@ const HowTo = () => {
       <div className="wrapper">
         <div className="text">
           <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            {...animations.fadeInFromLeft}
             transition={{ duration: 1, delay: 0.2 }}
             className="title"
           >
@@ -30,48 +28,83 @@ const HowTo = () => {
             <h3>{text.sub1[lang]}</h3>
           </motion.div>
           <motion.p
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            {...animations.fadeInFromLeft}
             transition={{ duration: 1, delay: 0.4 }}
           >
             {text.p1[lang]}
           </motion.p>
         </div>
 
-        <img alt="device" src={account} />
+        <motion.img
+          {...animations.fadeInFromRight}
+          transition={{ duration: 1, delay: 0.3 }}
+          alt="device"
+          src={account}
+        />
       </div>
       <div className="wrapper reverse">
         <div className="text">
-          <div className="title">
+          <motion.div
+            {...animations.fadeInFromRight}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="title"
+          >
             <div>2</div>
             <h3>{text.sub2[lang]}</h3>
-          </div>
-          <p>{text.p2[lang]}</p>
+          </motion.div>
+          <motion.p
+            {...animations.fadeInFromRight}
+            transition={{ duration: 1, delay: 0.4 }}
+          >
+            {text.p2[lang]}
+          </motion.p>
         </div>
 
-        <img alt="device" src={account} />
+        <motion.img
+          {...animations.fadeInFromLeft}
+          transition={{ duration: 1, delay: 0.3 }}
+          alt="device"
+          src={account}
+        />
       </div>
       <div className="wrapper">
         <div className="text">
-          <div className="title">
+          <motion.div
+            {...animations.fadeInFromLeft}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="title"
+          >
             <div>3</div>
             <h3>{text.sub3[lang]}</h3>
-          </div>
-          <p>{text.p3[lang]}</p>
+          </motion.div>
+          <motion.p
+            {...animations.fadeInFromLeft}
+            transition={{ duration: 1, delay: 0.4 }}
+          >
+            {text.p3[lang]}
+          </motion.p>
         </div>
 
-        <img alt="device" src={account} />
+        <motion.img
+          {...animations.fadeInFromRight}
+          transition={{ duration: 1, delay: 0.3 }}
+          alt="device"
+          src={account}
+        />
       </div>
       <div className="wrapper reverse">
         <div className="text">
-          <div className="title">
+          <motion.div {...animations.fadeInFromRight}
+          transition={{ duration: 1, delay: 0.2 }} className="title">
             <div>4</div>
             <h3>{text.sub4[lang]}</h3>
-          </div>
-          <p>{text.p4[lang]}</p>
+          </motion.div>
+          <motion.p {...animations.fadeInFromRight}
+          transition={{ duration: 1, delay: 0.4 }}>{text.p4[lang]}</motion.p>
         </div>
 
-        <img alt="device" src={account} />
+        <motion.img {...animations.fadeInFromLeft}
+          transition={{ duration: 1, delay: 0.3 }} alt="device" src={account} />
       </div>
       <img src={greywave} alt="wave" className="wave" />
     </Container>

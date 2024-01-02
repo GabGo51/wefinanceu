@@ -4,7 +4,8 @@ import account from "./img/account.PNG";
 import { useState } from "react";
 import text from './text/profilesText'
 import { SettingContext } from "../../context/SettingContext";
-
+import { motion } from "framer-motion";
+import animations from "../animation";
 
 const Profiles = () => {
 
@@ -17,36 +18,36 @@ const Profiles = () => {
 
   return (
     <Container>
-      <h2>{text.title[lang]}</h2>
+      <motion.h2 {...animations.fadeInFromDown} transition={{ duration: 1, delay: 0.1 }}>{text.title[lang]}</motion.h2>
       <nav>
         <ul className="noselect">
-          <li
+          <motion.li {...animations.fadeInFromDown} transition={{ duration: 0.3, delay: 0.1 }}
             onClick={() => {
               handleNav("profile1");
             }}
             className={profile === "profile1" ? "active" : ""}
           >
             profile1
-          </li>
-          <li
+          </motion.li>
+          <motion.li {...animations.fadeInFromDown} transition={{ duration: 0.3, delay: 0.3 }}
             onClick={() => {
               handleNav("profile2");
             }}
             className={profile === "profile2" ? "active" : ""}
           >
             profile2
-          </li>
-          <li
+          </motion.li>
+          <motion.li {...animations.fadeInFromDown} transition={{ duration: 0.3, delay: 0.5 }}
             onClick={() => {
               handleNav("profile3");
             }}
             className={profile === "profile3" ? "active" : ""}
           >
             profile3
-          </li>
+          </motion.li>
         </ul>
       </nav>
-      <div className="wrapper">
+      <motion.div initial={{scaleY:0.8, opacity:0}} whileInView={{scaleY:1, opacity:1}} transition={{ duration: 1, delay: 0.2 }} viewport={{once:true}} className="wrapper">
         {profile === "profile1" && (
           <>
             <div className="text">
@@ -95,7 +96,7 @@ const Profiles = () => {
             <img alt="device" src={account} />
           </>
         )}
-      </div>
+      </motion.div>
     </Container>
   );
 };
