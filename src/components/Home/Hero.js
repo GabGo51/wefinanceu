@@ -6,6 +6,8 @@ import mobile from "./img/mobilehero.png";
 import text from "./text/heroText";
 import { SettingContext } from "../../context/SettingContext";
 import animations from "../animation";
+import desktop2 from "./img/desktop2.png"; 
+import mobile2 from "./img/mobile2.png"; 
 
 //Hero components: title, text , button , application mockup 
 const Hero = () => {
@@ -43,14 +45,14 @@ const Hero = () => {
             initial={{ scaleY: 0.5, opacity: 0 }}
             animate={{ scaleY: 1, opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            src={desktop}
+            src={desktop2}
           />
           <motion.img
             alt="device"
             initial={{ scaleY: 0.5, opacity: 0 }}
             animate={{ scaleY: 1, opacity: 1 }}
             transition={{ duration: 1, delay: 0.7 }}
-            src={mobile}
+            src={mobile2}
             className="mobile"
           />
         </div>
@@ -95,6 +97,10 @@ const Container = styled.div`
 
     .image-box {
       position: relative;
+      margin-bottom: -100px;
+      @media (max-width: 800px) {
+        margin-bottom: -50px;
+      }
     }
 
     img {
