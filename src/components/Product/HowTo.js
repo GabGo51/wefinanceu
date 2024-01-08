@@ -6,6 +6,10 @@ import greywave from "./img/greywave.png";
 import animations from "../animation";
 import text from "./text/howText";
 import { SettingContext } from "../../context/SettingContext";
+import form from "./img/form.png";
+import fork from "./img/fork.png";
+import dash from "./img/dash.PNG";
+import account2 from "./img/account2.PNG";
 
 const HowTo = () => {
   const { lang } = useContext(SettingContext);
@@ -39,7 +43,7 @@ const HowTo = () => {
           {...animations.fadeInFromRight}
           transition={{ duration: 1, delay: 0.3 }}
           alt="device"
-          src={account}
+          src={account2}
         />
       </div>
       <div className="wrapper reverse">
@@ -64,7 +68,7 @@ const HowTo = () => {
           {...animations.fadeInFromLeft}
           transition={{ duration: 1, delay: 0.3 }}
           alt="device"
-          src={account}
+          src={form}
         />
       </div>
       <div className="wrapper">
@@ -89,7 +93,7 @@ const HowTo = () => {
           {...animations.fadeInFromRight}
           transition={{ duration: 1, delay: 0.3 }}
           alt="device"
-          src={account}
+          src={fork}
         />
       </div>
       <div className="wrapper reverse">
@@ -104,7 +108,7 @@ const HowTo = () => {
         </div>
 
         <motion.img {...animations.fadeInFromLeft}
-          transition={{ duration: 1, delay: 0.3 }} alt="device" src={account} />
+          transition={{ duration: 1, delay: 0.3 }} alt="device" src={dash} />
       </div>
       <img src={greywave} alt="wave" className="wave" />
     </Container>
@@ -129,7 +133,7 @@ const Container = styled.div`
 
   img {
     width: clamp(250px, 40%, 400px);
-    border-radius: 20px;
+    border-radius: 5px;
   }
 
   .wrapper {
