@@ -42,14 +42,14 @@ const Hero = () => {
         <div className="image-box">
           <motion.img
             alt="device"
-            initial={{ scaleY: 0.5, opacity: 0 }}
+            initial={{ scaleY: 0.8, opacity: 0 }}
             animate={{ scaleY: 1, opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
             src={desktop2}
           />
           <motion.img
             alt="device"
-            initial={{ scaleY: 0.5, opacity: 0 }}
+            initial={{ scaleY: 0.8, opacity: 0 }}
             animate={{ scaleY: 1, opacity: 1 }}
             transition={{ duration: 1, delay: 0.7 }}
             src={mobile2}

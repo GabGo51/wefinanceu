@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import text from "./text/benefitsText";
 import { SettingContext } from "../../context/SettingContext";
 import animations from "../animation";
+import happy from "./img/happy.jpg";
 
 //benefit component under product component: 4 block of text and an image\link
 const Benefits = () => {
-  
   const { lang } = useContext(SettingContext);
 
   return (
@@ -37,7 +37,7 @@ const Benefits = () => {
             <p>{text.p2[lang]}</p>
           </motion.div>
           <motion.div
-           {...animations.fadeInFromLeft}
+            {...animations.fadeInFromLeft}
             transition={{ duration: 1, delay: 0.3 }}
           >
             <h3>{text.sub3[lang]}</h3>
@@ -53,8 +53,9 @@ const Benefits = () => {
         </Text>
         <Img>
           <div>
+            <img src={happy} />
             <motion.button
-             {...animations.fadeInFromDown}
+              {...animations.fadeInFromDown}
               transition={{ duration: 0.5, delay: 0.4 }}
               className="try-button"
             >
@@ -92,6 +93,7 @@ const Container = styled.div`
   .wrapper {
     @media (max-width: 1350px) {
       flex-direction: column;
+      justify-content: center;
     }
   }
 `;
@@ -102,6 +104,7 @@ const Text = styled.div`
   justify-content: start;
   gap: 20px;
   max-width: 800px;
+  margin-bottom: 40px;
 
   h3 {
     color: var(--main);
@@ -116,23 +119,52 @@ const Text = styled.div`
     margin-bottom: 10px; /* Add margin between items */
     box-sizing: border-box;
     padding: 10px;
+    @media (max-width: 750px) {
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 1350px) {
+      max-width: 100%;
+      justify-content: center;
+    align-items: center;
+    
+    }
+
+  @media (max-width: 750px) {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 `;
 
 const Img = styled.div`
-  width: clamp(300px, 50%, 400px);
+display: flex;
+align-items: center;
+justify-content: center;
+  width: clamp(350px, 80%, 500px);
+ 
 
   div {
     position: relative;
-    background-color: grey;
+    
     height: 600px;
     border-radius: 40px;
   }
 
+  img {
+    border-radius: 40px;
+    width: clamp(350px, 80%, 600px);
+  }
+
   button {
     position: absolute;
-    bottom: 5%;
-    right: 30%;
+    bottom: 45px;
+    left: 5px;
   }
 `;
 export default Benefits;

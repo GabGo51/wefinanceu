@@ -68,6 +68,7 @@ const HowTo = () => {
           {...animations.fadeInFromLeft}
           transition={{ duration: 1, delay: 0.3 }}
           alt="device"
+          className="form"
           src={form}
         />
       </div>
@@ -132,9 +133,11 @@ const Container = styled.div`
   }
 
   img {
-    width: clamp(250px, 40%, 400px);
+    width: clamp(300px, 40%, 500px);
     border-radius: 5px;
   }
+
+  
 
   .wrapper {
     gap: 40px;
