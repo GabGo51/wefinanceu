@@ -81,7 +81,7 @@ const Container = styled.div`
 
       p {
         color: var(--main-p);
-        max-width: 300px;
+        max-width: 350px;
       }
 
       button {
@@ -91,13 +91,13 @@ const Container = styled.div`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 820px) {
     .text-box {
-      transform: translateX(20%);
+      transform: translateX(10%);
     }
   }
   
-  @media (max-width: 650px) {
+  @media (max-width: 750px) {
     .text-box {
       transform: translate(5%, -60%);
       width: 500px;
