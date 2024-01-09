@@ -21,19 +21,19 @@ const Mobile = () => {
       <div className="wrapper">
         <div className="text-box">
           <motion.h2
-            {...animations.fadeInFromLeft}
+            {...animations.fadeInFromRight}
             transition={{ duration: 1, delay: 0.2 }}
           >
             {text.title[lang]}
           </motion.h2>
           <motion.p
-            {...animations.fadeInFromLeft}
+            {...animations.fadeInFromRight}
             transition={{ duration: 1, delay: 0.4 }}
           >
             {text.p[lang]}
           </motion.p>
           <motion.button
-            {...animations.fadeInFromLeft}
+            {...animations.fadeInFromRight}
             transition={{ duration: 0.5, delay: 0.4 }}
             className="try-button"
           >
@@ -81,7 +81,7 @@ const Container = styled.div`
 
       p {
         color: var(--main-p);
-        max-width: 350px;
+        width: clamp(300px, 80%, 600px);
       }
 
       button {

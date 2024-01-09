@@ -53,7 +53,8 @@ const Benefits = () => {
         </Text>
         <Img>
           <div>
-            <img src={happy} />
+            <motion.img {...animations.fadeInFromDown}
+            transition={{ duration: 1, delay: 0.4 }} src={happy} />
             <motion.button
               {...animations.fadeInFromDown}
               transition={{ duration: 0.5, delay: 0.4 }}

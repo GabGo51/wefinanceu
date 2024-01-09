@@ -31,12 +31,12 @@ const productText = {
     false: "Tableau de bord intégré pour la gestion de vos projets etc.",
   },
   nav1: {
-    true: "See our",
+    true: "See",
     false: "Plus de detail sur",
   },
   nav2: {
-    true: "product",
-    false: "notre produit",
+    true: " our solution",
+    false: "notre solution",
   },
 
 

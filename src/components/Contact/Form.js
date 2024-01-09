@@ -5,6 +5,10 @@ import emailjs, { send } from "@emailjs/browser";
 import loadingCircle from "./img/loading.gif";
 import text from './text/formText'
 import { SettingContext } from "../../context/SettingContext";
+import { motion } from "framer-motion";
+import animations from "../animation";
+
+
 const Form = () => {
 
   const {lang} = useContext(SettingContext)
@@ -41,7 +45,8 @@ const Form = () => {
   };
 
   return (
-    <Container>
+    <Container {...animations.fadeInFromRight}
+    transition={{ duration: 1, delay: 0.2 }}>
       <form ref={form} onSubmit={sendEmail}>
         <div>
           <label>{text.name[lang]}</label>
@@ -99,7 +104,7 @@ const Form = () => {
   );
 };
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   display: flex;
   justify-content: end;
   align-items: end;

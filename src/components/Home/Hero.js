@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import desktop from "./img/desktop.png";
+
 import { motion } from "framer-motion";
-import mobile from "./img/mobilehero.png";
+
 import text from "./text/heroText";
 import { SettingContext } from "../../context/SettingContext";
 import animations from "../animation";
