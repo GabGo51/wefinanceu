@@ -36,6 +36,10 @@ const howText = {
     true: "Use the dashboard to track and review your submissions.",
     false: "Utiliser le tableau de bord pour suivre et réviser vos soumission.",
   },
+  tryButton: {
+    true: "Try it free",
+    false: "Essai Gratuit",
+  },
 };
 
 export default howText;

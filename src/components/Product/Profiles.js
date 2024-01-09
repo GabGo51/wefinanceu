@@ -2,14 +2,13 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import account from "./img/account.PNG";
 import { useState } from "react";
-import text from './text/profilesText'
+import text from "./text/profilesText";
 import { SettingContext } from "../../context/SettingContext";
 import { motion } from "framer-motion";
 import animations from "../animation";
 
 const Profiles = () => {
-
-  const {lang} = useContext(SettingContext)
+  const { lang } = useContext(SettingContext);
   const [profile, setProfile] = useState("profile1");
 
   const handleNav = (name) => {
@@ -18,10 +17,17 @@ const Profiles = () => {
 
   return (
     <Container>
-      <motion.h2 {...animations.fadeInFromDown} transition={{ duration: 1, delay: 0.1 }}>{text.title[lang]}</motion.h2>
+      <motion.h2
+        {...animations.fadeInFromDown}
+        transition={{ duration: 1, delay: 0.1 }}
+      >
+        {text.title[lang]}
+      </motion.h2>
       <nav>
         <ul className="noselect">
-          <motion.li {...animations.fadeInFromDown} transition={{ duration: 0.3, delay: 0.1 }}
+          <motion.li
+            {...animations.fadeInFromDown}
+            transition={{ duration: 0.3, delay: 0.1 }}
             onClick={() => {
               handleNav("profile1");
             }}
@@ -29,7 +35,9 @@ const Profiles = () => {
           >
             profile1
           </motion.li>
-          <motion.li {...animations.fadeInFromDown} transition={{ duration: 0.3, delay: 0.3 }}
+          <motion.li
+            {...animations.fadeInFromDown}
+            transition={{ duration: 0.3, delay: 0.3 }}
             onClick={() => {
               handleNav("profile2");
             }}
@@ -37,7 +45,9 @@ const Profiles = () => {
           >
             profile2
           </motion.li>
-          <motion.li {...animations.fadeInFromDown} transition={{ duration: 0.3, delay: 0.5 }}
+          <motion.li
+            {...animations.fadeInFromDown}
+            transition={{ duration: 0.3, delay: 0.5 }}
             onClick={() => {
               handleNav("profile3");
             }}
@@ -47,7 +57,13 @@ const Profiles = () => {
           </motion.li>
         </ul>
       </nav>
-      <motion.div initial={{scaleY:0.8, opacity:0}} whileInView={{scaleY:1, opacity:1}} transition={{ duration: 1, delay: 0.2 }} viewport={{once:true}} className="wrapper">
+      <motion.div
+        initial={{ scaleY: 0.8, opacity: 0 }}
+        whileInView={{ scaleY: 1, opacity: 1 }}
+        transition={{ duration: 1, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="wrapper"
+      >
         {profile === "profile1" && (
           <>
             <div className="text">
@@ -96,7 +112,14 @@ const Profiles = () => {
             <img alt="device" src={account} />
           </>
         )}
-      </motion.div>
+      </motion.div>{" "}
+      <motion.button
+        {...animations.fadeInFromDown}
+        transition={{ duration: 1, delay: 0.3 }}
+        className="try-button"
+      >
+        {text.tryButton[lang]}
+      </motion.button>
     </Container>
   );
 };
@@ -109,13 +132,10 @@ const Container = styled.div`
   padding-bottom: 100px;
   background-color: var(--secondary);
   text-align: center;
-  
 
-  
   ul {
     display: flex;
     margin: 20px 0;
-    
 
     li {
       transition: 500ms;
@@ -132,7 +152,7 @@ const Container = styled.div`
 
   .wrapper {
     height: 500px;
-  
+
     border-radius: 30px;
     padding: 40px;
     background-color: white;
@@ -148,6 +168,10 @@ const Container = styled.div`
   img {
     width: clamp(250px, 40%, 400px);
     border-radius: 20px;
+  }
+
+  button{
+    margin: 50px 0;
   }
 `;
 

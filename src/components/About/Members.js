@@ -31,17 +31,23 @@ const Members = () => {
       <div className="wrapper">
         <motion.div {...animations.fadeInFromDown}
         transition={{ duration: 1, delay: 0.1 }}>
-          <img
+          <a target="#" href="https://www.linkedin.com/in/alex-aube-martin-cfa-26a09947/">
+            <img
             src={alexis}
           />
+          </a>
+          
           <h3>Alexis Aube-Martin </h3>
           <p>Title </p>
         </motion.div>
         <motion.div {...animations.fadeInFromDown}
         transition={{ duration: 1, delay: 0.1 }}>
-          <img
+          <a target="#" href="https://www.linkedin.com/in/sabrina-lanteigne-b38a8b5a/">
+            <img
             src={sabrina}
           />
+          </a>
+          
           <h3>Sabrina Lateigne</h3>
           <p>Title</p>
         </motion.div>

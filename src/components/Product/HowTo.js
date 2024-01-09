@@ -99,18 +99,36 @@ const HowTo = () => {
       </div>
       <div className="wrapper reverse">
         <div className="text">
-          <motion.div {...animations.fadeInFromRight}
-          transition={{ duration: 1, delay: 0.2 }} className="title">
+          <motion.div
+            {...animations.fadeInFromRight}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="title"
+          >
             <div>4</div>
             <h3>{text.sub4[lang]}</h3>
           </motion.div>
-          <motion.p {...animations.fadeInFromRight}
-          transition={{ duration: 1, delay: 0.4 }}>{text.p4[lang]}</motion.p>
+          <motion.p
+            {...animations.fadeInFromRight}
+            transition={{ duration: 1, delay: 0.4 }}
+          >
+            {text.p4[lang]}
+          </motion.p>
         </div>
 
-        <motion.img {...animations.fadeInFromLeft}
-          transition={{ duration: 1, delay: 0.3 }} alt="device" src={dash} />
+        <motion.img
+          {...animations.fadeInFromLeft}
+          transition={{ duration: 1, delay: 0.3 }}
+          alt="device"
+          src={dash}
+        />
       </div>
+      <motion.button
+        {...animations.fadeInFromDown}
+        transition={{ duration: 1, delay: 0.3 }}
+        className="try-button"
+      >
+        {text.tryButton[lang]}
+      </motion.button>
       <img src={greywave} alt="wave" className="wave" />
     </Container>
   );
@@ -136,8 +154,6 @@ const Container = styled.div`
     width: clamp(300px, 40%, 500px);
     border-radius: 5px;
   }
-
-  
 
   .wrapper {
     gap: 40px;
@@ -175,6 +191,10 @@ const Container = styled.div`
     @media (max-width: 950px) {
       flex-direction: column;
     }
+  }
+
+  button {
+    margin: 50px 0;
   }
 
   .wave {

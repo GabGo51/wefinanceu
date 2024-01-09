@@ -29,6 +29,10 @@ const profilesText = {
     true: "After a quick analysis, a window will appear indicating a specific range of possible financing based on current rates and programs tailored to the type of property.",
     false: "Après une rapide analyse, une fenêtre s'affichera indiquant une fourchette précise du financement possible selon les taux et programmes actuels adaptés au type de propriété."
   },
+  tryButton: {
+    true: "Try it free",
+    false: "Essai Gratuit",
+  },
   
 };
 
