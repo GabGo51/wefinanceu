@@ -103,7 +103,7 @@ const Footer = () => {
       <div className="powered">
         <p>© {currentYear} WeFinanceU</p> <>|</> <p>{text.rights[lang]}</p>
       </div>
-      <button className="powered-button">{text.powered[lang]}</button>
+      <a target="#" href="https://portfolio-gabgo51.vercel.app" className="powered-button">{text.powered[lang]}</a>
     </Container>
   );
 };

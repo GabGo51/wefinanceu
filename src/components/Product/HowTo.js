@@ -152,7 +152,7 @@ const Container = styled.div`
 
   img {
     width: clamp(300px, 40%, 500px);
-    border-radius: 5px;
+    border-radius: 10px;
   }
 
   .wrapper {

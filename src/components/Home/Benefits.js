@@ -77,6 +77,9 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   padding-bottom: 70px;
+  @media (max-width: 1000px) {
+      padding-top: 100px;
+    }
 
   h2 {
     color: var(--main);
@@ -154,12 +157,21 @@ justify-content: center;
     position: relative;
     
     height: 600px;
+    @media (max-width:500px ){
+    height: 300px;
+    
+    }
     border-radius: 40px;
   }
 
   img {
     border-radius: 40px;
     width: clamp(350px, 80%, 600px);
+    @media (max-width:500px ){
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    }
   }
 
   button {
@@ -167,5 +179,7 @@ justify-content: center;
     bottom: 45px;
     left: 5px;
   }
+
+  
 `;
 export default Benefits;

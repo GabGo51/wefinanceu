@@ -6,12 +6,11 @@ import { motion } from "framer-motion";
 import text from "./text/heroText";
 import { SettingContext } from "../../context/SettingContext";
 import animations from "../animation";
-import desktop2 from "./img/desktop2.png"; 
-import mobile2 from "./img/mobile2.png"; 
+import desktop2 from "./img/desktop2.png";
+import mobile2 from "./img/mobile2.png";
 
-//Hero components: title, text , button , application mockup 
+//Hero components: title, text , button , application mockup
 const Hero = () => {
-  
   const { lang } = useContext(SettingContext);
 
   return (
@@ -30,14 +29,16 @@ const Hero = () => {
           >
             {text.p1[lang]}
           </motion.p>
-          <motion.button
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="try-button"
-          >
-            {text.tryButton[lang]}
-          </motion.button>
+          <motion.div key={"try"}
+              {...animations.fadeInFromUp}
+              transition={{ duration: 0.5, delay: 0.6 }}>
+            <motion.button
+              
+              className="try-button"
+            >
+              {text.tryButton[lang]}
+            </motion.button>
+          </motion.div>
         </div>
         <div className="image-box">
           <motion.img
@@ -113,7 +114,7 @@ const Container = styled.div`
       position: absolute;
       right: -50px;
       bottom: 4px;
-      
+
       @media (max-width: 800px) {
         display: none;
       }
