@@ -6,6 +6,7 @@ import text from "./text/benefitsText";
 import { SettingContext } from "../../context/SettingContext";
 import animations from "../animation";
 import happy from "./img/happy.jpg";
+import TryButton from "../TryButton";
 
 //benefit component under product component: 4 block of text and an image\link
 const Benefits = () => {
@@ -52,17 +53,12 @@ const Benefits = () => {
           </motion.div>
         </Text>
         <Img>
-          <div>
-            <motion.img {...animations.fadeInFromDown}
-            transition={{ duration: 1, delay: 0.4 }} src={happy} />
-            <motion.button
-              {...animations.fadeInFromDown}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="try-button"
-            >
-              {text.button[lang]}
-            </motion.button>
-          </div>
+          <motion.img
+            {...animations.fadeInFromDown}
+            transition={{ duration: 1, delay: 0.4 }}
+            src={happy}
+          />
+          <TryButton animation={animations.fadeInFromDown}/>
         </Img>
       </div>
     </Container>
@@ -78,8 +74,8 @@ const Container = styled.div`
   justify-content: center;
   padding-bottom: 70px;
   @media (max-width: 1000px) {
-      padding-top: 100px;
-    }
+    padding-top: 100px;
+  }
 
   h2 {
     color: var(--main);
@@ -124,7 +120,6 @@ const Text = styled.div`
     box-sizing: border-box;
     padding: 10px;
     @media (max-width: 750px) {
-    
       display: flex;
       justify-content: center;
       align-items: center;
@@ -133,11 +128,10 @@ const Text = styled.div`
   }
 
   @media (max-width: 1350px) {
-      max-width: 100%;
-      justify-content: center;
+    max-width: 100%;
+    justify-content: center;
     align-items: center;
-    
-    }
+  }
 
   @media (max-width: 750px) {
     justify-content: center;
@@ -147,39 +141,25 @@ const Text = styled.div`
 `;
 
 const Img = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 40px;
+  justify-content: center;
   width: clamp(350px, 80%, 500px);
- 
-
-  div {
-    position: relative;
-    
-    height: 600px;
-    @media (max-width:500px ){
-    height: 300px;
-    
-    }
-    border-radius: 40px;
+  @media (max-width: 1200px) {
+    align-items: center;
+    gap: 20px;
   }
 
   img {
     border-radius: 40px;
     width: clamp(350px, 80%, 600px);
-    @media (max-width:500px ){
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
+    @media (max-width: 500px) {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
     }
   }
-
-  button {
-    position: absolute;
-    bottom: 45px;
-    left: 5px;
-  }
-
-  
 `;
 export default Benefits;

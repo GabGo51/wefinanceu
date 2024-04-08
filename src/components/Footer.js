@@ -6,6 +6,7 @@ import text from "./text";
 import logo from "../img/logopng.png";
 import { SettingContext } from "../context/SettingContext";
 import animations from "./animation";
+import TryButton from "./TryButton";
 
 // footer component with nav buttons and contact info
 const Footer = () => {
@@ -54,13 +55,7 @@ const Footer = () => {
               <li>WeFinanceU@gmail.com</li>
             </motion.div>
           </ul>
-          <motion.button
-            {...animations.fadeInFromLeft}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="try-button"
-          >
-            {text.tryButton[lang]}
-          </motion.button>
+          <TryButton animation={animations.fadeInFromLeft}/>
         </div>
         <ul className="noselect">
           <motion.div

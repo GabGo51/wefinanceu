@@ -6,6 +6,7 @@ import text from "./text/profilesText";
 import { SettingContext } from "../../context/SettingContext";
 import { motion } from "framer-motion";
 import animations from "../animation";
+import TryButton from "../TryButton";
 
 const Profiles = () => {
   const { lang } = useContext(SettingContext);
@@ -25,36 +26,46 @@ const Profiles = () => {
       </motion.h2>
       <nav>
         <ul className="noselect">
-          <motion.li
+          <motion.div
             {...animations.fadeInFromDown}
-            transition={{ duration: 0.3, delay: 0.1 }}
-            onClick={() => {
-              handleNav("profile1");
-            }}
-            className={profile === "profile1" ? "active" : ""}
+            transition={{ duration: 1, delay: 0.1 }}
           >
-            profile1
-          </motion.li>
-          <motion.li
+            <li
+              onClick={() => {
+                handleNav("profile1");
+              }}
+              className={profile === "profile1" ? "active" : ""}
+            >
+              profile1
+            </li>
+          </motion.div>
+
+          <motion.div
             {...animations.fadeInFromDown}
-            transition={{ duration: 0.3, delay: 0.3 }}
-            onClick={() => {
-              handleNav("profile2");
-            }}
-            className={profile === "profile2" ? "active" : ""}
+            transition={{ duration: 1, delay: 0.3 }}
           >
-            profile2
-          </motion.li>
-          <motion.li
+            <li
+              onClick={() => {
+                handleNav("profile2");
+              }}
+              className={profile === "profile2" ? "active" : ""}
+            >
+              profile2
+            </li>
+          </motion.div>
+          <motion.div
             {...animations.fadeInFromDown}
-            transition={{ duration: 0.3, delay: 0.5 }}
-            onClick={() => {
-              handleNav("profile3");
-            }}
-            className={profile === "profile3" ? "active" : ""}
+            transition={{ duration: 1, delay: 0.5 }}
           >
-            profile3
-          </motion.li>
+            <li
+              onClick={() => {
+                handleNav("profile3");
+              }}
+              className={profile === "profile3" ? "active" : ""}
+            >
+              profile3
+            </li>
+          </motion.div>
         </ul>
       </nav>
       <motion.div
@@ -113,13 +124,7 @@ const Profiles = () => {
           </>
         )}
       </motion.div>{" "}
-      <motion.button
-        {...animations.fadeInFromDown}
-        transition={{ duration: 1, delay: 0.3 }}
-        className="try-button"
-      >
-        {text.tryButton[lang]}
-      </motion.button>
+      <TryButton animation={animations.fadeInFromDown} />
     </Container>
   );
 };
@@ -170,7 +175,7 @@ const Container = styled.div`
     border-radius: 20px;
   }
 
-  button{
+  button {
     margin: 50px 0;
   }
 `;

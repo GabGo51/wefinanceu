@@ -5,6 +5,9 @@ import mobile from "./img/mobile.png";
 import text from "./text/mobileText";
 import { SettingContext } from "../../context/SettingContext";
 import animations from "../animation";
+import TryButton from "../TryButton";
+
+
 
 //component showcasing the phone version and another link to try free
 const Mobile = () => {
@@ -32,13 +35,7 @@ const Mobile = () => {
           >
             {text.p[lang]}
           </motion.p>
-          <motion.button
-            {...animations.fadeInFromRight}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="try-button"
-          >
-            {text.button[lang]}
-          </motion.button>
+          <TryButton animation={animations.fadeInFromRight}/>
         </div>
       </div>
     </Container>

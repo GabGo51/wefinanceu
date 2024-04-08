@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
-import { motion, spring } from "framer-motion";
+import { motion} from "framer-motion";
 import styled from "styled-components";
-import account from "./img/account.PNG";
 import greywave from "./img/greywave.png";
 import animations from "../animation";
 import text from "./text/howText";
@@ -10,6 +9,7 @@ import form from "./img/form.png";
 import fork from "./img/fork.png";
 import dash from "./img/dash.PNG";
 import account2 from "./img/account2.PNG";
+import TryButton from "../TryButton";
 
 const HowTo = () => {
   const { lang } = useContext(SettingContext);
@@ -122,13 +122,7 @@ const HowTo = () => {
           src={dash}
         />
       </div>
-      <motion.button
-        {...animations.fadeInFromDown}
-        transition={{ duration: 1, delay: 0.3 }}
-        className="try-button"
-      >
-        {text.tryButton[lang]}
-      </motion.button>
+      <TryButton animation={animations.fadeInFromUp}/>
       <img src={greywave} alt="wave" className="wave" />
     </Container>
   );

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-
+import TryButton from "../TryButton";
 import { motion } from "framer-motion";
 
 import text from "./text/heroText";
@@ -29,16 +29,7 @@ const Hero = () => {
           >
             {text.p1[lang]}
           </motion.p>
-          <motion.div key={"try"}
-              {...animations.fadeInFromUp}
-              transition={{ duration: 0.5, delay: 0.6 }}>
-            <motion.button
-              
-              className="try-button"
-            >
-              {text.tryButton[lang]}
-            </motion.button>
-          </motion.div>
+          <TryButton animation={animations.fadeInFromUp}/>
         </div>
         <div className="image-box">
           <motion.img

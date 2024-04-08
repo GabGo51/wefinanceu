@@ -140,6 +140,8 @@ const Container = styled(motion.div)`
         box-shadow: rgba(100, 100, 111, 0.2) 0px 1px 5px 0px;
         outline: none;
         width: 100%;
+        font-size: 14px;
+        font-family: 'Montserrat', sans-serif;
 
         &:focus {
           border: 1px solid blue;

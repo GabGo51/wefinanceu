@@ -7,6 +7,7 @@ import banks from "./img/banks.png";
 import text from "./text/whoText";
 import { SettingContext } from "../../context/SettingContext";
 import animations from "../animation";
+import TryButton from "../TryButton";
 
 //section showing target audience of the app
 
@@ -47,13 +48,7 @@ const Who = () => {
           <p>{text.p3[lang]}</p>
         </motion.div>
       </div>
-      <motion.button
-        {...animations.fadeInFromDown}
-        transition={{ duration: 0.5, delay: 0.4 }}
-        className="try-button"
-      >
-        {text.button[lang]}
-      </motion.button>
+      <TryButton animation={animations.fadeInFromDown}/>
     </Container>
   );
 };

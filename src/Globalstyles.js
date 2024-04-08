@@ -105,6 +105,10 @@ export default createGlobalStyle`
     }
   }
  /* try it free button styles   */
+
+ .try-box{
+  
+ }
   .try-button{
     transition: 500ms;
     width: 150px;
