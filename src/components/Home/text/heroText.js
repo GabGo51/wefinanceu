@@ -1,6 +1,6 @@
 const heroText = {
   title: {
-    true: "Commercial real eastate financing, simplified",
+    true: "Commercial real estate financing, simplified",
     false: "Le financement immobilier commercial, simplifié",
   },
   p1: {
