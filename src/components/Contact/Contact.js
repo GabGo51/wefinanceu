@@ -34,6 +34,7 @@ const Container = styled.div`
     width: 100%;
     background-color: var(--main);
     transform-origin: top;
+    
   }
 
   .wrapper {

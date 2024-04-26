@@ -8,22 +8,27 @@ import Mobile from "./Mobile";
 import Benefits from "./Benefits";
 import Who from "./Who";
 
-//main component for the home page with all sections 
+//main component for the home page with all sections
 const Home = () => {
   return (
     <Container>
-      <Hero/>
-      <Stats/>
-      <Product/>
-      <Benefits/>
-      <Who/>
-      <Review/>
-      <Mobile/>
+      <Hero />
+      <Stats />
+      <Product />
+      <Benefits />
+      <Who />
+      <Review />
+      <Mobile />
     </Container>
   );
 };
 
 const Container = styled.div`
+
   padding-top: 50px;
+
+  @media (max-width: 800px) {
+    padding-top: 20px;
+  }
 `;
 export default Home;

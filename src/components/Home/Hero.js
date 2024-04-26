@@ -2,14 +2,13 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import TryButton from "../TryButton";
 import { motion } from "framer-motion";
-
 import text from "./text/heroText";
 import { SettingContext } from "../../context/SettingContext";
 import animations from "../animation";
 import desktop2 from "./img/desktop2.png";
 import mobile2 from "./img/mobile2.png";
 
-//Hero components: title, text , button , application mockup
+//Hero components: title, text , button , application mockup img
 const Hero = () => {
   const { lang } = useContext(SettingContext);
 
@@ -29,7 +28,7 @@ const Hero = () => {
           >
             {text.p1[lang]}
           </motion.p>
-          <TryButton animation={animations.fadeInFromUp}/>
+          <TryButton animation={animations.fadeInFromUp} />
         </div>
         <div className="image-box">
           <motion.img
@@ -73,6 +72,7 @@ const Container = styled.div`
       h1 {
         margin-bottom: 25px;
         font-size: clamp(34px, 3vw, 56px);
+        max-width: 1000px;
       }
 
       p {
@@ -83,16 +83,12 @@ const Container = styled.div`
 
       button {
         margin: 20px 0;
-        padding: 18px 0;
       }
     }
 
     .image-box {
       position: relative;
       margin-bottom: -100px;
-      @media (max-width: 800px) {
-        margin-bottom: -50px;
-      }
     }
 
     img {
@@ -105,10 +101,6 @@ const Container = styled.div`
       position: absolute;
       right: -50px;
       bottom: 4px;
-
-      @media (max-width: 800px) {
-        display: none;
-      }
     }
   }
 
@@ -116,6 +108,16 @@ const Container = styled.div`
     position: absolute;
     bottom: 0;
     width: 100vw;
+  }
+
+  @media (max-width: 800px) {
+    .wrapper .image-box {
+      margin-bottom: -50px;
+    }
+
+    .mobile {
+      display: none;
+    }
   }
 `;
 

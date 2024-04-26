@@ -1,12 +1,14 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import bluewave from './img/bluewave.png'
+import bluewave from "./img/bluewave.png";
 import { SettingContext } from "../../context/SettingContext";
 import text from "./text/statsText";
 import animations from "../animation";
-//stats under hero section with an about us link 
+
+//stats under hero section with  about page link
+
 const Stats = () => {
   const { lang } = useContext(SettingContext);
 
@@ -26,7 +28,7 @@ const Stats = () => {
       animate={{ scaleY: 1 }}
       transition={{ duration: 1 }}
     >
-      <img alt="wave" className="wave" src={bluewave}/>
+      <img alt="wave" className="wave" src={bluewave} />
       <div className="wrapper">
         <motion.div
           {...animations.fadeInFromUp}
@@ -44,14 +46,14 @@ const Stats = () => {
         </motion.div>
         <motion.div
           {...animations.fadeInFromUp}
-          transition={{ duration: 1, delay: 0.3 }}         
+          transition={{ duration: 1, delay: 0.3 }}
         >
           <h3>25+</h3>
           <p>{text.stat3[lang]}</p>
         </motion.div>
         <motion.div
           {...animations.fadeInFromUp}
-          transition={{ duration: 1, delay: 0.4 }}          
+          transition={{ duration: 1, delay: 0.4 }}
         >
           <h3>15+</h3>
           <p>{text.stat4[lang]}</p>
@@ -59,7 +61,7 @@ const Stats = () => {
       </div>
       <motion.div
         {...animations.fadeInFromUp}
-        transition={{ duration: 1, delay:0.2 }}
+        transition={{ duration: 1, delay: 0.2 }}
         className="button-wrapper"
       >
         <h4>{text.aboutLink1[lang]}</h4>
@@ -91,14 +93,13 @@ const Container = styled(motion.div)`
   color: white;
   padding-top: 50px;
 
-  .wave{
+  .wave {
     position: absolute;
     top: -4.5vw;
     width: 100vw;
   }
-  
-  .wrapper {
 
+  .wrapper {
     div {
       margin: 40px 0;
       display: flex;
@@ -117,37 +118,31 @@ const Container = styled(motion.div)`
       font-weight: 600;
     }
 
-    .button-wrapper{
-
-      h4{
+    .button-wrapper {
+      h4 {
         color: white;
       }
     }
-
-    
   }
 
-  .vector{
+  .vector {
     position: absolute;
     top: 0;
     right: 0;
   }
 
-  .other{
+  .other {
     position: absolute;
     left: 0;
-    bottom:0;
+    bottom: 0;
     transform: translateY(50%);
     transform: rotate(180deg);
   }
 
-  
-
   @media (max-width: 950px) {
-
     .wrapper {
       flex-wrap: wrap;
-      
+
       div {
         display: flex;
         flex-direction: column;
