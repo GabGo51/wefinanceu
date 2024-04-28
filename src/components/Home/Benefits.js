@@ -134,6 +134,10 @@ const Text = styled.div`
   }
 
   @media (max-width: 750px) {
+
+    div{
+      width: 100%;
+    }
     justify-content: center;
     align-items: center;
     flex-direction: column;

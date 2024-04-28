@@ -118,6 +118,7 @@ const Container = styled(motion.footer)`
 
   .wrapper {
     img {
+      margin-top: 20px;
       width: clamp(150px, 20%, 250px);
       cursor: pointer;
     }
@@ -139,7 +140,7 @@ const Container = styled(motion.footer)`
     .contact-ul {
       li {
         text-align: start;
-        margin: 10px 0;
+        margin: 15px 0;
         transition: 500ms;
         width: 200px;
       }
